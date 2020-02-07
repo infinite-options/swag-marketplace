@@ -2,9 +2,9 @@ var input ;
 var preview ;
 window.onload = function (){
      input = document.querySelector('.imageInput');
-     preview = document.querySelector('.preview');
+     preview = document.getElementById('preview');
                     
-// input.style.opacity = 0;
+    // input.style.opacity = 0;
                     
     input.addEventListener('change', updateImageDisplay);
 }
@@ -16,34 +16,23 @@ function updateImageDisplay() {
          preview.removeChild(preview.firstChild);
     }
                     
-    //   var curFiles = input.files;
-    //https://developer.mozilla.org/en-US/docs/Web/API/FileList
-    //   var file = document.getElementById('')
     file = input.files[0];
     if(file.length === 0) {
         var para = document.createElement('p');
         para.textContent = 'No files currently selected for upload';
         preview.appendChild(para);
     } else {
-        var list = document.createElement('ol');
-        preview.appendChild(list);
-        var listItem = document.createElement('li');
-        var para = document.createElement('p');
         if(validFileType(file)) {
-            para.textContent = 'File name ' + file.name + ', file size ' + returnFileSize(file.size) + '.';
             var image = document.createElement('img');
             image.src = window.URL.createObjectURL(file);
                         
-            listItem.appendChild(image);
-            listItem.appendChild(para);
+            preview.appendChild(image);
                     
         } else {
             para.textContent = 'File name ' + file.name + ': Not a valid file type. Update your selection.';
-            istItem.appendChild(para);
+            preview.appendChild(para);
         }
-                    
-        list.appendChild(listItem);
-        }
+    }
 }
                     
 var fileTypes = [

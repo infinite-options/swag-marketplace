@@ -3,6 +3,7 @@
     https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-example.html
     https://developer.mozilla.org/en-US/docs/Web/API/FileList
     https://www.w3schools.com/w3css/w3css_modal.asp
+    https://semantic-ui.com/views/card.html
  -->
 <!DOCTYPE html>
 <html>
@@ -15,7 +16,7 @@
                 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
                 
         </head>
-        <body>
+        <body style = " background: lightgray;">
             <header>
                 <div class= "topBar">
                     <div class= "logo">
@@ -30,7 +31,7 @@
                         </div>
                     </div >
                     <form>
-                        <div class= " buttonsSignIn" style= "display: flex; justify-content: space-between; width:150px">
+                        <div class= " buttonsSignIn" style= "display: flex; justify-content: space-between; width:200px">
                                 <div class="w3-container">
                                         <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-light-grey ">SIGN IN</button>
                                       
@@ -39,7 +40,6 @@
                                       
                                             <div class="w3-center"><br>
                                               <span onclick="document.getElementById('id01').style.display='none'" class="w3-button  w3-display-topright" title="Close Modal">&times;</span>
-                                              <!-- <img src="img_avatar4.png" alt="Avatar" style="width:30%" class="w3-circle w3-margin-top"> -->
                                             </div>
                                       
                                             <form class="w3-container" >
@@ -58,34 +58,70 @@
                                           </div>
                                         </div>
                                       </div>
-                            <!-- <button  class= "massive" type="submit">SIGN IN</button> -->
-                            <button  class = "massive" type="submit">CART</button>
+                            <button class="w3-button w3-light-grey " type="submit">CART</button>
                         </div>
                     </form>
                 </div>
                 <hr style = "border-top: 1px solid black;"/>  
             </header>
             <main>
-                 <form >
-                     <div class = " imageLabel">
-                         <h3>
-                            <label f>Choose a Product Image:</label>
-                        </h3>
-                    </div>
-                    <div class = "productImage">
-                        <div class="preview" id = "preview">
-                            <p>No files currently selected for upload</p>
+                 <form >     
+                    <div class="ui two column grid" style = "margin-left: 30px; margin-right: 30px;" >
+                        <div class="column">
+                            <div class="ui fluid card" style= " max-height: 650px;">
+                                <div class="content">
+                                    <div class = " imageLabel">
+                                        <h3>
+                                            <label f>Choose a Product Image:</label>
+                                        </h3>
+                                    </div>  
+                                </div>
+                                <div class="image " id = "preview"  style = "height: 500px">
+                                    <p>No files currently selected for upload</p>
+                                </div>
+                                <div class="content">
+                                    <a class="header">
+                                        <div>
+                                            <br>
+                                            <input class = "imageInput"type="file"id="postImage"  accept="image/*">
+                                            <button class = "imageSubmit">Submit</button>
+                                        </div> 
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        
-                        
-                         
-                   </div> 
-                   <div>
-                       <br>
-                        <!-- /* means only allows images of png jpeg or jpg -->
-                        <input class = "imageInput"type="file"id="postImage"  accept="image/*">
-                        <button class = "imageSubmit">Submit</button>
-                    </div>  
+                        <div class="column">
+                            <div class="ui fluid card">
+                                <div class="content">
+                                    <div class = "rightCard">
+                                        <div class="ui input">
+                                            <input type="text" placeholder="Post Title">
+                                        </div>
+                                        <div class="ui input" id = "postDescription">
+                                            <input type="text" placeholder="Post Description">
+                                        </div>
+                                        <div class="ui right labeled input" style= " margin-top: 5px;">
+                                            <label for="amount" class="ui label">$</label>
+                                            <input type="text" placeholder="Amount" id="amount">
+                                            <div class="ui basic label">.00</div>  
+                                        </div>
+                                        <div class= " priceNegotable">
+                                                <p>
+                                                    <h4>
+                                                        Is Price Negotable. 
+                                                    </h4>
+                                                </p>
+                                                <input type= "radio" name="negotable" value= "yes"> YES
+                                                <input type= "radio" name="negotable" value= "no"> NO
+                                        </div>
+                                            <button class = "rightCardSubmit" >Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                   
                 </form>
                      
             </main>
