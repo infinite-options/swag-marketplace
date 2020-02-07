@@ -1,0 +1,93 @@
+
+<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file
+    https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-example.html
+    https://developer.mozilla.org/en-US/docs/Web/API/FileList
+    https://www.w3schools.com/w3css/w3css_modal.asp
+ -->
+<!DOCTYPE html>
+<html>
+        <head>
+                <meta charset="UTF-8">
+                <title> Post Page </title>
+                <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
+                <link rel= " stylesheet" href="index.css"/>
+                <script src= "index.js"></script>
+                <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+                
+        </head>
+        <body>
+            <header>
+                <div class= "topBar">
+                    <div class= "logo">
+                        <img src= "https://image.shutterstock.com/image-vector/swag-lettering-600w-616596230.jpg" alt = "logo" style = "width: 60px; height: 40 px;"/>
+                    </div>
+                    <div style="display:flex ;justify-content: center;">
+                         <div class="ui masive icon input">
+                            <input type="text" placeholder="Search ..." style="width: 600px;">
+                            <button class="ui icon button" style = "background-color: gold;">
+                                <i class="search icon"></i>
+                            </button>
+                        </div>
+                    </div >
+                    <form>
+                        <div class= " buttonsSignIn" style= "display: flex; justify-content: space-between; width:150px">
+                                <div class="w3-container">
+                                        <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-light-grey ">SIGN IN</button>
+                                      
+                                        <div id="id01" class="w3-modal">
+                                          <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:500px">
+                                      
+                                            <div class="w3-center"><br>
+                                              <span onclick="document.getElementById('id01').style.display='none'" class="w3-button  w3-display-topright" title="Close Modal">&times;</span>
+                                              <!-- <img src="img_avatar4.png" alt="Avatar" style="width:30%" class="w3-circle w3-margin-top"> -->
+                                            </div>
+                                      
+                                            <form class="w3-container" >
+                                              <div class="w3-section">
+                                                <input class="w3-input  w3-margin-bottom " style="margin-left: 10px;max-width:450px"type="text" placeholder="Enter Username" name="usrname" required>
+                                                <input class="w3-input" style="margin-left: 10px;max-width:450px" type="password" placeholder="Enter Password" name="psw" required>
+                                                <button class="w3-button w3-block w3-blue w3-section w3-padding" style="margin-left: 10px;max-width:450px" type="submit">Login</button>
+                                              </div>
+                                            </form>
+                                      
+                                            <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+                                     
+                                              <span class="w3-right w3-padding w3-hide-small">Forgot <a href="#">password?</a></span>
+                                            </div>
+                                      
+                                          </div>
+                                        </div>
+                                      </div>
+                            <!-- <button  class= "massive" type="submit">SIGN IN</button> -->
+                            <button  class = "massive" type="submit">CART</button>
+                        </div>
+                    </form>
+                </div>
+                <hr style = "border-top: 1px solid black;"/>  
+            </header>
+            <main>
+                 <form >
+                     <div class = " imageLabel">
+                         <h3>
+                            <label f>Choose a Product Image:</label>
+                        </h3>
+                    </div>
+                    <div class = "productImage">
+                        <div class="preview" id = "preview">
+                            <p>No files currently selected for upload</p>
+                        </div>
+                        
+                        
+                         
+                   </div> 
+                   <div>
+                       <br>
+                        <!-- /* means only allows images of png jpeg or jpg -->
+                        <input class = "imageInput"type="file"id="postImage"  accept="image/*">
+                        <button class = "imageSubmit">Submit</button>
+                    </div>  
+                </form>
+                     
+            </main>
+        </body>
+</html>

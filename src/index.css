@@ -1,0 +1,83 @@
+
+.topBar{
+    display:flex;
+    margin-top: 20px;
+    justify-content:space-around; 
+    align-items: flex-start ;
+                        
+}
+.massive{
+    width: 90px;
+    height: 40px;
+}
+.productImage{
+    display:flex;
+    /* align-items:center; */
+    flex-direction: column;
+    width: 700px;
+    height: 400px;
+    background: rgb(223, 215, 215);
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+                   
+/* .buttonsSignIn button:hover {
+    background: #ccc;
+} */
+
+/* .postImage{
+    display:flex;
+    
+    margin-top: 100px;
+    margin-left: 6%;
+    align-items: flex-start;
+    justify-content:space-around; 
+} */
+form label:hover, form button:hover {
+    background: #ccc;
+                        /* background-color: #2D5BA3; */
+                        /* color: white; */
+}
+                    /* label {
+                        display: block;
+
+                        /* font: 1rem 'Fira Sans', sans-serif; */
+                    /* } */ 
+                    /* input,
+                    label {
+                        margin: .4rem 0;
+                    } */
+                    /* form label, form button {
+                        /* background-color: #7F9CCB; */
+                        /* padding: 5px 10px; */
+                        /* border-radius: 5px; */
+                        /* border: 1px ridge grey; */
+                        /* font-size: 0.8rem; */
+                        /* height: auto; */
+                    /* } */ 
+
+form ol {
+    padding-left: 0;
+}
+
+form li, div > p {
+    background: #eee;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    list-style-type: none;
+    border: 1px solid black;
+}
+ form img {
+    height: 64px;
+    order: 1;
+}
+
+form p {
+    line-height: 32px;
+    padding-left: 10px;
+}
+                    
+                  
