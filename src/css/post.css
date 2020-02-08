@@ -1,4 +1,11 @@
-
+/* Import fonts from google fonts    
+links .dscfsdjj a{
+    font siz : 0.9em
+    text-decoration: none;
+    color:white
+}
+#45ccb8  roboto font  !import*/
+/* @import url('https://fonts.googleapis.com/css?family=Anton|Gugi|Lato|Roboto|Sofia&display=swap'); */
 .topBar{
     display:flex;
     margin-top: 20px;
