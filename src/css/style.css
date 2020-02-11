@@ -21,13 +21,31 @@
     color:#b2b1b1;
     cursor:pointer;
 }
-/*
-.logo img {
-    width:30px;
-    margin-top:-7px;
-    margin-right:48px;
+
+ul {
+    list-style-type: none;
 }
-*/
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+button.btn {
+    border:none;
+    border-radius:2rem;
+    padding:1rem 3rem;
+    font-size:1rem;
+    cursor:pointer;
+}
+main .site-title .btn:hover{
+    background:transparent;
+    border:1px solid white;
+    color: white;
+}
 
 /* ----------- MAIN CONTENT ----------- */
 
@@ -53,5 +71,66 @@ main .site-title h1, h3 {
 
 main .site-title .btn {
     margin:1.8rem;
-    
+    background: white;
+}
+
+/* ----- Carousel ----- */
+
+.card-deck {
+    justify-content: center;
+}
+
+/* ----- Footer ----- */
+
+footer.footer{
+    height: 100%;
+    background: white;
+    position: relative;
+}
+
+footer.footer .container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+footer.footer .container > div{
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 3rem .9rem;
+}
+
+footer.footer .container h2{
+    color: white;
+}
+
+footer.footer .newsletter .form-element{
+    background: white;
+    display: inline-block;
+}
+
+footer.footer .newsletter .form-element input{
+    padding: .5rem .7rem;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 1rem;
+    width: 74%;
+}
+
+footer.footer .newsletter .form-element span{
+    background: white;
+    padding: .5rem .7rem;
+    cursor: pointer;
+}
+
+footer.footer .instagram div > img{
+    display: inline-block;
+    width: 25%;
+    height: 50%;
+    margin: .3rem .4rem;
+}
+
+footer.footer .follow div i{
+    color: white;
+    padding: 0 .4rem;
 }
