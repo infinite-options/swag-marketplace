@@ -183,9 +183,16 @@ main .site-title .btn {
     justify-content: center;
 }
 
-/* .carousel-control-prev-icon .carousel-control-next-icon {
-    color:grey;
-} */
+.carousel-control-next,
+.carousel-control-prev {
+    filter: invert(100%);
+}
+
+.carousel-control {
+    width:5%;
+}
+
+
 
 /* ----- Footer ----- */
 
