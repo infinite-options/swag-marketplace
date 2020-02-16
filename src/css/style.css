@@ -173,6 +173,11 @@ main .site-title .btn {
 
 /* ----- Carousel ----- */
 
+.carousel-container {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
 .card-img-top {
     width:100%;
     height:33vw;
@@ -213,9 +218,13 @@ footer.footer .container > div{
     padding: 3rem .9rem;
 }
 
-footer.footer .container h2{
-    color: white;
+footer.footer .container p{
+    color: black;
 }
+
+/* footer.footer .container-after-hr hr {
+    color:white;
+} */
 
 footer.footer .newsletter .form-element{
     background: white;
@@ -237,5 +246,5 @@ footer.footer .follow div i{
 }
 
 footer.footer .follow div i:hover {
-    color: black;
+    color: white;
 }
