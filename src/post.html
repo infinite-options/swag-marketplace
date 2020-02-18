@@ -2,8 +2,10 @@
 <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file
     https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-example.html
     https://developer.mozilla.org/en-US/docs/Web/API/FileList
+    https://www.w3schools.com/jsref/met_node_removechild.asp
     https://www.w3schools.com/w3css/w3css_modal.asp
     https://semantic-ui.com/views/card.html
+    https://success.figure-eight.com/hc/en-us/articles/202703155-CSS-Guide-to-Enlarge-Images-on-Hover
  -->
 <!DOCTYPE html>
 <html>
@@ -73,13 +75,13 @@
             <!-- HEADER -->
             <main>
                  <form >     
-                    <div class="ui two column grid" style = "margin-left: 30px; margin-right: 30px;" >
+                    <div class="ui two column grid" style = "margin-top: 30px; margin-left: 30px; margin-right: 30px;" >
                         <div class="column">
                             <div class="ui fluid card" style= " max-height: 650px;">
                                 <div class="content">
                                     <div class = " imageLabel">
                                         <h3>
-                                            <label f>Choose a Product Image:</label>
+                                            <label >Choose a Product Image (Max 5):</label>
                                         </h3>
                                     </div>  
                                 </div>
@@ -90,8 +92,9 @@
                                     <a class="header">
                                         <div>
                                             <br>
-                                            <input class = "imageInput"type="file"id="postImage"  accept="image/*">
-                                            <button class = "imageSubmit">Submit</button>
+                                            <!-- This accepts multiple images of the type .png .jpeg or .jpg -->
+                                            <input class = "imageInput"type="file"id="postImage"  accept="image/*" onChange= "updateImageDisplay()" multiple>
+                                            <!-- <button class = "imageSubmit">Submit</button> -->
                                         </div> 
                                     </a>
                                 </div>
