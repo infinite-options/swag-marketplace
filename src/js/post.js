@@ -1,3 +1,12 @@
+
+/*   
+    resource went off of - https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-example.html
+    understanding how to get the files -  https://developer.mozilla.org/en-US/docs/Web/API/FileList
+    remove child method -https://www.w3schools.com/jsref/met_node_removechild.asp
+    target event - https://developer.mozilla.org/en-US/docs/Web/API/Event/target
+                -https://stackoverflow.com/questions/5116929/get-clicked-li-from-ul-onclick
+*/
+
 // var input ;
 // var preview ;
 // window.onload = function (){
@@ -12,16 +21,27 @@
 //     // input.addEventListener('change', updateImageDisplay);
 // }
 
+
                     
 function updateImageDisplay() {
     //makes the input option disapear when images is uploaded. 
     //input.style.opacity = 0;
     // document.getElementById('postImage').style.opacity = 0
     preview = document.getElementById('preview');
+    // imagePreview = document.getElementById('imagePreview');
     //removes what is already in preview.
     while(preview.firstChild) {
          preview.removeChild(preview.firstChild);
     }
+    while(rightPreview.firstChild) {
+        rightPreview.removeChild(rightPreview.firstChild);
+    }
+    while(leftPreview.firstChild) {
+        leftPreview.removeChild(leftPreview.firstChild);
+    }
+//     while(imagePreview.firstChild) {
+//         imagePreview.removeChild(imagePreview.firstChild);
+//    }
     //capture the files in input.            
      const curFiles = document.getElementById('postImage').files;
     //if not files slescted sent a message.
@@ -38,8 +58,10 @@ function updateImageDisplay() {
         //create an ordered list element in the DOM 
         const list = document.createElement('ol');
         //put it in preview. 
-        preview.appendChild(list);
-
+        leftPreview.appendChild(list);
+         var bigImage = document.createElement('img');
+         bigImage.src = URL.createObjectURL(curFiles[0]);
+        rightPreview.appendChild(bigImage);
          for(const file of curFiles) {
             const listItem = document.createElement('li');
             const para = document.createElement('p');
@@ -49,6 +71,7 @@ function updateImageDisplay() {
               image.src = URL.createObjectURL(file);
   
               listItem.appendChild(image);
+              
             } else {
               para.textContent = `File name ${file.name}: Not a valid file type. Update your selection.`;
               listItem.appendChild(para);
@@ -56,6 +79,20 @@ function updateImageDisplay() {
   
             list.appendChild(listItem);
           }
+
+
+          list.addEventListener('mouseover', function(event){ 
+            // console.log(event.target) ;
+            if(event.target.src != undefined){
+                if(rightPreview.firstChild) {
+                    rightPreview.removeChild(rightPreview.firstChild);
+                }
+                var imageR = document.createElement('img');
+                imageR.src = event.target.src;
+                rightPreview.appendChild(imageR); 
+            }
+             
+          });
     }
 }
                     
