@@ -151,7 +151,7 @@ float: right;
  main .site-title {
     background: url("../assets/istockphoto-805119394-612x612.jpg");
     background-size:cover;
-    height:85vh;
+    height:90vh;
     display:flex;
     justify-content:center;
 }
