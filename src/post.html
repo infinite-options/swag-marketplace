@@ -72,15 +72,19 @@
             </header>      
             <!-- HEADER -->
             <main>
+                <h3 style="margin-left: 50px; margin-top: 20px;">
+                    Add a Product
+                </h3>
+                <hr style = "border: 1px solid black;"/>
                  <form >     
                     <div class="ui two column grid" style = "margin-top: 30px; margin-left: 30px; margin-right: 30px;" >
                         <div class="column">
                             <div class="ui fluid card" style= " max-height: 600px; max-width: 450px;">
                                 <div class="content">
                                     <div class = " imageLabel">
-                                        <h3>
+                                        <h4>
                                             <label >Choose a Product Image (Max 5):</label>
-                                        </h3>
+                                        </h4>
                                         <div id= "preview">
                                                 <div style="font-size: 10em;text-align: center; ">
                                                         <i class = "fa fa-camera  cart" ></i>
@@ -95,11 +99,11 @@
                                         
                                     <div class = row>
                                         
-                                        <div class="col image" id = "leftPreview" >
+                                        <div class="col-4 image" id = "leftPreview" >
                                                 
                                                  
                                         </div>
-                                        <div class="col " id= "rightPreview">
+                                        <div class="col-8 " id= "rightPreview">
                                             
                                         </div>
                                     </div>
@@ -144,7 +148,7 @@
                                             
                                             <!-- <input type="text" placeholder="Post Title"> -->
                                         <!-- </div> -->
-                                        <div   id = "postDescription">
+                                        <div   class = "postDescription">
                                             <label>
                                                 Product Description (required)
                                                     
@@ -153,6 +157,22 @@
 
                                             </textarea>
                                             <!-- <input type="text" placeholder="Post Description"> -->
+                                        </div>
+                                        <div class="sellerLocation">
+                                            <label>
+                                                Seller Location (required)
+                                            </label>
+                                            <textarea cols="50" placeholder="Seller Location">
+
+                                            </textarea>
+                                        </div>
+                                        <div class="quantity">
+                                            <label>
+                                                Quantity (required)
+                                            </label>
+                                            <textarea cols="50" placeholder="Quantity">
+
+                                            </textarea>
                                         </div>
                                         <div class = "price">
                                             <label>
@@ -170,7 +190,7 @@
                                         
                                         <div class= " priceNegotable">
                                                 <p>
-                                                    <label>
+                                                    <label style="margin-top: 10px;">
                                                         Is Price Negotable. 
                                                     </label>
                                                 </p>

@@ -1,39 +1,27 @@
-/* Import fonts from google fonts    
-links .dscfsdjj a{
-    font siz : 0.9em
-    text-decoration: none;
-    color:white
-}
-#45ccb8  roboto font  !import*/
-/* @import url('https://fonts.googleapis.com/css?family=Anton|Gugi|Lato|Roboto|Sofia&display=swap'); */
-form button:hover {
+
+
+/* form button:hover {
     background: #ccc;
-}
-
-
-/* .imageSubmit{
-    margin-right: 5px;
 } */
+
+
+/* ----------- Ordered list of images ------- */
+
 form ol {
-    /* background: #eee; */
     display:flex;
-  
     flex-direction:column; 
-   
-    /* align-content:space-around;
-    justify-content: space-around; */
     margin-bottom: 10px;
     margin-top:10px;
     width: 90px;
     padding:0 0 0 0;
     margin-left: 25px;
-  
     list-style-type: none; 
-    /* margin */
-    /* border: 1px solid black; */
-}
 
-form img {
+}
+form ol img:hover {
+    border: 2px solid gold;
+}
+form ol img {
     /* max-height: 500px; */
     margin-bottom: 20px;
     list-style-position:inside;
@@ -42,24 +30,14 @@ form img {
     width: 70px;
    
 }
-/* #rightPreview{
-    height: 400px;
-    
-} */
+/* ---------------Enlarged Image --------------*/
 #rightPreview img{
     width: 90%;
-    height: 70%;
+    height: auto;
     margin-right: 5%;
     border: none;
-
 }
-form ol img:hover {
-    border: 2px solid gold;
-}
-
-
-
-/* Right Card */
+/* ------------ Form Right Card -------------*/
 .rightCard{
     display:flex;
     margin-top: 5px;
@@ -68,10 +46,10 @@ form ol img:hover {
     
 }
 
-#postDescription{
+.postDescription, .quantity, .sellerLocation, .postTitle, .price, .companyName{
     display: flex;
     flex-direction:column;
-    /* height: 400px; */
+    margin-top: 10px;
 }
 .rightCardSubmit{
     background-color: gold;
@@ -82,20 +60,6 @@ form ol img:hover {
 }
 .rightCardSubmit:hover{
     background-color: goldenrod;
-}
-
-.postTitle{
-    display: flex;
-    flex-direction:column;
-}
-       
-.price{
-    display: flex;
-    flex-direction:column;
-}
-.companyName{
-    display: flex;
-    flex-direction:column;
 }
 
                     
