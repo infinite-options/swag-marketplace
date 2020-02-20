@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cart Page</title>
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- FONT AWSOME  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+            <div class="topnav">
+                <img src= "./assets/swag-logo.png "  class = "logo" alt = "LOGO"/>  
+                <a href="./index.html"> HOME</a>
+                <a href= "about.html"  >ABOUT </a>     
+                <a href= "./shop.html" >SHOP</a>     
+                <a href= "./post.html">POST </a>
+                <button type="button" class="btn btn-info" id="sign-in-modal" data-toggle="modal" data-target="#myModal">SIGN IN</button>
+                
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 >Log In to Your Account</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                
+                            </div>
+                            <div class="modal-body">
+                                <input type="text" placeholder="Enter Username" name="usrname" required>
+                                <input type="text" placeholder="Enter Password" name="psw" required>
+                                <button type = "button" class="log-in"> Log In</button>
+                            </div>
+                            <div class="modal-footer" id = "modal-footer">
+                                <h6>Need an Account?</h6>
+                                <button type="button" class="btn btn-default" style= " color: #2196F3;" >Sign up</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href= "#" ><i class = "fa fa-shopping-cart  cart"class="active" ></i> </a> 
+                <div class="search-container">
+                    <form>
+                        <div class="form-box">
+                            <input class="search-field" name= "search" type= "text" placeholder= "Search ..."/>
+                            <button type="submit"><i class="fa fa-search"></i></button>             
+                        </div>
+                    </form>
+                </div>
+            </div>                    
+        </header>      
+        <!-- HEADER -->
+    <h1>
+        THIS is the CART page.
+    </h1>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
