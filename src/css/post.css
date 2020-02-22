@@ -1,12 +1,8 @@
-
-
-/* form button:hover {
-    background: #ccc;
-} */
-
-
+/*                     RESOURCES 
+keeping aspect ratio of pic - https://alligator.io/css/cropping-images-object-fit/
+                           - https://www.kirupa.com/html5/preserve_an_image_aspect_ratio_when_resized.htm
+*/
 /* ----------- Ordered list of images ------- */
-
 form ol {
     display:flex;
     flex-direction:column; 
@@ -22,13 +18,12 @@ form ol img:hover {
     border: 2px solid gold;
 }
 form ol img {
-    /* max-height: 500px; */
     margin-bottom: 20px;
     list-style-position:inside;
-    border: 2px solid black;
+    border: 1px solid black;
     height: 70px;
     width: 70px;
-   
+    object-fit: contain;  
 }
 /* ---------------Enlarged Image --------------*/
 #rightPreview img{
@@ -45,22 +40,25 @@ form ol img {
     flex-direction: column;
     
 }
-
-.postDescription, .quantity, .sellerLocation, .postTitle, .price, .companyName{
-    display: flex;
-    flex-direction:column;
-    margin-top: 10px;
-}
 .rightCardSubmit{
     background-color: gold;
     color: white;
     border: 1px solid black ;
-    margin-top: 20px;
     width: 100px
 }
 .rightCardSubmit:hover{
     background-color: goldenrod;
 }
 
+#ErrorCompName, #ErrorProdName, #ErrorProdDes, #ErrorSellLoc,
+#ErrorQuan, #ErrorPrice, #ErrorPriceNeg, #ErrorNoPic{
+    color: red;
+}
+
+#SubmitionSuccess{
+    color:red;
+    text-align: center;
+    font-size: 2em;
+}
                     
                   
