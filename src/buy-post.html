@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>[Product]</title>
+
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <!-- FONT AWESOME  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/671c0e423a.js" crossorigin="anonymous"></script>
+
+  <!-- Carousel Tools -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  <!-- Custom Stylesheet, JS -->
+  <link rel="stylesheet" href="./css/buy-post.css">
+  <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src= "index.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+        <div class="topnav">
+            <img src= "./assets/swag-logo.png "  class = "logo" alt = "LOGO"/>  
+            <a href="./index.html" > HOME</a>
+            <a href= "about.html">ABOUT </a>     
+            <a href= "./shop.html">SHOP</a>     
+            <a href= "./post.html" class="active">POST </a>
+            <button type="button" class="btn btn-info" id="sign-in-modal" data-toggle="modal" data-target="#myModal">SIGN IN</button>
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 >Log In to Your Account</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>   
+                        </div>
+                        <div class="modal-body">
+                            <input type="text" placeholder="Enter Username" name="usrname" required>
+                            <input type="text" placeholder="Enter Password" name="psw" required>
+                            <button type = "button" class="log-in"> Log In</button>
+                        </div>
+                        <div class="modal-footer" id = "modal-footer">
+                            <h6>Need an Account?</h6>
+                            <button type="button" class="btn btn-default" style= " color: #2196F3;" >Sign up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href= "./cart.html" ><i class = "fa fa-shopping-cart  cart" ></i> </a> 
+            <div class="search-container">
+                <form>
+                    <div class="form-box">
+                        <input class="search-field" name= "search" type= "text" placeholder= "Search ..."/>
+                        <button type="submit"><i class="fa fa-search"></i></button>             
+                    </div>
+                </form>
+            </div>
+        </div>                    
+    </header>  
+
+    <!-- Post Images  -->
+    
+    <!-- <div class="img-container">
+        <div class="post-imgs">
+            <div class="post-img"></div>
+            <div class="post-img"></div>
+            <div class="post-img"></div>  
+        </div>
+        <div class="post-imgs">
+            <img class="main-img" src="assets/iStock-1135609382.jpg" alt="">
+        </div>
+    </div> -->
+
+    <br><br>
+
+    <main>    
+           <div class="ui two column grid" style = "margin-left: 30px; margin-right: 30px;" >
+               <div class="column">
+                   <div class="ui fluid card" style= " max-height: 650px;">
+                       <div class="image " id = "preview"  style = "height: 500px">
+
+                        </div>
+                       <div class="content">
+                           <a class="header">
+                               <div>
+                                   <br>
+                                   
+                               </div> 
+                           </a>
+                       </div>
+                   </div>
+               </div>
+               <div class="column">
+                   <div class="ui fluid card">
+                       <div class="content">
+                           <div class = "rightCard">
+                               <div class="ui input">
+                                   <h4 class="text">Post Title</p>
+                               </div>
+                               <br>
+                               <div class="ui input" id = "postDescription">
+                                   <p class="text">Post Description</p>
+                               </div>
+                               <div class="ui right labeled input" style= " margin-top: 5px;">
+                                   <label for="amount" class="ui label">$</label>
+                                   <input type="text" placeholder="Amount" id="amount">
+                                   <div class="ui basic label">.00</div>  
+                               </div>
+                               <div class= " priceNegotable">
+                                       <p>
+                                           <h4>
+                                               Is Price Negotable. 
+                                           </h4>
+                                       </p>
+                                       <input type= "radio" name="negotable" value= "yes"> YES
+                                       <input type= "radio" name="negotable" value= "no"> NO
+                               </div>
+                                   <button class = "rightCardSubmit" >Submit</button>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+            
+   </main>
+
+
+    <!-- Footer -->
+
+    <footer class="footer">
+        <hr style="margin-top:30px">
+        <div class="container">
+            <div class="about-us">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quia atque nemo ad modi officiis
+                    iure, autem nulla tenetur repellendus.</p>
+            </div>
+            <div class="newsletter">
+                <p>Stay updated with our newsletter</p>
+                <div class="form-element">
+                    <input type="text" placeholder="Email">
+                </div>
+            </div>
+            
+            <div class="follow">
+                <p>Follow Us</p>
+                <div>
+                    <!-- using FA icons -->
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    
+</body>
+</html>
