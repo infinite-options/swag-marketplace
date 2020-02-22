@@ -23,10 +23,10 @@
                 <script src= "./js/post.js"></script>
                 <!-- Bootstrap CDN -->
                 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-                <!-- W3School stylesheet -->
-                <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
-                
-                
+                <!-- FONT AWSOME  -->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                <script src="https://kit.fontawesome.com/671c0e423a.js" crossorigin="anonymous"></script>
+                       
         </head>
         <body>
             <!-- HEADER -->
@@ -38,14 +38,12 @@
                     <a href= "./shop.html">SHOP</a>     
                     <a href= "./post.html" class="active">POST </a>
                     <button type="button" class="btn btn-info" id="sign-in-modal" data-toggle="modal" data-target="#myModal">SIGN IN</button>
-                    
                     <div class="modal fade" id="myModal" role="dialog">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h4 >Log In to Your Account</h4>
-                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>   
                                 </div>
                                 <div class="modal-body">
                                     <input type="text" placeholder="Enter Username" name="usrname" required>
@@ -76,6 +74,7 @@
                     Add a Product
                 </h3>
                 <hr style = "border: 1px solid black;"/>
+                <p id = SubmitionSuccess></p>
                  <form >     
                     <div class="ui two column grid" style = "margin-top: 30px; margin-left: 30px; margin-right: 30px;" >
                         <div class="column">
@@ -86,25 +85,18 @@
                                             <label >Choose a Product Image (Max 5):</label>
                                         </h4>
                                         <div id= "preview">
-                                                <div style="font-size: 10em;text-align: center; ">
-                                                        <i class = "fa fa-camera  cart" ></i>
-                                                </div>
-                                                
-                                                <p style="text-align: center; ">No files currently selected</p>
-                                        </div>
-                                        
+                                            <div style="font-size: 10em;text-align: center; ">
+                                                <i class = "fa fa-camera  cart" ></i>
+                                            </div>
+                                            <p style="text-align: center; ">No files currently selected</p>
+                                        </div>   
                                     </div>  
                                 </div>
                                 <div    style = "max-height: 450px">
-                                        
-                                    <div class = row>
-                                        
-                                        <div class="col-4 image" id = "leftPreview" >
-                                                
-                                                 
+                                    <div class = row> 
+                                        <div class="col-4 image" id = "leftPreview" >                     
                                         </div>
-                                        <div class="col-8 " id= "rightPreview">
-                                            
+                                        <div class="col-8 " id= "rightPreview">      
                                         </div>
                                     </div>
                                 </div>
@@ -113,9 +105,10 @@
                                         <div>
                                             <br>
                                             <!-- This accepts multiple images of the type .png .jpeg or .jpg -->
-                                            <input class = "imageInput"type="file"id="postImage"  accept="image/*" onChange= "updateImageDisplay()" multiple>
+                                            <input class = "imageInput"type="file"id="postImage"  accept="image/*" onChange= "updateImageDisplay()" multiple>    
                                         </div> 
                                     </a>
+                                    <p id="ErrorNoPic" ></p>
                                 </div>
                             </div>
                         </div>
@@ -123,92 +116,83 @@
                             <h4>
                                 Required Info
                             </h4>
-                            <!-- <div class="ui fluid card"> -->
-                                <!-- <div class="content"> -->
-                                    <!-- <div class = "rightCard"> -->
-                                        <div class="companyName">
-                                            <label>
-                                                Company Name (required)
-                                                
-                                            </label>
-                                            <textarea cols="50" placeholder="Post Title" required>
-                                            
-                                            </textarea>
+                            <div class ="ui form">
+                                <div class="required field" >
+                                        <label>Company Name</label>
+                                        <input id= "CompanyName" type="text" placeholder="Ex Facebook">
+                                </div>
+                                <p id="ErrorCompName"></p>
+                                <div class="required field">
+                                        <label>Product Name</label>
+                                        <input id= "ProductName" type="text" placeholder="Ex T-Shirt">
+                                </div>
+                                <p id="ErrorProdName"></p>
+                                <div class="required field">
+                                        <label>Product Description</label>
+                                        <input id= "ProductDescription" type="text" placeholder="Ex Size Medium, used, no stains.">
+                                </div>
+                                <p id="ErrorProdDes"></p>
+                                <div class="required field">
+                                        <label>Seller Location</label>
+                                        <input id= "SellerLocation" type="text" placeholder="Ex San Fransisco">
+                                </div>
+                                <p id="ErrorSellLoc"></p>
+                                <div class="required field">
+                                        <label>Quantity</label>
+                                        <input id= "Quantity" type="text" placeholder="Ex 3">
+                                </div>
+                                <p id="ErrorQuan"></p>
+                                <div class="required field">
+                                        <label>Standard Price</label>
+                                        <div class="ui right labeled input " style= " margin-top: 5px;width: 100px;">
+                                            <label for="amount" class="ui label">$</label>
+                                            <input id= "Price" type="text" placeholder="Amount" id="amount">
+                                            <div class="ui basic label">.00</div>  
                                         </div>
-                                        <div class="postTitle">
-                                            <label>
-                                                Product Name (required)
-                                                
-                                            </label>
-                                            <textarea cols="50" placeholder="Post Title" required>
-                                            
-                                            </textarea>
-                                        </div>
-                                        <!-- <div class="ui input"> -->
-                                            
-                                            <!-- <input type="text" placeholder="Post Title"> -->
-                                        <!-- </div> -->
-                                        <div   class = "postDescription">
-                                            <label>
-                                                Product Description (required)
-                                                    
-                                            </label>
-                                            <textarea cols="50" placeholder="Post Description">
+                                </div>
+                                <p id="ErrorPrice"></p>
+                                <div class="required field">
+                                        <label>Is Price Negotable</label>
+                                        <input type= "radio" name="negotable" value= "yes"> YES
+                                        <input type= "radio" name="negotable" value= "no"> NO
+                                </div>
+                                <p id="ErrorPriceNeg"></p>
+                                <input type=" submit" value = "Submit"  class = "rightCardSubmit" onclick="formSubmittion()"/>
+                            </div>
+                        </div>
+                    </div>     
+                </form>             
+            </main>
+     <!----- Footer ----->
 
-                                            </textarea>
-                                            <!-- <input type="text" placeholder="Post Description"> -->
-                                        </div>
-                                        <div class="sellerLocation">
-                                            <label>
-                                                Seller Location (required)
-                                            </label>
-                                            <textarea cols="50" placeholder="Seller Location">
-
-                                            </textarea>
-                                        </div>
-                                        <div class="quantity">
-                                            <label>
-                                                Quantity (required)
-                                            </label>
-                                            <textarea cols="50" placeholder="Quantity">
-
-                                            </textarea>
-                                        </div>
-                                        <div class = "price">
-                                            <label>
-                                                    Standard Price (required)
-                                                        
-                                            </label>
-                                            <div class="ui right labeled input " style= " margin-top: 5px;">
-                                                
-                                                    <label for="amount" class="ui label">$</label>
-                                                    <input type="text" placeholder="Amount" id="amount">
-                                                    <div class="ui basic label">.00</div>  
-                                                </div>
-
-                                        </div>
-                                        
-                                        <div class= " priceNegotable">
-                                                <p>
-                                                    <label style="margin-top: 10px;">
-                                                        Is Price Negotable. 
-                                                    </label>
-                                                </p>
-                                                <input type= "radio" name="negotable" value= "yes"> YES
-                                                <input type= "radio" name="negotable" value= "no"> NO
-                                        </div>
-                                            <button class = "rightCardSubmit" >Submit</button>
-                                    <!-- </div> -->
-                                <!-- </div> -->
-                            <!-- </div> -->
+        <footer class="footer">
+                <hr style="margin-top:30px">
+                <div class="container">
+                    <div class="about-us">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quia atque nemo ad modi officiis
+                            iure, autem nulla tenetur repellendus.</p>
+                    </div>
+                    <div class="newsletter">
+                        <p>Stay updated with our newsletter</p>
+                        <div class="form-element">
+                            <input type="text" placeholder="Email">
                         </div>
                     </div>
-                   
-                   
-                </form>
-                     
-            </main>
-            <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+                    
+                    <div class="follow">
+                        <p>Follow Us</p>
+                        <div>
+                            <!-- using FA icons -->
+                            <i class="fab fa-facebook"></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                    </div>
+                </div>
+    
+            </footer>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         </body>

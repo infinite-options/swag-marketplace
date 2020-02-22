@@ -161,3 +161,54 @@ main .site-title .btn {
     background-color: #45ccb8 ;
 } */
 /*
+
+/* ----- Footer ----- */
+
+footer.footer{
+    /* height: 100%; */
+    /* margin-top:10px; */
+    background: white;
+    position: relative;
+}
+
+footer.footer .container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+footer.footer .container > div{
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 3rem .9rem;
+}
+
+footer.footer .container p{
+    color: black;
+}
+
+/* footer.footer .container-after-hr hr {
+    color:white;
+} */
+
+footer.footer .newsletter .form-element{
+    background: white;
+    display: inline-block;
+}
+
+footer.footer .newsletter .form-element input{
+    padding: .5rem .7rem;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 1rem;
+    width: 74%;
+}
+
+footer.footer .follow div i{
+    color: gray;
+    padding: 0 .4rem;
+}
+
+footer.footer .follow div i:hover {
+    color: white;
+}
