@@ -22,7 +22,7 @@
 
   <!-- Custom Stylesheet, JS -->
   <link rel="stylesheet" href="./css/buy-post.css">
-  <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
+  <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/> -->
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <script src= "index.js"></script>
 
@@ -71,70 +71,53 @@
         </div>                    
     </header>  
 
-    <!-- Post Images  -->
-    
-    <!-- <div class="img-container">
-        <div class="post-imgs">
-            <div class="post-img"></div>
-            <div class="post-img"></div>
-            <div class="post-img"></div>  
-        </div>
-        <div class="post-imgs">
-            <img class="main-img" src="assets/iStock-1135609382.jpg" alt="">
-        </div>
-    </div> -->
+    <!-- Post  -->
 
     <br><br>
-
     <main>    
-           <div class="ui two column grid" style = "margin-left: 30px; margin-right: 30px;" >
+           <div class="ui two column grid" style="margin-left: 30px; margin-right: 30px;" >
                <div class="column">
-                   <div class="ui fluid card" style= " max-height: 650px;">
-                       <div class="image " id = "preview"  style = "height: 500px">
-
+                   <div class="ui fluid card" style="height:500px;">
+                       <div class="image" style="background:white;">
+                            <div class="img-container">
+                                <div class="post-imgs">
+                                    <br>
+                                    <div class="post-img"></div>
+                                    <div class="post-img"></div>
+                                    <div class="post-img"></div>  
+                                </div>
+                            </div>
                         </div>
-                       <div class="content">
-                           <a class="header">
-                               <div>
-                                   <br>
-                                   
-                               </div> 
-                           </a>
-                       </div>
                    </div>
                </div>
                <div class="column">
-                   <div class="ui fluid card">
+                   <div class="ui fluid card" style="height:500px;">
                        <div class="content">
-                           <div class = "rightCard">
+                           <div class = "rightCard" style="height:450px;">
                                <div class="ui input">
                                    <h4 class="text">Post Title</p>
                                </div>
                                <br>
+                               <hr>
+                               <br>
                                <div class="ui input" id = "postDescription">
                                    <p class="text">Post Description</p>
                                </div>
-                               <div class="ui right labeled input" style= " margin-top: 5px;">
-                                   <label for="amount" class="ui label">$</label>
-                                   <input type="text" placeholder="Amount" id="amount">
-                                   <div class="ui basic label">.00</div>  
-                               </div>
                                <div class= " priceNegotable">
-                                       <p>
-                                           <h4>
-                                               Is Price Negotable. 
-                                           </h4>
-                                       </p>
-                                       <input type= "radio" name="negotable" value= "yes"> YES
-                                       <input type= "radio" name="negotable" value= "no"> NO
+                                   <hr>
+                                       <h4>PRICE</h4>
+                                       <br>
                                </div>
-                                   <button class = "rightCardSubmit" >Submit</button>
+                               <div class="buy-buttons">
+                                    <button class="ui button">BUY NOW</button>
+                                    <button class="ui button" >ADD TO CART</button>
+                               </div>
                            </div>
                        </div>
                    </div>
                </div>
            </div>
-            
+        <br>
    </main>
 
 
@@ -144,8 +127,7 @@
         <hr style="margin-top:30px">
         <div class="container">
             <div class="about-us">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quia atque nemo ad modi officiis
-                    iure, autem nulla tenetur repellendus.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quia atque nemo ad modi officiisiure, autem nulla tenetur repellendus.</p>
             </div>
             <div class="newsletter">
                 <p>Stay updated with our newsletter</p>

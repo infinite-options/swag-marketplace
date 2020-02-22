@@ -12,26 +12,7 @@ body {
     text-transform: uppercase;
 }
 
-.img-container {
-    display:inline-block;
-    position:relative;
-    margin: auto;
-    overflow: hidden;
-    width: 90vw;
-    height:65vw;
-    background: white;
-    box-shadow: 5px 5px 15px rgba(186, 126, 126, 0.5);
-    border-radius: 10px;
-}
-
-.main-img {
-    width: 45vw;
-    margin-top: 47px;
-}
-
 .post-imgs {
-    display: inline-block;
-    color: grey;
     grid-template-columns: repeat(auto-fill);
     width: 60%;
     grid-gap:4px;
@@ -39,18 +20,23 @@ body {
     margin-top:5px;
 }
 
-.post-img:hover {
-    cursor: pointer;
+.post-imgs img {
+    height: 15vw;
+    float:right;
 }
 
+/*----- Image Thumbnails -----*/
 .post-img {
-    /* display:block; */
     margin: 10px;
     grid-template-columns: repeat(auto-fill);
     padding:9px;
     border:1px solid grey;
     width:5vw;
     height:5vw;
+}
+.post-img:hover {
+    cursor: pointer;
+    border:1px solid black;
 }
 
 /* Post */
@@ -65,12 +51,9 @@ body {
     width: 90px;
     height: 40px;
 }
-form label:hover, form button:hover {
-    background: #ccc;
-}
 
 #postDescription{
-    height: 400px;
+    height: 200px;
 }
 .rightCardSubmit{
     margin-top: 20px;
@@ -78,10 +61,6 @@ form label:hover, form button:hover {
 }
 .imageSubmit{
     margin-right: 5px;
-}
-form img {
-    max-height: 500px;
-   
 }
 
 .rightCard{
@@ -91,7 +70,6 @@ form img {
     flex-direction: column;
     align-content:space-between;
 }
-
 
 /* ----------Top Navigation Bar ------------------- */
 
@@ -107,7 +85,7 @@ form img {
 /* LOGO */
 .logo{
     width: 60px;
-    height: 40 px;
+    height: 40px;
 }
 .topnav img{
     float:left;
@@ -217,7 +195,6 @@ main .site-title .btn:hover{
 .topnav .search-container {
 float: right;
 }
-  
 
 /* RESPONSIVE NAV-BAR */
 @media screen and (max-width: 600px) {
@@ -236,9 +213,6 @@ float: right;
         border: 1px solid #ccc;  
     }
 }
-
-/* ----- Post Images ----- */
-
 
 /* ----- Footer ----- */
 
@@ -283,5 +257,5 @@ footer.footer .follow div i{
 }
 
 footer.footer .follow div i:hover {
-    color: white;
+    color: black;
 }
