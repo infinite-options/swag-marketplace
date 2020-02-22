@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap');
 
-
-
 /* ----------Top Navigation Bar ------------------- */
 
 *{
@@ -131,7 +129,7 @@ float: right;
  main .site-title {
     background: url("../assets/istockphoto-805119394-612x612.jpg");
     background-size:cover;
-    height:110vh;
+    height:90vh;
     display:flex;
     justify-content:center;
 }
@@ -148,25 +146,41 @@ main .site-title h1, h3 {
 
 main .site-title .btn {
     margin:1.8rem;
-    
+    background: white;
+}
+
+/* ----- Carousel ----- */
+
+.carousel-container {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.card-img-top {
+    width:100%;
+    height:33vw;
+    object-fit: cover;
+}
+
+.card-deck {
+    justify-content: center;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    filter: invert(100%);
+}
+
+.carousel-control {
+    width:5%;
 }
 
 
-/* * {
-    margin:0;
-    padding:0;
-    font-family:sans-serif;
-} */
-/* header{
-    background-color: #45ccb8 ;
-} */
-/*
 
 /* ----- Footer ----- */
 
 footer.footer{
-    /* height: 100%; */
-    /* margin-top:10px; */
+    height: 100%;
     background: white;
     position: relative;
 }
@@ -190,6 +204,7 @@ footer.footer .container p{
     color:white;
 } */
 
+
 footer.footer .newsletter .form-element{
     background: white;
     display: inline-block;
@@ -212,3 +227,4 @@ footer.footer .follow div i{
 footer.footer .follow div i:hover {
     color: white;
 }
+
