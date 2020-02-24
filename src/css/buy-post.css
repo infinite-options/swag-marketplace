@@ -13,6 +13,7 @@ body {
 }
 
 .post-imgs {
+    display:inline;
     grid-template-columns: repeat(auto-fill);
     width: 60%;
     grid-gap:4px;
@@ -21,7 +22,8 @@ body {
 }
 
 .post-imgs img {
-    height: 15vw;
+    /* height:10%;
+    width:10% */
     float:right;
 }
 
