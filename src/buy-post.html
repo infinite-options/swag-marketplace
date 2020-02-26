@@ -20,11 +20,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
-  <!-- Custom Stylesheet, JS -->
+  <!-- Custom Stylesheets -->
   <link rel="stylesheet" href="./css/buy-post.css">
-  <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <script src= "index.js"></script>
 
 </head>
 
@@ -37,8 +35,8 @@
             <img src= "./assets/swag-logo.png "  class = "logo" alt = "LOGO"/>  
             <a href="./index.html" > HOME</a>
             <a href= "about.html">ABOUT </a>     
-            <a href= "./shop.html">SHOP</a>     
-            <a href= "./post.html" class="active">POST </a>
+            <a href= "./shop.html" class="active">SHOP</a>     
+            <a href= "./post.html">POST </a>
             <button type="button" class="btn btn-info" id="sign-in-modal" data-toggle="modal" data-target="#myModal">SIGN IN</button>
             <div class="modal fade" id="myModal" role="dialog">
                 <div class="modal-dialog">
@@ -71,65 +69,167 @@
         </div>                    
     </header>  
 
-    <!-- Post  -->
+    <!-- Post -->
 
-    <br><br>
     <main>    
-           <div class="ui two column grid" style="margin-left: 30px; margin-right: 30px;" >
-               <div class="column">
-                   <div class="ui fluid card" style="height:500px;">
-                       <div class="image" style="background:white;">
-                            <div class="post-imgs">
-                                <br>
-                                <div class="post-img"></div>
-                                <div class="post-img"></div>
-                                <div class="post-img"></div>  
+        <br>
+        <div class="row">
+            <div class="column">
+                <div class="image">
+                    <div class="post-imgs">
+                        <img src="assets/post-1.jpg" style="height:30vw;">
+                    </div>
+                    <div class="post-imgs">
+                        <br>
+                        <img src="assets/post-1.jpg" class="post-img">
+                        <img src="assets/post-1.jpg" class="post-img">
+                        <img src="assets/post-1.jpg" class="post-img"> 
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="ui input">
+                    <br><br><br>
+                    <h3 class="text">Post Title [Location]</h3>
+                </div>
+                <hr>
+                <div id = "post-details">
+                     <h4>Rating</h4> 
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>                     
+                     <i class="far fa-star"></i>
+                     
+                     <h3>USD $$</h3>
+                     <br>
+                     <h4>Availability: Available</h4>
+                     <h4>Condition: New</h4>
+                     <h4>Company: Infinite Options</h4>
+                     <br>
+                </div>
+                <div class="buy-buttons">
+                 <button class="ui button">BUY NOW</button>
+                 <button class="ui button" >ADD TO CART</button>
+                 <br><br>
+                 <label for="offer">Best Offer: $</label>
+                 <input type="number" name="offer">
+                 </div>
+                <div class= "post-description">
+                    <hr>
+                    <h5 class="text">Post Description</h5>
+                    <p> LOREM IPSUM DOLOR SIT AMET CONSECTETUR ADIPISICING ELIT. ACCUSANTIUM QUIA ATQUE NEMO AD MODI OFFICIISIURE, AUTEM NULLA TENETUR REPELLENDUS.</p>
+                    <br>
+                </div>
+            </div>
+          </div> 
+
+          <!-- Carousel -->
+
+          <div class="container-fluid carousel-container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="next" class="carousel slide" data-ride="carousel">
+        
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                 <div class="container">
+                                     <div class="row">
+        
+                                         <div class="col-sm-12 col-lg-4">
+                                             <div class="card" style="margin:auto;">
+                                                 <img src="./assets/post-1.jpg" class="card-img-top">
+                                                 <div class="card-body">
+                                                     <h4 class="card-title">Instagram Popsocket</h4>
+                                                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                     <button type="button" class="btn btn-info">Read More</button>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         
+                                         <div class="col-sm-12 col-lg-4">
+                                             <div class="card">
+                                                 <img src="./assets/post-2.jpg" class="card-img-top">
+                                                 <div class="card-body">
+                                                     <h4 class="card-title">Amazon Rubik's Cube</h4>
+                                                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                     <button type="button" class="btn btn-info">Read More</button>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         
+                                         <div class="col-sm-12 col-lg-4">
+                                             <div class="card">
+                                                 <img src="./assets/post-3.jpg" class="card-img-top">
+                                                 <div class="card-body">
+                                                     <h4 class="card-title">Instagram Stylus Pen</h4>
+                                                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                     <button type="button" class="btn btn-info">Read More</button>
+                                                 </div>
+                                             </div>
+                                        </div>
+                                         
+                                     </div>
+                                 </div>						
                             </div>
-                            <div class="post-imgs">
-                                <img src="assets/post-1.jpg" style="height:500px;">
+                            
+                            <div class="carousel-item">
+                                 <div class="container">
+                                     <div class="row">
+        
+                                         <div class="col-sm-12 col-lg-4">
+                                             <div class="card" style="margin: auto;">
+                                                 <img src="./assets/post-3.jpg" class="card-img-top">
+                                                 <div class="card-body">
+                                                     <h4 class="card-title">Item 4</h4>
+                                                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                     <button type="button" class="btn btn-info">Read More</button>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         
+                                         <div class="col-sm-12 col-lg-4">
+                                             <div class="card">
+                                                 <img src="./assets/post-2.jpg" class="card-img-top">
+                                                 <div class="card-body">
+                                                     <h4 class="card-title">Item 5</h4>
+                                                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                     <button type="button" class="btn btn-info">Read More</button>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         
+                                         <div class="col-sm-12 col-lg-4">
+                                             <div class="card">
+                                                 <img src="./assets/post-1.jpg" class="card-img-top">
+                                                 <div class="card-body">
+                                                     <h4 class="card-title">Item 6</h4>
+                                                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                     <button type="button" class="btn btn-info">Read More</button>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         
+                                     </div>
+                                 </div>
                             </div>
                         </div>
-                   </div>
-               </div>
-               <div class="column">
-                   <div class="ui fluid card" style="height:500px;">
-                       <div class="content">
-                           <div class = "rightCard" style="height:450px;">
-                               <div class="ui input">
-                                   <h4 class="text">Post Title</p>
-                               </div>
-                               <hr>
-                               <div class="ui input" id = "postDescription">
-                                   <p class="text">Post Description</p>
-                               </div>
-                               <div class= " priceNegotable">
-                                   <hr>
-                                       <h4>PRICE</h4>
-                                       <br>
-                               </div>
-                               <div class="buy-buttons">
-                                    <button class="ui button">BUY NOW</button>
-                                    <button class="ui button" >ADD TO CART</button>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-           </div>
-        <br>
-   </main>
-
-    <main>
-        <div class="row">
-            <div class="col-4">
-
+                        <a href="#next" class="carousel-control-prev" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a href="#next" class="carousel-control-next" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+                
             </div>
-            <div class="col-8">
-
-            </div>
+            
         </div>
-    </main>
 
+   </main>
 
     <!-- Footer -->
 
