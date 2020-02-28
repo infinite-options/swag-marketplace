@@ -1,0 +1,236 @@
+<!-- Resources --
+    Categories -  https://www.youtube.com/watch?v=MWX3PPfNrV8
+    Product Grid -  https://bootsnipp.com/snippets/O5yMd
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title> Shop </title>
+
+        <!-- Custom Stylesheet -->
+        <link rel="stylesheet" href="./css/style.css">
+
+        <!-- Bootstrap CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <!-- FONT AWESOME  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/671c0e423a.js" crossorigin="anonymous"></script>
+
+        <!-- Carousel Tools -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+        <!-- Custom Stylesheet -->
+        <link href="./css/shop.css" rel="stylesheet" />
+</head>
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+        <div class="topnav">
+            <img src= "./assets/swag-logo.png "  class = "logo" alt = "LOGO"/>  
+            <a href="./index.html"> HOME</a>
+            <a href= "about.html">ABOUT </a>     
+            <a href= "./shop.html" class="active">SHOP</a>     
+            <a href= "./post.html">POST </a>
+            <button type="button" class="btn btn-info" id="sign-in-modal" data-toggle="modal" data-target="#myModal">SIGN IN</button>
+            
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 >Log In to Your Account</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            
+                        </div>
+                        <div class="modal-body">
+                            <input type="text" placeholder="Enter Username" name="usrname" required>
+                            <input type="text" placeholder="Enter Password" name="psw" required>
+                            <button type = "button" class="log-in"> Log In</button>
+                        </div>
+                        <div class="modal-footer" id = "modal-footer">
+                            <h6>Need an Account?</h6>
+                            <button type="button" class="btn btn-default" style= " color: #2196F3;" >Sign up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href= "./cart.html" ><i class = "fa fa-shopping-cart  cart" ></i> </a> 
+            <div class="search-container">
+                <form>
+                    <div class="form-box">
+                        <input class="search-field" name= "search" type= "text" placeholder= "Search ..."/>
+                        <button type="submit"><i class="fa fa-search"></i></button>             
+                    </div>
+                </form>
+            </div>
+        </div>                    
+    </header>
+    
+    <!----- Shop Content ----->
+    
+    <main>
+
+        <!-- Categories -->
+
+        <div class="categories">
+            <br>
+            <div>
+                <a class="submenu" >Company</a>
+                <a class="submenu">Color</a>
+                <a class="submenu">Price</a>
+                <a class="submenu">Size</a>
+                <a class="submenu">T-Shirts</a>
+                <a class="submenu">Hoodies</a>
+                <a class="submenu">Stationery</a>
+                <a class="submenu">Water Bottles</a>
+                <a class="submenu">Accessories</a>
+                <a class="submenu">Electronics</a>
+                <a class="submenu">Miscellaneous</a>
+            </div>
+        </div>
+
+        <!-- Dropdown -->
+
+        <br>
+
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sort By
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <li><a href="#">Featured</a></li>
+              <li><a href="#">Price: Low to High</a></li>
+              <li><a href="#">Highest Rating</a></li>
+              <li><a href="#">Newest</a></li>
+            </ul>
+          </div>
+
+        <!-- Product Grid -->
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid5">
+                        <div class="product-image5">
+                            <a href="buy-post.html">
+                                <img class="pic-1" src="assets/post-1.jpg">
+                                <img class="pic-2" src="assets/post-2.jpg">
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <a href="#" class="select-options"><i class="fa fa-arrow-right"></i> Select Options</a>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Instagram Popsocket</a></h3>
+                            <div class="price">$11.00 - $15.00</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid5">
+                        <div class="product-image5">
+                            <a href="buy-post.html">
+                                <img class="pic-1" src="assets/post-2.jpg">
+                                <img class="pic-2" src="assets/post-3.jpg">
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <a href="#" class="select-options"><i class="fa fa-arrow-right"></i> Select Options</a>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Amazon Rubik's Cube</a></h3>
+                            <div class="price">$10.00 - $12.00</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid5">
+                        <div class="product-image5">
+                            <a href="#">
+                                <img class="pic-1" src="assets/post-3.jpg">
+                                <img class="pic-2" src="assets/post-1.jpg">
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <a href="#" class="select-options"><i class="fa fa-arrow-right"></i> Select Options</a>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Instagram Stylus Pen</a></h3>
+                            <div class="price">$11.00 - $15.00</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid5">
+                        <div class="product-image5">
+                            <a href="#">
+                                <img class="pic-1" src="assets/post-2.jpg">
+                                <img class="pic-2" src="assets/post-3.jpg">
+                            </a>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <a href="#" class="select-options"><i class="fa fa-arrow-right"></i> Select Options</a>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Amazon Rubik's Cube</a></h3>
+                            <div class="price">$11.00 - $15.00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+
+    </main>
+    
+    <!----- Footer ----->
+
+    <footer class="footer">
+        <hr>
+        <div class="container">
+            <div class="about-us">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quia atque nemo ad modi officiisiure, autem nulla tenetur repellendus.</p>
+            </div>
+            <div class="newsletter">
+                <p>Stay updated with our newsletter</p>
+                <div class="form-element">
+                    <input type="text" placeholder="Email">
+                </div>
+            </div>
+            
+            <div class="follow">
+                <p>Follow Us</p>
+                <div>
+                    <!-- using FA icons -->
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

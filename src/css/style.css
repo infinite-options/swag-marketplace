@@ -197,8 +197,6 @@ main .site-title .btn {
     width:5%;
 }
 
-
-
 /* ----- Footer ----- */
 
 footer.footer{
@@ -242,5 +240,5 @@ footer.footer .follow div i{
 }
 
 footer.footer .follow div i:hover {
-    color: white;
+    color: black;
 }
