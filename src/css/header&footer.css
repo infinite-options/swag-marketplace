@@ -1,11 +1,23 @@
-@import url('https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap');
+/* RESOURCES
 
-/* ----------Top Navigation Bar ------------------- */
+footer bottom of page: https://www.google.com/search?q=keep+footer+at+bottom+of+page+css&oq=put+footer+at+bottom+of+page&aqs=chrome.5.69i57j0l7.18591j0j7&sourceid=chrome&ie=UTF-8#kpvalbx=_UJFRXoSdJ5L0-gSFpbTIBA67 
+*/
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap');
 
 *{
     margin: 0;
+    padding:0;
     font-family: Arial, Helvetica, sans-serif;
-  }
+}
+
+html, body{
+    height: 100%;
+}
+/* ----------Top Navigation Bar ------------------- */
 
 .topnav {
     overflow: hidden;
@@ -119,68 +131,24 @@ float: right;
     }
 }
 
-
-
-
-/* ----------- MAIN CONTENT ----------- */
-
-/* SITE TITLE */
-
- main .site-title {
-    background: url("../assets/istockphoto-805119394-612x612.jpg");
-    background-size:cover;
-    height:90vh;
-    display:flex;
-    justify-content:center;
-}
-
-main .site-title .site-background {
-    padding-top: 10rem;
-    text-align:center;
-    color: var(--white);
-}
-
-main .site-title h1, h3 {
-    margin: .3rem;
-}
-
-main .site-title .btn {
-    margin:1.8rem;
-    background: white;
-}
-
-/* ----- Carousel ----- */
-
-.carousel-container {
-    margin-top: 100px;
-    margin-bottom: 100px;
-}
-
-.card-img-top {
-    width:100%;
-    height:33vw;
-    object-fit: cover;
-}
-
-.card-deck {
-    justify-content: center;
-}
-
-.carousel-control-next,
-.carousel-control-prev {
-    filter: invert(100%);
-}
-
-.carousel-control {
-    width:5%;
-}
-
 /* ----- Footer ----- */
 
+main {
+    min-height: 85%;
+   
+}
+main .main{
+    overflow:auto;
+    padding-bottom:50px;
+    
+}
+
 footer.footer{
-    /* height: 100%; */
     background: white;
     position: relative;
+    height: 50px;
+    margin-top: -50px;
+    clear:both;
 }
 
 footer.footer .container{
@@ -197,6 +165,7 @@ footer.footer .container > div{
 footer.footer .container p{
     color: black;
 }
+
 
 footer.footer .newsletter .form-element{
     background: white;
@@ -218,6 +187,5 @@ footer.footer .follow div i{
 }
 
 footer.footer .follow div i:hover {
-    color: black;
+    color: white;
 }
-

@@ -1,2 +1,2 @@
 # swag-marketplace
-e-commerce website for exchange of tech merchandise
+E-commerce website for exchange of tech merchandise hosted on heroku
