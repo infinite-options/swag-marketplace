@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>[Product]</title>
+
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <!-- FONT AWESOME  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/671c0e423a.js" crossorigin="anonymous"></script>
+
+  <!-- Carousel Tools -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="./css/buy-post.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+        <div class="topnav">
+            <img src= "./assets/swag-logo.png "  class = "logo" alt = "LOGO"/>  
+            <a href="./index.html" > HOME</a>
+            <a href= "about.html">ABOUT </a>     
+            <a href= "./shop.html" class="active">SHOP</a>     
+            <a href= "./post.html">POST </a>
+            <button type="button" class="btn btn-info" id="sign-in-modal" data-toggle="modal" data-target="#myModal">SIGN IN</button>
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 >Log In to Your Account</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>   
+                        </div>
+                        <div class="modal-body">
+                            <input type="text" placeholder="Enter Username" name="usrname" required>
+                            <input type="text" placeholder="Enter Password" name="psw" required>
+                            <button type = "button" class="log-in"> Log In</button>
+                        </div>
+                        <div class="modal-footer" id = "modal-footer">
+                            <h6>Need an Account?</h6>
+                            <button type="button" class="btn btn-default" style= " color: #2196F3;" >Sign up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href= "./cart.html" ><i class = "fa fa-shopping-cart  cart" ></i> </a> 
+            <div class="search-container">
+                <form>
+                    <div class="form-box">
+                        <input class="search-field" name= "search" type= "text" placeholder= "Search ..."/>
+                        <button type="submit"><i class="fa fa-search"></i></button>             
+                    </div>
+                </form>
+            </div>
+        </div>                    
+    </header>  
+
+    <!-- Post -->
+
+    <main>    
+        <br>
+        <div class="row">
+            <div class="column">
+                <div class="image">
+                    <div class="post-imgs">
+                        <img src="assets/post-1.jpg" style="height:30vw;">
+                    </div>
+                    <div class="post-imgs">
+                        <br>
+                        <img src="assets/post-1.jpg" class="post-img">
+                        <img src="assets/post-1.jpg" class="post-img">
+                        <img src="assets/post-1.jpg" class="post-img"> 
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="ui input">
+                    <br><br><br>
+                    <h3 class="text">Post Title [Location]</h3>
+                </div>
+                <hr>
+                <div id = "post-details">
+                     <h4>Rating</h4> 
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>                     
+                     <i class="far fa-star"></i>
+                     <br><br>
+                     <h3>USD $$</h3>
+                     <br>
+                     <h4>Availability: Available</h4>
+                     <h4>Condition: New</h4>
+                     <h4>Company: Infinite Options</h4>
+                     <br>
+                </div>
+                <div class="buy-buttons">
+                 <button class="ui button">BUY NOW</button>
+                 <button class="ui button" >ADD TO CART</button>
+                 <br><br>
+                 <label for="offer">Best Offer: $</label>
+                 <input type="number" name="offer">
+                 </div>
+                <div class= "post-description">
+                    <hr>
+                    <h5 class="text">Post Description</h5>
+                    <p> LOREM IPSUM DOLOR SIT AMET CONSECTETUR ADIPISICING ELIT. ACCUSANTIUM QUIA ATQUE NEMO AD MODI OFFICIISIURE, AUTEM NULLA TENETUR REPELLENDUS.</p>
+                    <br>
+                </div>
+            </div>
+          </div> 
+
+          <!-- Carousel -->
+          <hr>
+
+          <div class="container-fluid carousel-container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="next" class="carousel slide" data-ride="carousel">
+        
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                 <div class="container">
+                                     <div class="row">
+        
+                                         <div class="col-sm-12 col-lg-4">
+                                             <div class="card" style="margin:auto;">
+                                                 <img src="./assets/post-1.jpg" class="card-img-top">
+                                                 <div class="card-body">
+                                                     <h4 class="card-title">Instagram Popsocket</h4>
+                                                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                     <button type="button" class="btn btn-info">Read More</button>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         
+                                         <div class="col-sm-12 col-lg-4">
+                                             <div class="card">
+                                                 <img src="./assets/post-2.jpg" class="card-img-top">
+                                                 <div class="card-body">
+                                                     <h4 class="card-title">Amazon Rubik's Cube</h4>
+                                                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                     <button type="button" class="btn btn-info">Read More</button>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         
+                                         <div class="col-sm-12 col-lg-4">
+                                             <div class="card">
+                                                 <img src="./assets/post-3.jpg" class="card-img-top">
+                                                 <div class="card-body">
+                                                     <h4 class="card-title">Instagram Stylus Pen</h4>
+                                                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                     <button type="button" class="btn btn-info">Read More</button>
+                                                 </div>
+                                             </div>
+                                        </div>
+                                         
+                                     </div>
+                                 </div>						
+                            </div>
+                            
+                            <div class="carousel-item">
+                                 <div class="container">
+                                     <div class="row">
+        
+                                         <div class="col-sm-12 col-lg-4">
+                                             <div class="card" style="margin: auto;">
+                                                 <img src="./assets/post-3.jpg" class="card-img-top">
+                                                 <div class="card-body">
+                                                     <h4 class="card-title">Item 4</h4>
+                                                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                     <button type="button" class="btn btn-info">Read More</button>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         
+                                         <div class="col-sm-12 col-lg-4">
+                                             <div class="card">
+                                                 <img src="./assets/post-2.jpg" class="card-img-top">
+                                                 <div class="card-body">
+                                                     <h4 class="card-title">Item 5</h4>
+                                                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                     <button type="button" class="btn btn-info">Read More</button>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         
+                                         <div class="col-sm-12 col-lg-4">
+                                             <div class="card">
+                                                 <img src="./assets/post-1.jpg" class="card-img-top">
+                                                 <div class="card-body">
+                                                     <h4 class="card-title">Item 6</h4>
+                                                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                     <button type="button" class="btn btn-info">Read More</button>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         
+                                     </div>
+                                 </div>
+                            </div>
+                        </div>
+                        <a href="#next" class="carousel-control-prev" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a href="#next" class="carousel-control-next" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+
+   </main>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+        <hr style="margin-top:30px">
+        <div class="container">
+            <div class="about-us">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quia atque nemo ad modi officiisiure, autem nulla tenetur repellendus.</p>
+            </div>
+            <div class="newsletter">
+                <p>Stay updated with our newsletter</p>
+                <div class="form-element">
+                    <input type="text" placeholder="Email">
+                </div>
+            </div>
+            
+            <div class="follow">
+                <p>Follow Us</p>
+                <div>
+                    <!-- using FA icons -->
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    
+</body>
+</html>
