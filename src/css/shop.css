@@ -7,7 +7,7 @@ section {
 /* ----- Categories ----- */
 
 .categories {
-    width: 27vw;
+    width: auto;
     margin-right: 2%;
     margin-left: 5%;
 }
@@ -37,6 +37,13 @@ section {
     background-color: #ececfa;
 }
 
+/* ----- Dropdown ----- */
+
+.dropdown {
+    position: absolute;
+    right:0px;
+}
+
 /* ----- Product Grid ----- */
 
 .product-image5 .pic-1, .product-image5 .pic-2 {
@@ -46,7 +53,8 @@ section {
 
 .product-grid5 {
     font-family: Poppins, sans-serif;
-    position: relative
+    position: relative;
+    padding-bottom:30px;
 }
 
 .product-grid5 .product-image5 {
@@ -55,7 +63,7 @@ section {
 }
 
 .product-grid5 .product-image5 a {
-    display: block
+    display: block;
 }
 
 .product-grid5 .product-image5 img {
