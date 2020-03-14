@@ -7,56 +7,49 @@ html {
 
 body {
     display: grid;
-    /* background: white; */
     font-family: "Lato", sans-serif;
 }
 
-/* 
 .post-imgs {
     display:inline;
     grid-template-columns: repeat(auto-fill);
-} */
-/* 
-.post-imgs .post-img {
+}
+
+/* .post-imgs .post-img {
     object-fit: cover;
 } */
-/* 
-.bg {
-    margin-bottom:100px;
-} */
 
-/* Create two equal columns that floats next to each other */
+.post-imgs img {
+    float:right;
+    /* left: 50%; */
+}
+
+/* Create two equal columns floating next to each other */
 .column {
-    margin:10px 10px 10px 10px;
-    padding: 100px 100px 100px 100px;
+    margin:auto;
     float: left;
     width: 38%;
     padding: 10px;
-    /* background-color:#d3d3d3; */
-}
-
-.post-row {
-    margin-left: 200px;
-    /* background-color:#d3d3d3; */
+    margin-left: 6vw;
 }
   
   /* Clear floats after the columns */
-  .post-img:after {
+  /* .row:after {
     margin-right:10vw;
     content: "";
     display: table;
     clear: both;
-  }
+  } */
 
 /*----- Image Thumbnails -----*/
 .post-img {
-    margin: 0px 15px 0px 15px;
+    margin: 10px;
     grid-template-columns: repeat(auto-fill);
-    padding:5px;
+    padding:9px;
     border:1px solid grey;
     width:5vw;
     height:5vw;
-}
+}   
 .post-img:hover {
     cursor: pointer;
     border:1px solid black;
@@ -72,7 +65,7 @@ input[type=number]{
 *{
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-  }
+}
 
 .topnav {
     overflow: hidden;
@@ -211,10 +204,20 @@ float: right;
     }
 }
 
+/* ----- Breadcrumbs Nav ----- */
+
+.breadcrumbs-nav a {
+    color: #505050;
+}
+
 /* ----- Post Content (Body) ----- */
 .seller-rating {
     padding: 0px 0px 0px 0px;
     float:right;
+}
+
+.main .bg h6, p {
+    color: #505050;
 }
 
 /* ----- Body Buttons ----- */
