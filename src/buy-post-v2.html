@@ -2,6 +2,7 @@
     resources
     css buttons - https://www.w3schools.com/css/css3_buttons.asp
     css rounded corners - https://www.w3schools.com/css/css3_borders.asp
+    display image on hover - https://stackoverflow.com/questions/10769016/display-image-on-text-link-hover-css-only
 
 -->
 
@@ -32,6 +33,9 @@
     <!-- Custom Stylesheets -->
     <link rel="stylesheet" href="./css/buy-post-v2.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- Custom JavaScript -->
+    <script src="./js/buy-post.js"></script>
 
 </head>
 
@@ -86,13 +90,13 @@
 
         <!-- Breadcrumbs Nav -->
 
-        <p class="breadcrumbs-nav" style="margin-left: 20px;" class=> 
-            <a href="./index.html">HOME</a> >> 
-            <a href="./index.html">Location</a> >> 
-            <a href="./index.html">Company</a> >> 
-            <a href="./index.html" >Category</a> >> 
-            <a href="./index.html">Item</a> >> 
-            <a href="./index.html">Backpacks</a> >> 
+        <p class="breadcrumbs-nav" style="margin-left: 20px;" class=>
+            <a href="./index.html">HOME</a> >>
+            <a href="./index.html">Location</a> >>
+            <a href="./index.html">Company</a> >>
+            <a href="./index.html">Category</a> >>
+            <a href="./index.html">Item</a> >>
+            <a href="./index.html">Backpacks</a> >>
             Swissgear
         </p>
 
@@ -103,15 +107,17 @@
                 <div class="column">
                     <div class="image">
                         <div class="post-imgs">
-                            <img src="assets/post-1.jpg" style="height:30vw;" class="main-post-img">
-                            <br>
+                            <img src="assets/post-1.jpg" id="image" class="main-image" height="420" />
                         </div>
                         <div class="post-imgs">
                             <br>
-                            <img src="assets/post-1.jpg" class="post-img">
-                            <img src="assets/post-1.jpg" class="post-img">
-                            <img src="assets/post-1.jpg" class="post-img">
-                            <!-- <img src="assets/post-1.jpg" class="post-img"> -->
+
+                            <img class="post-img" src="assets/post-1.jpg" onmouseover="document.images['image'].src='assets/post-1.jpg';" onmouseout="document.images['image'].src='assets/post-1.jpg';"/></img>
+
+                            <img class="post-img" src="assets/post-2.jpg" onmouseover="document.images['image'].src='assets/post-2.jpg';" onmouseout="document.images['image'].src='assets/post-2.jpg';"/></img>
+
+                            <img class="post-img" src="assets/post-3.jpg" onmouseover="document.images['image'].src='assets/post-3.jpg';" onmouseout="document.images['image'].src='assets/post-3.jpg';"/></img>
+
                         </div>
                     </div>
                 </div>
@@ -159,7 +165,7 @@
                         <br><br>
                         <div class="offer-section" style="margin-top:-60px">
                             <label for="offer">BEST OFFER </label>
-                            <p style="display:inline; margin-left:40px;box-shadow:grey;">$</p>
+                            <p style="display:inline; margin-left:80px;box-shadow:grey;">$</p>
                             <input type="number" name="offer" size="5" style="margin-left:33px">
                             <button class="ui button" style="float:right;background-color:#f44336">SUBMIT</button>
                         </div>
@@ -168,7 +174,7 @@
             </div>
         </div>
 
-        
+
         <!-- POST CAROUSEL 1 -->
 
         <div class="carousels">
@@ -183,18 +189,15 @@
                                     <div class="container">
                                         <div class="row">
 
-                                            
-
                                             <div class="col-sm-12 col-lg-4">
                                                 <div class="card" style="margin:auto;">
                                                     <img src="./assets/post-1.jpg" class="card-img-top">
                                                     <div class="card-body">
-                                                        <h4 class="card-title">Instagram Popsocket</h4>
-                                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur
+                                                        <!-- <h4 class="card-title">Instagram Popsocket</h4> -->
+                                                        <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur
                                                             adipiscing elit, sed do eiusmod tempor incididunt ut labore
                                                             et
-                                                            dolore magna aliqua.</p>
-                                                        <button type="button" class="btn btn-info">Read More</button>
+                                                            dolore magna aliqua.</p> -->
                                                     </div>
                                                 </div>
                                             </div>
@@ -203,12 +206,11 @@
                                                 <div class="card">
                                                     <img src="./assets/post-2.jpg" class="card-img-top">
                                                     <div class="card-body">
-                                                        <h4 class="card-title">Amazon Rubik's Cube</h4>
-                                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur
+                                                        <!-- <h4 class="card-title">Amazon Rubik's Cube</h4> -->
+                                                        <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur
                                                             adipiscing elit, sed do eiusmod tempor incididunt ut labore
                                                             et
-                                                            dolore magna aliqua.</p>
-                                                        <button type="button" class="btn btn-info">Read More</button>
+                                                            dolore magna aliqua.</p> -->
                                                     </div>
                                                 </div>
                                             </div>
@@ -217,12 +219,11 @@
                                                 <div class="card">
                                                     <img src="./assets/post-3.jpg" class="card-img-top">
                                                     <div class="card-body">
-                                                        <h4 class="card-title">Instagram Stylus Pen</h4>
-                                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur
+                                                        <!-- <h4 class="card-title">Instagram Stylus Pen</h4> -->
+                                                        <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur
                                                             adipiscing elit, sed do eiusmod tempor incididunt ut labore
                                                             et
-                                                            dolore magna aliqua.</p>
-                                                        <button type="button" class="btn btn-info">Read More</button>
+                                                            dolore magna aliqua.</p> -->
                                                     </div>
                                                 </div>
                                             </div>
@@ -239,12 +240,11 @@
                                                 <div class="card" style="margin: auto;">
                                                     <img src="./assets/post-3.jpg" class="card-img-top">
                                                     <div class="card-body">
-                                                        <h4 class="card-title">Item 4</h4>
-                                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur
+                                                        <!-- <h4 class="card-title">Item 4</h4> -->
+                                                        <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur
                                                             adipiscing elit, sed do eiusmod tempor incididunt ut labore
                                                             et
-                                                            dolore magna aliqua.</p>
-                                                        <button type="button" class="btn btn-info">Read More</button>
+                                                            dolore magna aliqua.</p> -->
                                                     </div>
                                                 </div>
                                             </div>
@@ -253,12 +253,11 @@
                                                 <div class="card">
                                                     <img src="./assets/post-2.jpg" class="card-img-top">
                                                     <div class="card-body">
-                                                        <h4 class="card-title">Item 5</h4>
-                                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur
+                                                        <!-- <h4 class="card-title">Item 5</h4> -->
+                                                        <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur
                                                             adipiscing elit, sed do eiusmod tempor incididunt ut labore
                                                             et
-                                                            dolore magna aliqua.</p>
-                                                        <button type="button" class="btn btn-info">Read More</button>
+                                                            dolore magna aliqua.</p> -->
                                                     </div>
                                                 </div>
                                             </div>
@@ -267,12 +266,11 @@
                                                 <div class="card">
                                                     <img src="./assets/post-1.jpg" class="card-img-top">
                                                     <div class="card-body">
-                                                        <h4 class="card-title">Item 6</h4>
-                                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur
+                                                        <!-- <h4 class="card-title">Item 6</h4> -->
+                                                        <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur
                                                             adipiscing elit, sed do eiusmod tempor incididunt ut labore
                                                             et
-                                                            dolore magna aliqua.</p>
-                                                        <button type="button" class="btn btn-info">Read More</button>
+                                                            dolore magna aliqua.</p> -->
                                                     </div>
                                                 </div>
                                             </div>
@@ -294,7 +292,6 @@
 
                 </div>
             </div>
-
     </main>
 
     <br>
