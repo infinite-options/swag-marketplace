@@ -214,42 +214,6 @@ main .site-title .btn:hover {
     object-fit: cover;
 }
 
-/* img hover horizontal */
-
-/* .post-imgs {
-    display: inline;
-    grid-template-columns: repeat(auto-fill);
-}
-
-.post-imgs img {
-    float: right;
-} */
-
-/* img hover */
-
-/* .hover_img a {
-    position: relative;
-}
-
-.hover_img a span {
-    position: absolute;
-    display: none;
-    z-index: 99;
-}
-
-.hover_img a:hover span {
-    display: block;
-    margin-left:100px;
-}
-
-.hover_img .hov-img {
-    height:400px;
-} */
-
-/* .hover_img .hov-img .one {
-    margin-top: -100px;
-} */
-
 /* ----- Post Content (Body) ----- */
 
 .seller-rating {

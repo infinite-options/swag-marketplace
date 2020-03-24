@@ -1,28 +1,41 @@
+<!--
+    resources
+    css buttons - https://www.w3schools.com/css/css3_buttons.asp
+    css rounded corners - https://www.w3schools.com/css/css3_borders.asp
+    display image on hover - https://stackoverflow.com/questions/10769016/display-image-on-text-link-hover-css-only
+
+-->
+
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <title>[Product]</title>
+    <title>[Product]</title>
 
-  <!-- Bootstrap CDN -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-  <!-- FONT AWESOME  -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://kit.fontawesome.com/671c0e423a.js" crossorigin="anonymous"></script>
+    <!-- FONT AWESOME  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/671c0e423a.js" crossorigin="anonymous"></script>
 
-  <!-- Carousel Tools -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <!-- Carousel Tools -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
-  <!-- Custom Stylesheets -->
-  <link rel="stylesheet" href="./css/buy-post.css">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- Custom Stylesheets -->
+    <link rel="stylesheet" href="./css/buy-post-v2.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- Custom JavaScript -->
+    <script src="./js/buy-post.js"></script>
 
 </head>
 
@@ -32,224 +45,317 @@
 
     <header>
         <div class="topnav">
-            <img src= "./assets/swag-logo.png "  class = "logo" alt = "LOGO"/>  
-            <a href="./index.html" > HOME</a>
-            <a href= "about.html">ABOUT </a>     
-            <a href= "./shop.html" class="active">SHOP</a>     
-            <a href= "./post.html">POST </a>
-            <button type="button" class="btn btn-info" id="sign-in-modal" data-toggle="modal" data-target="#myModal">SIGN IN</button>
+            <img src="./assets/swag-logo.png " class="logo" alt="LOGO" />
+            <a href="./index.html"> HOME</a>
+            <a href="about.html">ABOUT </a>
+            <a href="./shop.html" class="active">SHOP</a>
+            <a href="./post.html">POST </a>
+            <button type="button" class="btn btn-info" id="sign-in-modal" data-toggle="modal"
+                data-target="#myModal">SIGN IN</button>
             <div class="modal fade" id="myModal" role="dialog">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h4 >Log In to Your Account</h4>
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>   
+                            <h4>Log In to Your Account</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
                         <div class="modal-body">
                             <input type="text" placeholder="Enter Username" name="usrname" required>
                             <input type="text" placeholder="Enter Password" name="psw" required>
-                            <button type = "button" class="log-in"> Log In</button>
+                            <button type="button" class="log-in"> Log In</button>
                         </div>
-                        <div class="modal-footer" id = "modal-footer">
+                        <div class="modal-footer" id="modal-footer">
                             <h6>Need an Account?</h6>
-                            <button type="button" class="btn btn-default" style= " color: #2196F3;" >Sign up</button>
+                            <button type="button" class="btn btn-default" style=" color: #2196F3;">Sign up</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <a href= "./cart.html" ><i class = "fa fa-shopping-cart  cart" ></i> </a> 
+            <a href="./cart.html"><i class="fa fa-shopping-cart  cart"></i> </a>
             <div class="search-container">
                 <form>
                     <div class="form-box">
-                        <input class="search-field" name= "search" type= "text" placeholder= "Search ..."/>
-                        <button type="submit"><i class="fa fa-search"></i></button>             
+                        <input class="search-field" name="search" type="text" placeholder="Search ..." />
+                        <button type="submit"><i class="fa fa-search"></i></button>
                     </div>
                 </form>
             </div>
-        </div>                    
-    </header>  
+        </div>
+    </header>
 
     <!-- Post -->
 
-    <main>    
+    <main>
         <br>
-        <div class="row">
-            <div class="column">
-                <div class="image">
-                    <div class="post-imgs">
-                        <img src="assets/post-1.jpg" style="height:30vw;">
-                    </div>
-                    <div class="post-imgs">
-                        <br>
-                        <img src="assets/post-1.jpg" class="post-img">
-                        <img src="assets/post-1.jpg" class="post-img">
-                        <img src="assets/post-1.jpg" class="post-img"> 
-                    </div>
-                </div>
-            </div>
-            <div class="column">
-                <div class="ui input">
-                    <br><br><br>
-                    <h3 class="text">Post Title [Location]</h3>
-                </div>
-                <hr>
-                <div id = "post-details">
-                     <h4>Rating</h4> 
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star"></i>
-                     <i class="fas fa-star"></i>                     
-                     <i class="far fa-star"></i>
-                     <br><br>
-                     <h3>USD $$</h3>
-                     <br>
-                     <h4>Availability: Available</h4>
-                     <h4>Condition: New</h4>
-                     <h4>Company: Infinite Options</h4>
-                     <br>
-                </div>
-                <div class="buy-buttons">
-                 <button class="ui button">BUY NOW</button>
-                 <button class="ui button" >ADD TO CART</button>
-                 <br><br>
-                 <label for="offer">Best Offer: $</label>
-                 <input type="number" name="offer">
-                 <button class="ui button" >SUBMIT</button>
-                </div>
-                <div class= "post-description">
-                    <hr>
-                    <h5 class="text">Post Description</h5>
-                    <p> LOREM IPSUM DOLOR SIT AMET CONSECTETUR ADIPISICING ELIT. ACCUSANTIUM QUIA ATQUE NEMO AD MODI OFFICIISIURE, AUTEM NULLA TENETUR REPELLENDUS.</p>
-                    <br>
-                </div>
-            </div>
-          </div> 
 
-          <!-- Carousel -->
-          <hr>
+        <!-- Breadcrumbs Nav -->
 
-          <div class="container-fluid carousel-container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div id="next" class="carousel slide" data-ride="carousel">
-        
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                 <div class="container">
-                                     <div class="row">
-        
-                                         <div class="col-sm-12 col-lg-4">
-                                             <div class="card" style="margin:auto;">
-                                                 <img src="./assets/post-1.jpg" class="card-img-top">
-                                                 <div class="card-body">
-                                                     <h4 class="card-title">Instagram Popsocket</h4>
-                                                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                                     <button type="button" class="btn btn-info">Read More</button>
-                                                 </div>
-                                             </div>
-                                         </div>
-                                         
-                                         <div class="col-sm-12 col-lg-4">
-                                             <div class="card">
-                                                 <img src="./assets/post-2.jpg" class="card-img-top">
-                                                 <div class="card-body">
-                                                     <h4 class="card-title">Amazon Rubik's Cube</h4>
-                                                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                                     <button type="button" class="btn btn-info">Read More</button>
-                                                 </div>
-                                             </div>
-                                         </div>
-                                         
-                                         <div class="col-sm-12 col-lg-4">
-                                             <div class="card">
-                                                 <img src="./assets/post-3.jpg" class="card-img-top">
-                                                 <div class="card-body">
-                                                     <h4 class="card-title">Instagram Stylus Pen</h4>
-                                                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                                     <button type="button" class="btn btn-info">Read More</button>
-                                                 </div>
-                                             </div>
-                                        </div>
-                                         
-                                     </div>
-                                 </div>						
-                            </div>
-                            
-                            <div class="carousel-item">
-                                 <div class="container">
-                                     <div class="row">
-        
-                                         <div class="col-sm-12 col-lg-4">
-                                             <div class="card" style="margin: auto;">
-                                                 <img src="./assets/post-3.jpg" class="card-img-top">
-                                                 <div class="card-body">
-                                                     <h4 class="card-title">Item 4</h4>
-                                                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                                     <button type="button" class="btn btn-info">Read More</button>
-                                                 </div>
-                                             </div>
-                                         </div>
-                                         
-                                         <div class="col-sm-12 col-lg-4">
-                                             <div class="card">
-                                                 <img src="./assets/post-2.jpg" class="card-img-top">
-                                                 <div class="card-body">
-                                                     <h4 class="card-title">Item 5</h4>
-                                                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                                     <button type="button" class="btn btn-info">Read More</button>
-                                                 </div>
-                                             </div>
-                                         </div>
-                                         
-                                         <div class="col-sm-12 col-lg-4">
-                                             <div class="card">
-                                                 <img src="./assets/post-1.jpg" class="card-img-top">
-                                                 <div class="card-body">
-                                                     <h4 class="card-title">Item 6</h4>
-                                                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                                     <button type="button" class="btn btn-info">Read More</button>
-                                                 </div>
-                                             </div>
-                                         </div>
-                                         
-                                     </div>
-                                 </div>
-                            </div>
+        <p class="breadcrumbs-nav" style="margin-left: 20px;" class=>
+            <a href="./index.html">HOME</a> >>
+            <a href="./index.html">Location</a> >>
+            <a href="./index.html">Company</a> >>
+            <a href="./index.html">Category</a> >>
+            <a href="./index.html">Item</a> >>
+            <a href="./index.html">Backpacks</a> >>
+            Swissgear
+        </p>
+
+        <br>
+        <div class="bg">
+            <div class="post-row">
+                <br>
+                <div class="column">
+                    <div class="image">
+                        <div class="post-imgs">
+                            <img src="assets/post-1.jpg" id="image" class="main-image" height="420" />
                         </div>
-                        <a href="#next" class="carousel-control-prev" data-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                        </a>
-                        <a href="#next" class="carousel-control-next" data-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                        </a>
-                        
+                        <div class="post-imgs">
+                            <br>
+
+                            <img class="post-img" src="assets/post-1.jpg" onmouseover="document.images['image'].src='assets/post-1.jpg';" onmouseout="document.images['image'].src='assets/post-1.jpg';"/></img>
+
+                            <img class="post-img" src="assets/post-2.jpg" onmouseover="document.images['image'].src='assets/post-2.jpg';" onmouseout="document.images['image'].src='assets/post-2.jpg';"/></img>
+
+                            <img class="post-img" src="assets/post-3.jpg" onmouseover="document.images['image'].src='assets/post-3.jpg';" onmouseout="document.images['image'].src='assets/post-3.jpg';"/></img>
+
+                        </div>
                     </div>
-                    
                 </div>
-                
+                <div class="column">
+                    <div class="ui input">
+                        <h6 class="text">ITEM NAME</h6>
+                        <h6 class="text" style="margin-top:-29px;margin-left:220px;">LOCATION</h6>
+                        <h6 style="float:right;margin-top:-29px;">COMPANY</h6>
+                        <hr style="margin-top:-5px;">
+                        <p style="margin-top:-12px">Backpack</p>
+                        <p style="margin-left:239px;margin-top:-36px">95087</p>
+                        <p style="margin-top:-10px">Swissgear 1758</p>
+                        <p style="float:right;margin-top:-64px;">Infinite Options</p>
+                    </div>
+                    <div class="post-description">
+                        <br>
+                        <h6 class="text">DESCRIPTION</h6>
+                        <hr style="margin-top:-5px;">
+                        <p style="margin-top:-12px;">Lorem ipsum dolor sit amet, at solum inciderint eum, eum posse
+                            argumentum ne. Sit intellegebat signiferumque cu, regione patrioque mei ea. Ea eam augue
+                            essent ornatus, ad salutandi scriptorem qui. Eu tempor accusata complectitur pri, usu vidit
+                            feugiat vivendo ea, mei iudicabit scribentur reformidans ea. Sit ad quem melius diceret.</p>
+                    </div>
+                    <div id="post-details">
+                        <br>
+                        <h6 style="margin-top:0;">PRICE</h6>
+                        <p style="float:right;margin-top:-29px;margin-right:120px;">Seller Rating</p>
+                        <hr style="margin-top:-5px;">
+                        <div class="seller-rating" style="margin-top:-47px;">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div class="price-usd">
+                            <p>USD $$</p>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="buy-buttons">
+                        <button class="ui button"
+                            style="float:right;margin-top:-60px;margin-right:180px;background-color:#4CAF50">BUY
+                            NOW</button>
+                        <button class="ui button" style="float:right;margin-top:-60px;background-color:#8FBC8F">ADD TO
+                            CART</button>
+                        <br><br>
+                        <div class="offer-section" style="margin-top:-60px">
+                            <label for="offer">BEST OFFER </label>
+                            <p style="display:inline; margin-left:83px;box-shadow:grey;">$</p>
+                            <input type="number" name="offer" size="5" style="margin-left:33px">
+                            <button class="ui button" style="float:right;background-color:#f44336">SUBMIT</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
         </div>
 
-   </main>
+
+        <!-- POST CAROUSEL 1 -->
+
+        <div class="carousels">
+
+            <div class="container-fluid carousel-container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div id="next" class="carousel slide" data-ride="carousel">
+
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="container">
+                                        <div class="row">
+
+                                            <div class="col-sm-12 col-lg-4">
+                                                <div class="card" style="margin:auto;">
+                                                    <img src="./assets/post-1.jpg" class="card-img-top">
+                                                    <div class="card-body">
+                                                        <!-- <h4 class="card-title">Instagram Popsocket</h4> -->
+                                                        <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur
+                                                            adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                                                            et
+                                                            dolore magna aliqua.</p> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-12 col-lg-4">
+                                                <div class="card">
+                                                    <img src="./assets/post-2.jpg" class="card-img-top">
+                                                    <div class="card-body">
+                                                        <!-- <h4 class="card-title">Amazon Rubik's Cube</h4> -->
+                                                        <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur
+                                                            adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                                                            et
+                                                            dolore magna aliqua.</p> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-12 col-lg-4">
+                                                <div class="card">
+                                                    <img src="./assets/post-3.jpg" class="card-img-top">
+                                                    <div class="card-body">
+                                                        <!-- <h4 class="card-title">Instagram Stylus Pen</h4> -->
+                                                        <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur
+                                                            adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                                                            et
+                                                            dolore magna aliqua.</p> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <div class="container">
+                                        <div class="row">
+
+                                            <div class="col-sm-12 col-lg-4">
+                                                <div class="card" style="margin: auto;">
+                                                    <img src="./assets/post-3.jpg" class="card-img-top">
+                                                    <div class="card-body">
+                                                        <!-- <h4 class="card-title">Item 4</h4> -->
+                                                        <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur
+                                                            adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                                                            et
+                                                            dolore magna aliqua.</p> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-12 col-lg-4">
+                                                <div class="card">
+                                                    <img src="./assets/post-2.jpg" class="card-img-top">
+                                                    <div class="card-body">
+                                                        <!-- <h4 class="card-title">Item 5</h4> -->
+                                                        <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur
+                                                            adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                                                            et
+                                                            dolore magna aliqua.</p> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-12 col-lg-4">
+                                                <div class="card">
+                                                    <img src="./assets/post-1.jpg" class="card-img-top">
+                                                    <div class="card-body">
+                                                        <!-- <h4 class="card-title">Item 6</h4> -->
+                                                        <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur
+                                                            adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                                                            et
+                                                            dolore magna aliqua.</p> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#next" class="carousel-control-prev" data-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </a>
+                            <a href="#next" class="carousel-control-next" data-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+    </main>
+
+    <br>
 
     <!-- Footer -->
 
     <footer class="footer">
         <hr style="margin-top:30px">
         <div class="container">
-            <div class="about-us">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quia atque nemo ad modi officiisiure, autem nulla tenetur repellendus.</p>
+            <div class="sell">
+                <h4>SELL</h4>
+                <p>SELL ON SWAG</p>
+                <p>TEAMS</p>
+                <p>FORUMS</p>
+                <p>AFFILIATES</p>
+            </div>
+            <div class="help">
+                <h4>HELP</h4>
+                <p>FAQs</p>
+                <p>GUIDELINES</p>
+                <p>SUPPORT</p>
+                <p>BLOG</p>
+            </div>
+            <div class="about">
+                <h4>ABOUT</h4>
+                <p>SWAG INC.</p>
+                <p>POLICIES</p>
+                <p>INVESTORS</p>
+                <p>CAREERS</p>
+                <p>PRESS</p>
+            </div>
+            <div class="contact">
+                <h4>CONTACT</h4>
+                <p>TERMS AND CONDITIONS</p>
+                <p>JOBS</p>
+                <p>PRIVACY POLICY</p>
+                <p>DO NOT SELL MY PERSONAL INFORMATION</p>
+            </div>
+            <div class="google-app-btn">
+                <img src="assets/google-play-badge.png">
+            </div>
+            <div class="apple-app-btn">
+                <img src="assets/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg">
             </div>
             <div class="newsletter">
-                <p>Stay updated with our newsletter</p>
                 <div class="form-element">
-                    <input type="text" placeholder="Email">
+                    <input type="text" size="100" placeholder="ENTER YOUR EMAIL">
                 </div>
+
             </div>
-            
+            <div class="subscribe-btn">
+                <button class="ui button">SUBSCRIBE</button>
+            </div>
+            <div class="copyright">
+                <p>COPYRIGHT © SWAG INC.</p>
+            </div>
+            <div class="rights-reserved">
+                <p>ALL RIGHTS RESERVED</p>
+            </div>
+            <div class=""></div>
+
             <div class="follow">
-                <p>Follow Us</p>
                 <div>
                     <!-- using FA icons -->
                     <i class="fab fa-facebook"></i>
@@ -261,6 +367,7 @@
         </div>
 
     </footer>
-    
+
 </body>
+
 </html>
