@@ -7,6 +7,7 @@ html {
 body {
     display: grid;
     font-family: "Lato", sans-serif;
+    background-color: #72bbd7;
 }
 
 /* Create two equal columns floating next to each other */
@@ -180,27 +181,52 @@ main .site-title .btn:hover {
 
 /* ----- Breadcrumbs Nav ----- */
 
-.breadcrumbs-nav a {
+main .breadcrumbs-nav a {
     color: #505050;
+    text-align:left !important
 }
 
 /* ---- Post Content (Images) ----- */
 
+main {
+    position: relative;
+}
+
+.bg {
+    background-color: #cccccc;
+    max-width: 95%;
+    display: inline-block;
+    border-radius: 25px;
+    padding-bottom: 50px;
+    transform: translate(2.5%, 0);
+}
+
+.rotate90 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
 /* thumbs */
 
-.post-imgs img {
-    float:right;
-    left: 50%;
-    margin-left:11px;
+.bg .image {
+    display: block;
 }
 
 .post-img {
-    margin: 10px; /*space btwn thumbs*/
+    display: block;
+    margin: 10px;
     grid-template-columns: repeat(auto-fill);
     padding: 7px; /*whitespace inside thumbs*/
-    border: 1px solid grey;
-    width: 5vw; /* size*/
-    height: 5vw;
+    /* border: 1px solid grey; */
+    width: 6vw; /* size*/
+    height: 6vw;
+    object-fit:cover;
+    background-color: #f2f2f2;
+    border-radius: 15px;
+    margin-left: -50px;
 }
 
 .post-img:hover {
@@ -208,13 +234,26 @@ main .site-title .btn:hover {
     border: 1px solid black;
 }
 
+
+
 .post-imgs .main-image {
-    height:420px;
-    width:420px;
+    float: right;
+    height:500px;
+    width:450px;
     object-fit: cover;
+    background-color: #f2f2f2;
+    padding: 30px;
+    border-radius: 15px;
+    margin-right: -50px;
+    margin-top: -325px;
 }
 
 /* ----- Post Content (Body) ----- */
+
+.column .location {
+    margin-top:-29px;
+    margin-left:220px;
+}
 
 .seller-rating {
     padding: 0px 0px 0px 0px;
@@ -245,26 +284,39 @@ input[type=number] {
 
 /* ----- Carousel ----- */
 
+.carouseldiv {
+    margin-left: 40px;
+    display: block;
+}
+
+.carousel-title {
+    max-width: 200px;
+    text-align: right;
+}
+
 .carousels {
-    margin-top: 50vw;
+    margin-top: 550px;
 }
 
 .carousels .card {
-    border-radius: 25px;
+    border-radius: 15px;
+    background-color: #f2f2f2;
 }
 
 .carousels .card img {
-    border-radius: 25px 25px 0 0;
+    padding: 15px;
 }
 
-.carousel-container {
-    margin-top: 100px;
-    margin-bottom: 100px;
+.carousel-inner {
+    margin-top: -60px;
+    margin-right: 10%;
+    margin-left: 200px;
+    width: 75%;
 }
 
 .card-img-top {
     width: 100%;
-    height: 33vw;
+    height: 300px;
     object-fit: cover;
 }
 
@@ -276,8 +328,15 @@ input[type=number] {
     filter: invert(100%);
 }
 
-.carousel-control {
-    width: 5%;
+.carousel-control-prev {
+    margin-left: 50px;
+}
+
+.carouseldiv .card-body {
+    text-align: center;
+    letter-spacing: 1.5em;
+    font-size: 25px;
+    padding: 2px;
 }
 
 /* ----- Footer ----- */
@@ -288,7 +347,6 @@ footer.footer h4 {
 
 footer.footer {
     height: 100%;
-    background: white;
     position: relative;
 }
 
