@@ -3,7 +3,11 @@
     css buttons - https://www.w3schools.com/css/css3_buttons.asp
     css rounded corners - https://www.w3schools.com/css/css3_borders.asp
     display image on hover - https://stackoverflow.com/questions/10769016/display-image-on-text-link-hover-css-only
-
+    carousel links sizing - https://stackoverflow.com/questions/46257264/how-do-you-change-the-size-of-bootstrap-carousel-control-links
+    image rotate - https://stackoverflow.com/questions/20061774/rotate-an-image-in-image-source-in-html
+    image color pick - https://imagecolorpicker.com
+    vertical carousel - https://stackoverflow.com/questions/32080077/how-to-create-a-vertical-carousel-using-plain-javascript-and-css
+    transparent button - https://stackoverflow.com/questions/22672368/how-to-make-a-transparent-html-button/22672444
 -->
 
 <!DOCTYPE html>
@@ -30,11 +34,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
+    <!-- Ionicons for Horizontal Carousels -->
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+
     <!-- Custom Stylesheets -->
     <link rel="stylesheet" href="./css/buy-post-v2.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-    <!-- Custom JavaScript -->
+    <!-- Custom JavaScript (vertical thumbnail carousel) -->
     <script src="./js/buy-post.js"></script>
 
 </head>
@@ -100,31 +107,50 @@
             Swissgear
         </p>
 
-        <br>
         <div class="bg">
             <div class="post-row">
                 <br>
                 <div class="column">
                     <div class="image">
-                        <div class="post-imgs">
-                            <img src="assets/post-1.jpg" id="image" class="main-image" height="420" />
+
+                         <div id="spinner">
+                             Loading...
+                         </div>
+
+                        <div class="thumb-buttons">
+                            <!-- <button id="prev">&and;</button> -->
+                            <button id="prev"><ion-icon name="chevron-up-outline" class="iconhover"></ion-icon></button>
                         </div>
-                        <div class="post-imgs">
-                            <br>
+                        
+                        <div class="post-imgs thumbnails" id="carousel">
 
-                            <img class="post-img" src="assets/post-1.jpg" onmouseover="document.images['image'].src='assets/post-1.jpg';" onmouseout="document.images['image'].src='assets/post-1.jpg';"/></img>
+                            <img class="post-img rotate90" src="assets/google-sunnies5.jpg" onmouseover="document.images['image'].src='assets/google-sunnies5.jpg';" onmouseout="document.images['image'].src='assets/google-sunnies5.jpg';"/></img>
 
-                            <img class="post-img" src="assets/post-2.jpg" onmouseover="document.images['image'].src='assets/post-2.jpg';" onmouseout="document.images['image'].src='assets/post-2.jpg';"/></img>
+                            <img class="post-img rotate90" src="assets/google-sunnies3.jpg" onmouseover="document.images['image'].src='assets/google-sunnies3.jpg';" onmouseout="document.images['image'].src='assets/google-sunnies3.jpg';"/></img>
 
-                            <img class="post-img" src="assets/post-3.jpg" onmouseover="document.images['image'].src='assets/post-3.jpg';" onmouseout="document.images['image'].src='assets/post-3.jpg';"/></img>
+                            <img class="post-img rotate90" src="assets/google-sunnies2.jpg" onmouseover="document.images['image'].src='assets/google-sunnies2.jpg';" onmouseout="document.images['image'].src='assets/google-sunnies2.jpg';"/></img>
+
+                            <img class="post-img rotate90" src="assets/google-sunnies4.jpg" onmouseover="document.images['image'].src='assets/google-sunnies4.jpg';" onmouseout="document.images['image'].src='assets/google-sunnies4.jpg';"/></img>
 
                         </div>
+
+                        <div class="thumb-buttons">
+                            <!-- <button id="next">&or;</button> -->
+                            <button id="next"><ion-icon name="chevron-down-outline" class="iconhover"></ion-icon></button>
+                        </div>
+
+                        <div class="post-imgs large-image">
+                            <img src="assets/google-sunnies5.jpg" id="image" class="main-image rotate90" height="420" />
+                        </div>
+
+                        
+
                     </div>
                 </div>
                 <div class="column">
                     <div class="ui input">
                         <h6 class="text">ITEM NAME</h6>
-                        <h6 class="text" style="margin-top:-29px;margin-left:220px;">LOCATION</h6>
+                        <h6 class="text location">LOCATION</h6>
                         <h6 style="float:right;margin-top:-29px;">COMPANY</h6>
                         <hr style="margin-top:-5px;">
                         <p style="margin-top:-12px">Backpack</p>
@@ -174,129 +200,413 @@
                     </div>
                 </div>
             </div>
+
+            <!-- POST CAROUSEL 1 -->
+        <div class="carouseldiv">
+            <div class="carousels">
+                <div class="carousel-title">
+                    <h6>POPULAR SWAG FROM FACEBOOK</h6>
+                </div>
+                <div class="container-fluid carousel-container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div id="next" class="carousel slide" data-ride="carousel">
+    
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="container">
+                                            <div class="row">
+    
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <div class="card" style="margin:auto;">
+                                                        <img src="./assets/post-1.jpg" class="card-img-top">
+                                                        <div class="card-body">
+                                                            <ion-icon class="custom-icon" name="share-social-outline"></ion-icon>
+                                                            <ion-icon name="bookmark-outline"></ion-icon>
+                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <div class="card">
+                                                        <img src="./assets/post-2.jpg" class="card-img-top">
+                                                        <div class="card-body">
+                                                            <ion-icon name="share-social-outline"></ion-icon>
+                                                            <ion-icon name="bookmark-outline"></ion-icon>
+                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <div class="card">
+                                                        <img src="./assets/post-3.jpg" class="card-img-top">
+                                                        <div class="card-body">
+                                                            <ion-icon name="share-social-outline"></ion-icon>
+                                                            <ion-icon name="bookmark-outline"></ion-icon>
+                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <div class="card" style="margin:auto;">
+                                                        <img src="./assets/post-1.jpg" class="card-img-top">
+                                                        <div class="card-body">
+                                                            <ion-icon name="share-social-outline"></ion-icon>
+                                                            <ion-icon name="bookmark-outline"></ion-icon>
+                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="carousel-item">
+                                        <div class="container">
+                                            <div class="row">
+    
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <div class="card" style="margin: auto;">
+                                                        <img src="./assets/post-3.jpg" class="card-img-top">
+                                                        <div class="card-body">
+                                                            <ion-icon name="share-social-outline"></ion-icon>
+                                                            <ion-icon name="bookmark-outline"></ion-icon>
+                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <div class="card">
+                                                        <img src="./assets/post-2.jpg" class="card-img-top">
+                                                        <div class="card-body">
+                                                            <ion-icon name="share-social-outline"></ion-icon>
+                                                            <ion-icon name="bookmark-outline"></ion-icon>
+                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <div class="card">
+                                                        <img src="./assets/post-1.jpg" class="card-img-top">
+                                                        <div class="card-body">
+                                                            <ion-icon name="share-social-outline"></ion-icon>
+                                                            <ion-icon name="bookmark-outline"></ion-icon>
+                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <div class="card" style="margin:auto;">
+                                                        <img src="./assets/post-3.jpg" class="card-img-top">
+                                                        <div class="card-body">
+                                                            <ion-icon name="share-social-outline"></ion-icon>
+                                                            <ion-icon name="bookmark-outline"></ion-icon>
+                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#next" class="carousel-control-prev" data-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </a>
+                                <a href="#next" class="carousel-control-next" data-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </a>
+    
+                            </div>
+    
+                        </div>
+    
+                    </div>
+                </div>
         </div>
 
 
-        <!-- POST CAROUSEL 1 -->
+        
 
-        <div class="carousels">
-
-            <div class="container-fluid carousel-container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div id="next" class="carousel slide" data-ride="carousel">
-
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <div class="container">
-                                        <div class="row">
-
-                                            <div class="col-sm-12 col-lg-4">
-                                                <div class="card" style="margin:auto;">
-                                                    <img src="./assets/post-1.jpg" class="card-img-top">
-                                                    <div class="card-body">
-                                                        <!-- <h4 class="card-title">Instagram Popsocket</h4> -->
-                                                        <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur
-                                                            adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                                                            et
-                                                            dolore magna aliqua.</p> -->
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-12 col-lg-4">
-                                                <div class="card">
-                                                    <img src="./assets/post-2.jpg" class="card-img-top">
-                                                    <div class="card-body">
-                                                        <!-- <h4 class="card-title">Amazon Rubik's Cube</h4> -->
-                                                        <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur
-                                                            adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                                                            et
-                                                            dolore magna aliqua.</p> -->
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-12 col-lg-4">
-                                                <div class="card">
-                                                    <img src="./assets/post-3.jpg" class="card-img-top">
-                                                    <div class="card-body">
-                                                        <!-- <h4 class="card-title">Instagram Stylus Pen</h4> -->
-                                                        <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur
-                                                            adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                                                            et
-                                                            dolore magna aliqua.</p> -->
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="carousel-item">
-                                    <div class="container">
-                                        <div class="row">
-
-                                            <div class="col-sm-12 col-lg-4">
-                                                <div class="card" style="margin: auto;">
-                                                    <img src="./assets/post-3.jpg" class="card-img-top">
-                                                    <div class="card-body">
-                                                        <!-- <h4 class="card-title">Item 4</h4> -->
-                                                        <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur
-                                                            adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                                                            et
-                                                            dolore magna aliqua.</p> -->
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-12 col-lg-4">
-                                                <div class="card">
-                                                    <img src="./assets/post-2.jpg" class="card-img-top">
-                                                    <div class="card-body">
-                                                        <!-- <h4 class="card-title">Item 5</h4> -->
-                                                        <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur
-                                                            adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                                                            et
-                                                            dolore magna aliqua.</p> -->
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-12 col-lg-4">
-                                                <div class="card">
-                                                    <img src="./assets/post-1.jpg" class="card-img-top">
-                                                    <div class="card-body">
-                                                        <!-- <h4 class="card-title">Item 6</h4> -->
-                                                        <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur
-                                                            adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                                                            et
-                                                            dolore magna aliqua.</p> -->
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#next" class="carousel-control-prev" data-slide="prev">
-                                <span class="carousel-control-prev-icon"></span>
-                            </a>
-                            <a href="#next" class="carousel-control-next" data-slide="next">
-                                <span class="carousel-control-next-icon"></span>
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
     </main>
 
-    <br>
+    <!----- Carousel 2 ----->
+
+    <div class="bg-2">
+        <div class="carouseldiv">
+            <div class="carousels-2">
+                <div class="carousel-title">
+                    <h6>RECENTLY VIEWED</h6>
+                </div>
+                <div class="container-fluid carousel-container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div id="next" class="carousel slide" data-ride="carousel">
+    
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="container">
+                                            <div class="row">
+    
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <div class="card" style="margin:auto;">
+                                                        <img src="./assets/post-1.jpg" class="card-img-top">
+                                                        <div class="card-body">
+                                                            <ion-icon class="custom-icon" name="share-social-outline"></ion-icon>
+                                                            <ion-icon name="bookmark-outline"></ion-icon>
+                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <div class="card">
+                                                        <img src="./assets/post-2.jpg" class="card-img-top">
+                                                        <div class="card-body">
+                                                            <ion-icon name="share-social-outline"></ion-icon>
+                                                            <ion-icon name="bookmark-outline"></ion-icon>
+                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <div class="card">
+                                                        <img src="./assets/post-3.jpg" class="card-img-top">
+                                                        <div class="card-body">
+                                                            <ion-icon name="share-social-outline"></ion-icon>
+                                                            <ion-icon name="bookmark-outline"></ion-icon>
+                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <div class="card" style="margin:auto;">
+                                                        <img src="./assets/post-1.jpg" class="card-img-top">
+                                                        <div class="card-body">
+                                                            <ion-icon name="share-social-outline"></ion-icon>
+                                                            <ion-icon name="bookmark-outline"></ion-icon>
+                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="carousel-item">
+                                        <div class="container">
+                                            <div class="row">
+    
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <div class="card" style="margin: auto;">
+                                                        <img src="./assets/post-3.jpg" class="card-img-top">
+                                                        <div class="card-body">
+                                                            <ion-icon name="share-social-outline"></ion-icon>
+                                                            <ion-icon name="bookmark-outline"></ion-icon>
+                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <div class="card">
+                                                        <img src="./assets/post-2.jpg" class="card-img-top">
+                                                        <div class="card-body">
+                                                            <ion-icon name="share-social-outline"></ion-icon>
+                                                            <ion-icon name="bookmark-outline"></ion-icon>
+                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <div class="card">
+                                                        <img src="./assets/post-1.jpg" class="card-img-top">
+                                                        <div class="card-body">
+                                                            <ion-icon name="share-social-outline"></ion-icon>
+                                                            <ion-icon name="bookmark-outline"></ion-icon>
+                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <div class="card" style="margin:auto;">
+                                                        <img src="./assets/post-3.jpg" class="card-img-top">
+                                                        <div class="card-body">
+                                                            <ion-icon name="share-social-outline"></ion-icon>
+                                                            <ion-icon name="bookmark-outline"></ion-icon>
+                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <a href="#next" class="carousel-control-prev" data-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </a>
+                                <a href="#next" class="carousel-control-next" data-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </a> -->
+    
+                            </div>
+    
+                        </div>
+    
+                    </div>
+                </div>
+                </div>
+        </div>
+    </div>
+
+    <!----- Carousel 3 ----->
+
+    <div class="bg-2">
+        <div class="carouseldiv">
+            <div class="carousels-2">
+                <div class="carousel-title-3">
+                    <h6>SUGGESTIONS</h6>
+                    <h6>FOR YOU</h6>
+                </div>
+                <div class="container-fluid carousel-container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div id="next" class="carousel slide" data-ride="carousel">
+    
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="container">
+                                            <div class="row">
+    
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <div class="card" style="margin:auto;">
+                                                        <img src="./assets/post-1.jpg" class="card-img-top">
+                                                        <!-- <div class="card-body">
+                                                            <ion-icon class="custom-icon" name="share-social-outline"></ion-icon>
+                                                            <ion-icon name="bookmark-outline"></ion-icon>
+                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                                                        </div> -->
+                                                    </div>
+                                                </div>
+    
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <div class="card">
+                                                        <img src="./assets/post-2.jpg" class="card-img-top">
+                                                        <!-- <div class="card-body">
+                                                            <ion-icon name="share-social-outline"></ion-icon>
+                                                            <ion-icon name="bookmark-outline"></ion-icon>
+                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                                                        </div> -->
+                                                    </div>
+                                                </div>
+    
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <div class="card">
+                                                        <img src="./assets/post-3.jpg" class="card-img-top">
+                                                        <!-- <div class="card-body">
+                                                            <ion-icon name="share-social-outline"></ion-icon>
+                                                            <ion-icon name="bookmark-outline"></ion-icon>
+                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                                                        </div> -->
+                                                    </div>
+                                                </div>
+    
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <div class="card" style="margin:auto;">
+                                                        <img src="./assets/post-1.jpg" class="card-img-top">
+                                                        <!-- <div class="card-body">
+                                                            <ion-icon name="share-social-outline"></ion-icon>
+                                                            <ion-icon name="bookmark-outline"></ion-icon>
+                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                                                        </div> -->
+                                                    </div>
+                                                </div>
+    
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="carousel-item">
+                                        <div class="container">
+                                            <div class="row">
+    
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <div class="card" style="margin: auto;">
+                                                        <img src="./assets/post-3.jpg" class="card-img-top">
+                                                        <!-- <div class="card-body">
+                                                            <ion-icon name="share-social-outline"></ion-icon>
+                                                            <ion-icon name="bookmark-outline"></ion-icon>
+                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                                                        </div> -->
+                                                    </div>
+                                                </div>
+    
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <div class="card">
+                                                        <img src="./assets/post-2.jpg" class="card-img-top">
+                                                        <!-- <div class="card-body">
+                                                            <ion-icon name="share-social-outline"></ion-icon>
+                                                            <ion-icon name="bookmark-outline"></ion-icon>
+                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                                                        </div> -->
+                                                    </div>
+                                                </div>
+    
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <div class="card">
+                                                        <img src="./assets/post-1.jpg" class="card-img-top">
+                                                        <!-- <div class="card-body">
+                                                            <ion-icon name="share-social-outline"></ion-icon>
+                                                            <ion-icon name="bookmark-outline"></ion-icon>
+                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                                                        </div> -->
+                                                    </div>
+                                                </div>
+    
+                                                <div class="col-sm-12 col-lg-3">
+                                                    <div class="card" style="margin:auto;">
+                                                        <img src="./assets/post-3.jpg" class="card-img-top">
+                                                        <!-- <div class="card-body">
+                                                            <ion-icon name="share-social-outline"></ion-icon>
+                                                            <ion-icon name="bookmark-outline"></ion-icon>
+                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                                                        </div> -->
+                                                    </div>
+                                                </div>
+    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <a href="#next" class="carousel-control-prev" data-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </a>
+                                <a href="#next" class="carousel-control-next" data-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </a> -->
+    
+                            </div>
+    
+                        </div>
+    
+                    </div>
+                </div>
+                </div>
+        </div>
+    </div>
 
     <!-- Footer -->
 

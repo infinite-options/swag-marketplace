@@ -209,7 +209,38 @@ main {
     transform: rotate(90deg);
 }
 
-/* thumbs */
+/* thumb carousel */
+.post-imgs {
+    font-family: sans-serif;
+  }
+
+  .thumb-buttons button {
+    color: black;
+    font-size: 14px;
+    display: inline;
+    font-size: 20px;
+    outline: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    overflow: hidden;
+    padding-left: 45px;
+  } 
+  .thumb-buttons button:hover {
+    cursor: pointer;
+  }
+
+  #carouselWrapper {
+    position: relative;
+    overflow: hidden;
+  }
+  #carousel {
+    position: absolute;
+    visibility: hidden;
+    padding-left: 50px;
+  }
+
+  /* thumb and main image styling */
 
 .bg .image {
     display: block;
@@ -219,8 +250,7 @@ main {
     display: block;
     margin: 10px;
     grid-template-columns: repeat(auto-fill);
-    padding: 7px; /*whitespace inside thumbs*/
-    /* border: 1px solid grey; */
+    padding: 5px; /*whitespace inside thumbs*/
     width: 6vw; /* size*/
     height: 6vw;
     object-fit:cover;
@@ -234,21 +264,24 @@ main {
     border: 1px solid black;
 }
 
-
-
 .post-imgs .main-image {
     float: right;
-    height:500px;
+    height:420px;
     width:450px;
     object-fit: cover;
     background-color: #f2f2f2;
     padding: 30px;
     border-radius: 15px;
-    margin-right: -50px;
-    margin-top: -325px;
+    margin-right: -100px;
+    margin-top: -450px;
 }
 
 /* ----- Post Content (Body) ----- */
+
+.column {
+    padding-right: 0px;
+    padding-left: 50px;
+}
 
 .column .location {
     margin-top:-29px;
@@ -298,12 +331,12 @@ input[type=number] {
     margin-top: 550px;
 }
 
-.carousels .card {
+.card {
     border-radius: 15px;
     background-color: #f2f2f2;
 }
 
-.carousels .card img {
+.card img {
     padding: 15px;
 }
 
@@ -337,6 +370,24 @@ input[type=number] {
     letter-spacing: 1.5em;
     font-size: 25px;
     padding: 2px;
+}
+
+/* carousels 2 and 3 */
+
+.bg-2 {
+    background-color: #cccccc;
+    max-width: 95%;
+    display: inline-block;
+    border-radius: 25px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    transform: translate(2.5%, 0);
+    margin-top: 30px;
+}
+
+.bg-2 .carousel-title-3 {
+    padding-right: 1135px;
+    text-align: right;
 }
 
 /* ----- Footer ----- */

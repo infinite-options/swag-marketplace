@@ -7,6 +7,7 @@ html {
 body {
     display: grid;
     font-family: "Lato", sans-serif;
+    background-color: #72bbd7;
 }
 
 /* Create two equal columns floating next to each other */
@@ -180,27 +181,82 @@ main .site-title .btn:hover {
 
 /* ----- Breadcrumbs Nav ----- */
 
-.breadcrumbs-nav a {
+main .breadcrumbs-nav a {
     color: #505050;
+    text-align:left !important
 }
 
 /* ---- Post Content (Images) ----- */
 
-/* thumbs */
+main {
+    position: relative;
+}
 
-.post-imgs img {
-    float:right;
-    left: 50%;
-    margin-left:11px;
+.bg {
+    background-color: #cccccc;
+    max-width: 95%;
+    display: inline-block;
+    border-radius: 25px;
+    padding-bottom: 50px;
+    transform: translate(2.5%, 0);
+}
+
+.rotate90 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+/* thumb carousel */
+.post-imgs {
+    font-family: sans-serif;
+  }
+
+  .thumb-buttons button {
+    color: black;
+    font-size: 14px;
+    display: inline;
+    font-size: 20px;
+    outline: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    overflow: hidden;
+    padding-left: 45px;
+  } 
+  .thumb-buttons button:hover {
+    cursor: pointer;
+  }
+
+  #carouselWrapper {
+    position: relative;
+    overflow: hidden;
+  }
+  #carousel {
+    position: absolute;
+    visibility: hidden;
+    padding-left: 50px;
+  }
+
+  /* thumb and main image styling */
+
+.bg .image {
+    display: block;
 }
 
 .post-img {
-    margin: 10px; /*space btwn thumbs*/
+    display: block;
+    margin: 10px;
     grid-template-columns: repeat(auto-fill);
-    padding: 7px; /*whitespace inside thumbs*/
-    border: 1px solid grey;
-    width: 5vw; /* size*/
-    height: 5vw;
+    padding: 5px; /*whitespace inside thumbs*/
+    width: 6vw; /* size*/
+    height: 6vw;
+    object-fit:cover;
+    background-color: #f2f2f2;
+    border-radius: 15px;
+    margin-left: -50px;
 }
 
 .post-img:hover {
@@ -209,12 +265,28 @@ main .site-title .btn:hover {
 }
 
 .post-imgs .main-image {
+    float: right;
     height:420px;
-    width:420px;
+    width:450px;
     object-fit: cover;
+    background-color: #f2f2f2;
+    padding: 30px;
+    border-radius: 15px;
+    margin-right: -100px;
+    margin-top: -450px;
 }
 
 /* ----- Post Content (Body) ----- */
+
+.column {
+    padding-right: 0px;
+    padding-left: 50px;
+}
+
+.column .location {
+    margin-top:-29px;
+    margin-left:220px;
+}
 
 .seller-rating {
     padding: 0px 0px 0px 0px;
@@ -245,26 +317,39 @@ input[type=number] {
 
 /* ----- Carousel ----- */
 
+.carouseldiv {
+    margin-left: 40px;
+    display: block;
+}
+
+.carousel-title {
+    max-width: 200px;
+    text-align: right;
+}
+
 .carousels {
-    margin-top: 50vw;
+    margin-top: 550px;
 }
 
-.carousels .card {
-    border-radius: 25px;
+.card {
+    border-radius: 15px;
+    background-color: #f2f2f2;
 }
 
-.carousels .card img {
-    border-radius: 25px 25px 0 0;
+.card img {
+    padding: 15px;
 }
 
-.carousel-container {
-    margin-top: 100px;
-    margin-bottom: 100px;
+.carousel-inner {
+    margin-top: -60px;
+    margin-right: 10%;
+    margin-left: 200px;
+    width: 75%;
 }
 
 .card-img-top {
     width: 100%;
-    height: 33vw;
+    height: 300px;
     object-fit: cover;
 }
 
@@ -276,8 +361,33 @@ input[type=number] {
     filter: invert(100%);
 }
 
-.carousel-control {
-    width: 5%;
+.carousel-control-prev {
+    margin-left: 50px;
+}
+
+.carouseldiv .card-body {
+    text-align: center;
+    letter-spacing: 1.5em;
+    font-size: 25px;
+    padding: 2px;
+}
+
+/* carousels 2 and 3 */
+
+.bg-2 {
+    background-color: #cccccc;
+    max-width: 95%;
+    display: inline-block;
+    border-radius: 25px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    transform: translate(2.5%, 0);
+    margin-top: 30px;
+}
+
+.bg-2 .carousel-title-3 {
+    padding-right: 1135px;
+    text-align: right;
 }
 
 /* ----- Footer ----- */
@@ -288,7 +398,6 @@ footer.footer h4 {
 
 footer.footer {
     height: 100%;
-    background: white;
     position: relative;
 }
 
