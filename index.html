@@ -22,7 +22,7 @@
     <title>Home</title>
 
     <!-- Custom Stylesheet -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="src/css/style.css">
 
     <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -32,18 +32,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/671c0e423a.js" crossorigin="anonymous"></script>
 
-    <!-- Carousel Tools -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script> -->
+    <!-- Bootstrap/Carousel/Sign In Tools -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
-    <!-- Company Circle Carousel (Slick) -->
-    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <!-- custom scripts/slick circle nav-->
+    <script type="text/javascript" src="./src/js/main.js"></script>
+
 
 </head>
 
 <body>
+    
     <div class="bg">
 
     <!-- HEADER -->
@@ -51,11 +52,11 @@
     <header>
 
         <div class="topnav">
-            <img src="./assets/swag-logo.png " class="logo" alt="LOGO" />
-            <a href="./index.html" class="active"> HOME</a>
-            <a href="about.html">ABOUT </a>
-            <a href="./shop.html">SHOP</a>
-            <a href="./post.html">POST </a>
+            <img src="./src/assets/swag-logo.png" class="logo" alt="LOGO" />
+            <a href="index.html" class="active">HOME</a>
+            <a href="./src/about.html">ABOUT</a>
+            <a href="./src/shop.html">SHOP</a>
+            <a href="./src/post.html">POST </a>
             <button type="button" class="btn btn-info" id="sign-in-modal" data-toggle="modal"
                 data-target="#myModal">SIGN IN</button>
 
@@ -79,7 +80,7 @@
                     </div>
                 </div>
             </div>
-            <a href="./cart.html"><i class="fa fa-shopping-cart  cart"></i> </a>
+            <a href="./src/cart.html"><i class="fa fa-shopping-cart  cart"></i> </a>
             <div class="search-container">
                 <form>
                     <div class="form-box">
@@ -133,6 +134,9 @@
 
             </div>
 
+            <i class="fas fa-chevron-left prev"></i>
+            <i class="fas fa-chevron-right next"></i>
+
             <!-- /CIRCLE COMPANY NAV -->
 
         </div>
@@ -177,10 +181,10 @@
                 <p>DO NOT SELL MY PERSONAL INFORMATION</p>
             </div>
             <div class="google-app-btn">
-                <img src="assets/google-play-badge.png">
+                <img src="./src/assets/google-play-badge.png">
             </div>
             <div class="apple-app-btn">
-                <img src="assets/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg">
+                <img src="./src/assets/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg">
             </div>
             <div class="newsletter">
                 <div class="form-element">
@@ -212,11 +216,6 @@
 
     </footer>
 
-
-    <!-- custom scripts/slick circle nav-->
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="/js/main.js"></script>
 
 </div>
 </body>
