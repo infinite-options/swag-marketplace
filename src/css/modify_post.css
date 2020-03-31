@@ -1,0 +1,401 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #72bbd7;
+}
+main {
+  min-height: 100%;
+  width: 100%;
+  display: block;
+  margin: auto;
+  padding-bottom: 200px;
+  overflow: auto;
+}
+/* ----------Top Navigation Bar ------------------- */
+.topnav {
+  width: 1680px;
+  height: 70px;
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  /* background-color: #e9e9e9; */
+  margin-top: 20px;
+  margin-bottom: 0px;
+  padding-top: 5px;
+}
+/* LOGO */
+.logo_container {
+  width: 170px;
+  height: 60px;
+  float: left;
+  background-color: white;
+  display: inline-block;
+  margin-right: 10px;
+}
+.logo_container:hover {
+  background-color: #ddd;
+  color: black;
+}
+.logo_container a {
+  width: 100%;
+  height: 100%;
+}
+.logo {
+  color: blue;
+  width: 80px;
+  height: 60px;
+  position: relative;
+  margin-top: -20px;
+  display: inline-block;
+}
+.sign_in_button {
+  width: 150px;
+  height: 60px;
+  margin-right: 10px;
+  float: left;
+  display: inline-block;
+  background-color: white;
+}
+/* NAV_BAR LINKS */
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 16px 18px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #2196f3;
+  color: white;
+}
+#sign-in-modal {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 16px 18px;
+  text-decoration: none;
+  font-size: 17px;
+  /* background-color: #e9e9e9; */
+  border: none;
+}
+#sign-in-modal:hover {
+  background-color: #ddd;
+  color: black;
+}
+#sign-in-modal:active {
+  background-color: #ddd;
+  color: black;
+  border: none;
+}
+
+/* SIGN IN MODAL */
+
+.modal-body {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+#modal-body button {
+  border: 10px;
+}
+.log-in {
+  margin-top: 15px;
+  background-color: #2196f3;
+}
+
+/* SEARCH BAR */
+.topnav .search_container {
+  width: 800px;
+  height: 60px;
+  float: left;
+  display: inline-block;
+  background-color: white;
+  margin-right: 10px;
+}
+.topnav .search_container input {
+  width: 650px;
+  height: 60px;
+  padding-left: 10px;
+  float: left;
+  font-size: 18px;
+  display: inline-block;
+  border: none;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box; /* Opera/IE 8+ */
+  font-weight: 400;
+  line-height: 1.6;
+  color: #495057;
+  background-clip: border-box;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.topnav .search_container input:hover {
+  background-color: #ddd;
+  color: black;
+}
+.topnav .search_container .search_select {
+  width: 150px;
+  height: 60px;
+  float: left;
+  font-size: 17px;
+  display: inline-block;
+  margin: auto;
+  background-color: white;
+}
+.topnav .search_container .search_select select {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border: none;
+  border-radius: 0px;
+}
+.topnav .search_container .search_select select:hover {
+  background-color: #ddd;
+  color: black;
+}
+.topnav .button {
+  width: 260px;
+  height: 60px;
+  display: inline-block;
+  font-size: 15px;
+}
+
+.topnav .button.search {
+  background-color: lightblue;
+  margin-right: 10px;
+}
+.topnav .button.search:hover {
+  background-color: lightskyblue;
+  color: black;
+}
+.topnav .button.cart {
+  float: right;
+  margin-right: 0px;
+  background-color: #0defd7;
+}
+.topnav .button.cart:hover {
+  background-color: #05ceba;
+  color: black;
+}
+.sell_bar {
+  border-radius: 10px;
+  display: block;
+  margin: auto;
+  height: 100%;
+  background-color: #e9e9e9;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+.container.sell {
+  height: 100%;
+  max-width: 1180px;
+  padding: 5px;
+}
+.container.uploadImage {
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  margin: auto;
+}
+.row.blank_image {
+  height: 100%;
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+#camera_icon {
+  text-align: center;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 250px 1180px 250px;
+  height: 100%;
+}
+.grid-container > div {
+  background-color: #72bbd7;
+}
+
+/* tabs full page */
+/* https://www.w3schools.com/howto/howto_js_full_page_tabs.asp */
+/* Style tab links */
+.tablink {
+  background-color: grey;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 50px;
+  color: black;
+  float: left;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+.tablink:hover {
+  background-color: #5f657a;
+}
+.tablink.sell {
+  width: 55%;
+}
+
+.tablink.other {
+  width: 15%;
+}
+
+.custom-file-label {
+  text-align: left;
+}
+.custom-file {
+  width: 57%;
+}
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  background-color: #c4c4c4;
+  color: black;
+  display: none;
+  padding: 10px;
+  height: 600px;
+  border-radius: 20px;
+}
+/* #Sell.tabcontent {
+  height: 60px;
+} */
+.container.sell .row {
+  background-color: #c4c4c4;
+}
+#chooseFile {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+/* .col-8 .container .row {
+  text-align: center;
+}
+.col-6 .container .row {
+  text-align: center;
+} */
+.checked {
+  color: orange;
+}
+
+.container .row img {
+  border-radius: 10px;
+  border: 2px solid white;
+  opacity: 50%;
+}
+
+#carouselImg {
+  display: none;
+}
+p {
+  margin-bottom: 5px;
+}
+
+.description {
+  width: 100%;
+  height: 145px;
+  border-radius: 10px;
+  border: 2px solid white;
+  margin-top: 10px;
+}
+.container .itemDetail {
+  display: inline-block;
+  margin: auto;
+  margin-top: 20px;
+}
+.container .itemDetail p {
+  display: inline-block;
+  width: 20%;
+  margin: 10px;
+}
+
+/* Footer */
+
+/* ----- Footer ----- */
+footer {
+  position: relative;
+  height: 200px;
+  margin-top: -200px;
+  clear: both;
+}
+footer.footer h4 {
+  color: #505050;
+}
+
+footer.footer {
+  height: 0px;
+  position: relative;
+}
+
+footer.footer .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+footer.footer .container > div {
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 3rem 0.9rem;
+}
+
+footer.footer .container p {
+  color: grey;
+}
+
+footer.footer .newsletter .form-element {
+  background: white;
+  display: inline-block;
+}
+
+footer.footer .newsletter .form-element input {
+  padding: 0.5rem 0.7rem;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 1rem;
+  width: 74%;
+}
+
+footer.footer .follow div i {
+  color: gray;
+  padding: 0 0.4rem;
+  float: right;
+}
+
+footer.footer .follow div i:hover {
+  color: black;
+}
+
+/* ----- Footer App Btns ----- */
+
+footer.footer .google-app-btn img {
+  width: 65%;
+  height: 65%;
+  margin-top: -10px;
+}
+
+footer.footer .subscribe-btn .button {
+  background: white;
+  box-shadow: none;
+  float: right;
+}
