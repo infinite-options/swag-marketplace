@@ -13,12 +13,13 @@
 
 .topnav {
     overflow: hidden;
-    background-color: #e9e9e9;
+    background-color: #9e015d;
 }
 /* LOGO */
 .logo{
     width: 60px;
     height: 40 px;
+    margin: 5px 0 0 5px;
 }
 .topnav img{
     float:left;
@@ -40,7 +41,7 @@
 }
 
 .topnav a.active {
-    background-color: #2196F3;
+    /* background-color: #2196F3; */
     color: white;
 }
 #sign-in-modal{
@@ -51,7 +52,7 @@
     padding: 16px 18px;
     text-decoration: none;
     font-size: 17px;
-    background-color: #e9e9e9;
+    background-color: #9e015d;
     border: none;
 }
 #sign-in-modal:hover {
@@ -127,6 +128,7 @@ float: right;
 .wrapper {
     text-align: center;
     white-space: nowrap; /*prevent circle nav wrap*/
+    margin: 0 24px 0 24px;
 }
 
 .wrapper .explore {
@@ -198,6 +200,57 @@ float: right;
     font-size: 12px;
     font-weight: bold;
     margin-top: 39px; /*center text vertically in circle*/
+}
+
+/* ----- FEATURED PRODUCTS SECTION ----- */
+
+.featured-bg {
+    background-color: #cccccc;
+    margin: 0 24px 0 24px;
+    border-radius: 25px;
+    padding-bottom: 10px;
+}
+
+.featured-title {
+    color: #4d4d4d;
+    letter-spacing: .05em;
+}
+
+.featured-title h5 {
+    padding: 20px 0 20px 0;
+    font-weight: bold;
+}
+
+.featured-bg .featured-item {
+    background-color: #f2f2f2;
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
+
+.featured-bg .featured-item img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
+
+.card {
+    border-radius: 25px;
+    background-color: #f2f2f2;
+}
+
+.card img {
+    padding: 15px;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-deck {
+    justify-content: center;
 }
 
 /* ----- Footer ----- */
