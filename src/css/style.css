@@ -15,10 +15,24 @@
     overflow: hidden;
     background-color: #9e015d;
 }
+
+.navigation-menu {
+    margin-left: 24px;
+    padding-top: 24px;
+}
+
+.navigation-menu .hamburger i {
+    font-size: 30px;
+    color: white;
+}
+
+/* ----- ORIGINAL NAV ----- */
+
 /* LOGO */
 .logo{
+    background-color: white;
     width: 60px;
-    height: 40 px;
+    height: 40px;
     margin: 5px 0 0 5px;
 }
 .topnav img{
@@ -152,7 +166,7 @@ float: right;
     text-align: center;
     width: 100%;
     max-height: 120px;
-    margin-bottom: 20px;
+    margin-bottom: 45px;
     /* padding-bottom: 20px; */
     overflow: hidden;
 }
@@ -202,13 +216,27 @@ float: right;
     margin-top: 39px; /*center text vertically in circle*/
 }
 
+/* featured banner */
+
+.ft-banner {
+    padding: none;
+    position: absolute;
+    z-index: 2;
+    margin-top: -15px;
+    margin-left: -24px;
+}
+
 /* ----- FEATURED PRODUCTS SECTION ----- */
+
+.featured-wrapper {
+    padding-bottom: 24px;
+}
 
 .featured-bg {
     background-color: #cccccc;
     margin: 0 24px 0 24px;
     border-radius: 25px;
-    padding-bottom: 10px;
+    padding-bottom: 24px;
 }
 
 .featured-title {
@@ -221,23 +249,30 @@ float: right;
     font-weight: bold;
 }
 
-.featured-bg .featured-item {
-    background-color: #f2f2f2;
-    width: 500px;
-    height: 500px;
-    object-fit: cover;
+/* featured large image */
+
+.featured-lg-img {
+    width: 460px;
+    margin-left: 46px;
+    position: relative;
+    z-index: 1;
 }
 
-.featured-bg .featured-item img {
-    width: 500px;
-    height: 500px;
-    object-fit: cover;
-}
-
-.card {
+.featured-lg-img .card {
+    height: 584px;
     border-radius: 25px;
     background-color: #f2f2f2;
 }
+
+.featured-bg .featured-lg-img .card-lg-img-top {
+    height: 456px;
+    object-fit: cover;
+}
+
+.featured-lg-img .card-body {
+
+}
+
 
 .card img {
     padding: 15px;
@@ -251,6 +286,32 @@ float: right;
 
 .card-deck {
     justify-content: center;
+}
+
+/* ----- RECENTLY VIEWED ----- */
+
+.recently-viewed-wrapper {
+   padding-bottom: 24px;
+}
+
+.recently-viewed-bg {
+    background-color: #cccccc;
+    margin: 0 24px 0 24px;
+    border-radius: 25px;
+    padding-bottom: 24px;
+}
+
+/* ----- SUGGESTED ----- */
+
+.suggested-wrapper {
+    margin-top: 24px;
+}
+
+.suggested-bg {
+    background-color: #cccccc;
+    margin: 0 24px 0 24px;
+    border-radius: 25px;
+    padding-bottom: 24px;
 }
 
 /* ----- Footer ----- */
