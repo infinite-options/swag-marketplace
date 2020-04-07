@@ -327,6 +327,10 @@ float: right;
     padding-bottom: 24px;
 }
 
+.recently-viewed-wrapper .card {
+    border-radius: 25px;
+}
+
 /* ----- SUGGESTED ----- */
 
 .suggested-wrapper {
