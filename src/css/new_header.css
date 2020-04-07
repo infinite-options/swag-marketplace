@@ -1,0 +1,417 @@
+html,
+body {
+  background-color: #9e015d;
+  overflow-x: hidden;
+}
+
+/* HEADER BEGIN */
+.header {
+  width: 100%;
+  height: 60px;
+  margin-right: 35px;
+  margin-left: 35px;
+  justify-content: center;
+  padding: 5px;
+  display: flex;
+}
+.header img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  float: left;
+}
+.header_icon {
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  margin: auto;
+}
+.header_icon img {
+  max-width: 100%;
+  max-height: 100%;
+  display: inline;
+}
+.header_icon a {
+  display: inline;
+  cursor: pointer;
+}
+.header_icon a:hover {
+  background-image: linear-gradient(to right, #37a79f, #c77314);
+}
+.header_button {
+  width: 160px;
+  height: 100%;
+  cursor: pointer;
+  background-color: white;
+  display: block;
+  margin-right: 10px;
+}
+
+.button {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.button.white {
+  margin-left: 10px;
+}
+.header_button .button.white:hover {
+  background-color: #dadada;
+}
+.button.orange {
+  background-color: orange;
+}
+.button.orange:focus {
+  outline: 0;
+  background-color: #ff6600;
+}
+
+.header_button .button.orange:hover {
+  background-color: #ff6600;
+  color: black;
+}
+.button.seagreen {
+  background-color: lightseagreen;
+}
+.button.seagreen:focus {
+  outline: 0;
+  background-color: #007ef3;
+}
+.header_button .button.seagreen:hover {
+  background-color: #007ef3;
+  color: black;
+}
+.header_search {
+  width: 800px;
+  height: 100%;
+  float: left;
+  display: block;
+  background-color: white;
+}
+
+.header_search input {
+  width: 650px;
+  height: 100%;
+  padding-left: 10px;
+  float: left;
+  font-size: 18px;
+  display: block;
+  border: none;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box; /* Opera/IE 8+ */
+  font-weight: 400;
+  line-height: 1.6;
+  color: #495057;
+  background-clip: border-box;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.header_search input:hover {
+  background-color: #dadada;
+}
+.header_search select {
+  width: 150px;
+  height: 100%;
+  float: left;
+  font-size: 18px;
+  display: block;
+  margin: auto;
+  background-color: white;
+  border: none;
+}
+.header_search select:hover {
+  background-color: #dadada;
+}
+
+/* Log in modal */
+.remember {
+  color: black;
+}
+.remember input {
+  width: 20px;
+  height: 20px;
+  margin-left: 15px;
+  margin-right: 5px;
+}
+
+.login_btn {
+  color: black;
+  background-color: #ffc312;
+  width: 100px;
+}
+
+.login_btn:hover {
+  color: black;
+  background-color: #fab700;
+}
+
+.links {
+  color: black;
+}
+
+.links a {
+  margin-left: 10px;
+}
+/* log in modal end */
+/* Sell tab starts */
+.sell_tab {
+  background-color: lightseagreen;
+  width: 75%;
+  max-height: 100%;
+  position: absolute;
+  right: 25px;
+  padding-bottom: 30px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: none;
+}
+.uploadImages {
+  display: none;
+  margin: 30px;
+  justify-content: center;
+}
+.uploadImages img {
+  float: none;
+  margin: auto;
+  opacity: 70%;
+  border-radius: 10px;
+}
+.uploadImages .custom-file {
+  width: 80%;
+  display: block;
+  margin: auto;
+}
+/* .imagesCarousel {
+  display: block;
+  margin-top: 30px;
+  margin-left: 15px;
+}
+.imagesCarousel img {
+  border-radius: 10px;
+}
+.smaller_carousel {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+}
+.smaller_carousel-item {
+  display: inline-block;
+  margin-left: 4px;
+  margin-right: 4px;
+  width: 30%;
+}
+.carousel_content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+} */
+/* carousel goes here */
+.carousel_thumbnail {
+  position: relative;
+  width: 400px;
+  height: 250px;
+  background-color: white;
+  border-radius: 10px;
+  margin-left: 30px;
+  margin-right: 10px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.mySlides {
+  display: none;
+}
+.mySlides img {
+  display: block;
+  margin: auto;
+}
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 66%;
+  width: 30px;
+  height: 30px;
+  padding: 3px;
+  margin-top: -50px;
+  color: white;
+  font-size: 15px;
+  transition: 0.6s ease;
+  border-radius: 15px;
+  user-select: none;
+  -webkit-user-select: none;
+  background-color: rgb(168, 168, 168);
+  text-align: center;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 10px;
+  border-radius: 15px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.thumbnail_img {
+  display: inline-block;
+  margin-left: 20px;
+  margin-right: 10px;
+  text-align: center;
+}
+.thumbnail_img img {
+  display: inline;
+  border-radius: 10px;
+  width: 26%;
+  margin-left: 10px;
+}
+.thumbnail {
+  opacity: 0.6;
+}
+
+.active,
+.container .thumbnail:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* carousel ends here */
+.itemDetail {
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+  margin-left: 35px;
+  margin-top: 20px;
+}
+.itemDetail .radio {
+  display: inline-block;
+  width: 60%;
+  background-color: white;
+  text-align: center;
+}
+.itemDetail select {
+  display: inline-block;
+  width: 60%;
+  height: 100%;
+  border: none;
+  background-color: white;
+  text-align: right;
+  outline: 1px inset #fff;
+  outline-offset: -1px;
+}
+.itemDetail > input {
+  display: inline-block;
+  text-align: left;
+  width: 60%;
+  height: 100%;
+}
+.itemDetail p {
+  display: inline-block;
+  text-align: left;
+  height: 100%;
+}
+.checkboxgroup {
+  display: inline-block;
+  width: 65%;
+}
+.checkboxgroup label {
+  display: block;
+}
+.checkboxgroup > .row {
+  margin-left: -5px;
+  margin-right: -5px;
+  text-align: center;
+}
+.checkboxgroup > .row .col-2 {
+  width: 25%;
+  display: block;
+}
+.itemInfo {
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 70px;
+}
+.itemInfo .row {
+  align-content: center;
+  /* justify-content: center; */
+  margin-top: 5px;
+}
+.itemInfo hr {
+  background-color: rgb(226, 223, 223);
+  height: 1px;
+  margin: 0px;
+}
+/* radio check button color */
+.radio_colorize input[type="radio"]:after {
+  width: 17px;
+  height: 17px;
+  border-radius: 15px;
+  left: -1px;
+  position: relative;
+  background-color: red;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 3px solid white;
+}
+
+.radio_colorize input[type="radio"]:checked:after {
+  width: 17px;
+  height: 17px;
+  border-radius: 15px;
+  left: -1px;
+  position: relative;
+  background-color: green;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 3px solid white;
+}
+/* radio check button end */
+.checked {
+  color: #1d81df;
+}
+.description {
+  width: 100%;
+  height: 100%;
+  background-color: lightseagreen;
+  color: blue;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 15px;
+}
+.post_button {
+  width: 150px;
+  height: 50px;
+  background-color: orange;
+  margin-top: 20px;
+}
+/* Sell tab end */
+/* HEADER END */

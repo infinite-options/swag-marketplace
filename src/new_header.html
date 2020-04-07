@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Bootstrap 4 -->
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <!--Fontawesome CDN-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    />
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- customize css -->
+    <link rel="stylesheet" href="css/new_header.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <div class="row">
+      <div class="header">
+        <div class="header_icon">
+          <a href="#"><img src="assets/menuIcon.png" style="float: left;"/></a>
+          <a href="#"
+            ><img
+              src="assets/chatIcon.png"
+              style="float: right; margin-left: 10px"
+          /></a>
+          <a href="#"
+            ><img
+              src="assets/bell-icons.png"
+              style="float: right; margin-right: 10px"
+          /></a>
+        </div>
+      </div>
+      <div class="header">
+        <div class="header_button" style="width: 150px;">
+          <div class="button white">
+            <a href="./index.html">
+              <img
+                src="assets/swag-logo.png"
+                style="margin-left: 40px; margin-right:50px;"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="header_button">
+          <button
+            class="button orange"
+            data-toggle="modal"
+            data-target="#signinModal"
+          >
+            SIGN IN
+          </button>
+          <div class="modal fade" id="signinModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title" style="color: blue;">SIGN IN</h4>
+                  <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                  </button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                  <form>
+                    <div class="input-group form-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"
+                          ><i class="fas fa-user"></i
+                        ></span>
+                      </div>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="username"
+                      />
+                    </div>
+                    <div class="input-group form-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"
+                          ><i class="fas fa-key"></i
+                        ></span>
+                      </div>
+                      <input
+                        type="password"
+                        class="form-control"
+                        placeholder="password"
+                      />
+                    </div>
+                    <div class="row align-items-center remember">
+                      <input type="checkbox" />Remember Me
+                    </div>
+                    <div class="form-group">
+                      <input
+                        type="submit"
+                        value="Login"
+                        class="btn float-right login_btn"
+                      />
+                    </div>
+                  </form>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <div class="d-flex links" style="float:left">
+                    Don't have an account?<a href="#">Sign Up</a>
+                  </div>
+                  <div class="d-flex">
+                    <a href="#">Forgot password?</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Search bar -->
+        <div class="header_search">
+          <input type="text" id="header_search" placeholder="Search..." />
+          <select>
+            <option value="All Categories">All Categories</option>
+            <option value="Backpack">Backpack</option>
+            <option value="Watch">Watch</option>
+            <option value="Pen">Pen</option>
+            <option value="T-shirt">T-Shirt</option>
+          </select>
+        </div>
+        <!-- Search bar end -->
+        <!-- Search and Cart button -->
+        <div class="header_button">
+          <button class="button seagreen">SEARCH</button>
+        </div>
+        <div class="header_button">
+          <button class="button orange">CART</button>
+        </div>
+        <div class="header_button">
+          <button class="button seagreen" id="h_sell">
+            SELL
+          </button>
+        </div>
+        <!-- Search and Cart button End-->
+      </div>
+    </div>
+    <!-- Sell tab start -->
+    <div class="sell_tab">
+      <!-- left column -->
+      <div class="row">
+        <div class="col-4">
+          <!-- uploadImages come first until images are loaded -->
+          <div class="uploadImages">
+            <img src="assets/camera_icon.png" />
+            <div class="custom-file">
+              <input
+                type="file"
+                class="custom-file-input"
+                id="sellImagesUpload"
+                aria-describedby="sellImagesUpload"
+              />
+              <label class="custom-file-label" for="sellImagesUpload"
+                >Choose file</label
+              >
+            </div>
+          </div>
+          <!-- carousel comes later when images have already been loaded -->
+          <div class="container">
+            <div class="row">
+              <div class="container carousel_thumbnail">
+                <div class="mySlides">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="assets/google-sunnies1.jpg" style="width:100%" />
+                </div>
+
+                <div class="mySlides">
+                  <div class="numbertext">2 / 3</div>
+                  <img src="assets/google-sunnies2.jpg" style="width:100%" />
+                </div>
+
+                <div class="mySlides">
+                  <div class="numbertext">3 / 3</div>
+                  <img src="assets/google-sunnies3.jpg" style="width:100%" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Thumbnail image controls -->
+            <div class="row">
+              <div class="thumbnail_img">
+                <img
+                  class="thumbnail"
+                  src="assets/google-sunnies1.jpg"
+                  onclick="currentSlide(1)"
+                />
+
+                <img
+                  class="thumbnail"
+                  src="assets/google-sunnies2.jpg"
+                  onclick="currentSlide(2)"
+                />
+
+                <img
+                  class="thumbnail"
+                  src="assets/google-sunnies3.jpg"
+                  onclick="currentSlide(3)"
+                />
+              </div>
+            </div>
+            <!-- Next/previous controls -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <!-- smaller carousel ends here -->
+          </div>
+          <!-- size, condition, color -->
+          <div class="itemDetail">
+            <select>
+              <option value="" disabled selected>S/M/L/Dimension</option>
+              <option value="s">S</option>
+              <option value="m">M</option>
+              <option value="l">L</option>
+            </select>
+            <p>Size</p>
+          </div>
+          <div class="container itemDetail">
+            <input type="text" placeholder="Color family" />
+            <p>Color</p>
+          </div>
+          <div class="itemDetail">
+            <div class="radio">
+              <p style="opacity: 0.5;">Used</p>
+              <div class="checkboxgroup">
+                <div class="row">
+                  <div class="col-2">
+                    <input type="radio" name="item_condition" id="condition1" />
+                    <label for="condition1">1</label>
+                  </div>
+                  <div class="col-2">
+                    <input type="radio" name="item_condition" id="condition2" />
+                    <label for="condition2">2</label>
+                  </div>
+                  <div class="col-2">
+                    <input type="radio" name="item_condition" id="condition3" />
+                    <label for="condition3">3</label>
+                  </div>
+                  <div class="col-2">
+                    <input type="radio" name="item_condition" id="condition4" />
+                    <label for="condition4">4</label>
+                  </div>
+                  <div class="col-2">
+                    <input type="radio" name="item_condition" id="condition5" />
+                    <label for="condition5">5</label>
+                  </div>
+                </div>
+              </div>
+              <p style="opacity: 0.5;">New</p>
+            </div>
+            <p>Condition</p>
+          </div>
+        </div>
+        <!-- right column -->
+        <div class="col-8 itemInfo">
+          <div class="row">
+            <div class="col-4" style="text-align: left;">
+              <label>ITEM CATERGORY</label>
+            </div>
+            <div class="col-4" style="text-align: left;">
+              <label>ITEM BRAND</label>
+            </div>
+            <div class="col-4" style="text-align: right;">
+              <label>COMPANY SWAG</label>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-4">
+              <input
+                type="text"
+                placeholder="Item's catergory"
+                id="itemName"
+                style="text-align: left;"
+              />
+            </div>
+            <div class="col-4" style="text-align: left;">
+              <input
+                type="text"
+                placeholder="Item's Brand"
+                id="itemBrand"
+                style="text-align: center;"
+              />
+            </div>
+            <div class="col-4" style="text-align: right;">
+              <input
+                type="text"
+                placeholder="Item's Company Swag"
+                id="itemCompany"
+                style="text-align: left;"
+              />
+            </div>
+          </div>
+          <div class="row" style="margin-top: 30px;">
+            <div class="col-12">
+              <p>PRICE</p>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-6">
+              <div class="container">
+                <div class="row">
+                  <input type="text" id="itemPrice" placeholder="USD $$" />
+                </div>
+                <div class="row" style="margin-top: 10px;">
+                  <p
+                    style="width: 25%; display: inline-block; margin-left: 0px;"
+                  >
+                    Negotiate
+                  </p>
+                  <span style="text-align: center;" class="radio_colorize">
+                    <p style="display: inline-block; margin-right: 3px;">
+                      Y
+                    </p>
+                    <input
+                      type="radio"
+                      id="negotiate_yes"
+                      name="yes_no"
+                      style="margin-right: 5px;"
+                      checked
+                    />
+                    <p
+                      style="display: inline-block; margin-right: 3px; margin-left: 20px"
+                    >
+                      N
+                    </p>
+                    <input
+                      type="radio"
+                      id="negotiate_no"
+                      name="yes_no"
+                      style="margin-right: 3px;"
+                    />
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="row">
+                <div class="container" style="text-align: right;">
+                  <input
+                    type="text"
+                    id="lowestOffer"
+                    placeholder="USD $$"
+                    style="text-align: left;"
+                  />
+                  <p style="margin-top: 10px;">
+                    Lowest Offer Entertained
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <p>DELIVERY</p>
+            </div>
+            <div class="col-6" style="text-align: right;">
+              <p>LOCATION</p>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-6">
+              <span style="text-align: center;">
+                <input
+                  type="radio"
+                  id="delivery_ship"
+                  name="delivery_method"
+                  style="margin-right: 5px;"
+                  checked
+                />Ship
+                <input
+                  type="radio"
+                  id="delivery_person"
+                  name="delivery_method"
+                  style="margin-left: 60px; margin-right: 5px;"
+                />In Person
+              </span>
+            </div>
+            <div class="col-6" style="text-align: right;">
+              <input
+                type="text"
+                id="itemZipcode"
+                placeholder="zip code"
+                style="text-align: left;"
+              />
+            </div>
+          </div>
+          <!-- Description row -->
+          <div class="row">
+            <div class="col-6" style="text-align: left;">
+              <p style="margin-top: 20px;">DESCRIPTION</p>
+            </div>
+            <div
+              class="col-6"
+              style="margin-top: 20px; text-align: right; margin-bottom: 0px;"
+            >
+              <label>Rating: </label>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="container">
+              <textarea
+                class="description"
+                placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec quam ipsum. Nam imperdiet nisl eget ante semper, eu pulvinar quam cursus. Aliquam posuere convallis consequat. Phasellus aliquet lectus at eleifend laoreet. Nulla lorem velit, sodales vel lacus non, consequat molestie ipsum. Praesent vestibulum at ligula nec aliquet. In posuere aliquam mi in viverra. Donec id dui et tellus varius porttitor quis vel mauris. Proin dignissim ac urna quis vehicula. Aenean fringilla nulla sit amet magna eleifend, ac gravida nunc suscipit. Maecenas finibus nulla sed velit viverra, non varius urna venenatis. Donec porttitor quis nibh nec vestibulum"
+              ></textarea>
+            </div>
+          </div>
+          <!-- Post button goes here -->
+          <button class="post_button">POST</button>
+          <!-- Post button end here -->
+        </div>
+      </div>
+    </div>
+    <!-- Sell tab end -->
+    <!-- HEADER END -->
+    <script src="js/new_header.js"></script>
+  </body>
+</html>
