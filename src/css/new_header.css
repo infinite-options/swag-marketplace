@@ -6,7 +6,7 @@ body {
 
 /* HEADER BEGIN */
 .header {
-  width: 1680px;
+  width: 100%;
   height: 60px;
   margin-right: 35px;
   margin-left: 35px;
@@ -54,7 +54,6 @@ body {
 }
 .button.white {
   margin-left: 10px;
-  background-color: white;
 }
 .header_button .button.white:hover {
   background-color: #dadada;
@@ -182,7 +181,7 @@ body {
   display: block;
   margin: auto;
 }
-.imagesCarousel {
+/* .imagesCarousel {
   display: block;
   margin-top: 30px;
   margin-left: 15px;
@@ -201,18 +200,125 @@ body {
   margin-right: 4px;
   width: 30%;
 }
+.carousel_content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+} */
+/* carousel goes here */
+.carousel_thumbnail {
+  position: relative;
+  width: 400px;
+  height: 250px;
+  background-color: white;
+  border-radius: 10px;
+  margin-left: 30px;
+  margin-right: 10px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.mySlides {
+  display: none;
+}
+.mySlides img {
+  display: block;
+  margin: auto;
+}
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 66%;
+  width: 30px;
+  height: 30px;
+  padding: 3px;
+  margin-top: -50px;
+  color: white;
+  font-size: 15px;
+  transition: 0.6s ease;
+  border-radius: 15px;
+  user-select: none;
+  -webkit-user-select: none;
+  background-color: rgb(168, 168, 168);
+  text-align: center;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 10px;
+  border-radius: 15px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.thumbnail_img {
+  display: inline-block;
+  margin-left: 20px;
+  margin-right: 10px;
+  text-align: center;
+}
+.thumbnail_img img {
+  display: inline;
+  border-radius: 10px;
+  width: 26%;
+  margin-left: 10px;
+}
+.thumbnail {
+  opacity: 0.6;
+}
+
+.active,
+.container .thumbnail:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* carousel ends here */
 .itemDetail {
   width: 100%;
   height: 40px;
-  display: block;
+  display: inline-block;
   margin: 0px;
   padding: 0px;
   margin-left: 35px;
   margin-top: 20px;
 }
+.itemDetail .radio {
+  display: inline-block;
+  width: 60%;
+  background-color: white;
+  text-align: center;
+}
 .itemDetail select {
   display: inline-block;
-  width: 50%;
+  width: 60%;
   height: 100%;
   border: none;
   background-color: white;
@@ -220,16 +326,32 @@ body {
   outline: 1px inset #fff;
   outline-offset: -1px;
 }
-.itemDetail input {
+.itemDetail > input {
   display: inline-block;
   text-align: left;
-  width: 50%;
+  width: 60%;
   height: 100%;
 }
 .itemDetail p {
   display: inline-block;
   text-align: left;
   height: 100%;
+}
+.checkboxgroup {
+  display: inline-block;
+  width: 65%;
+}
+.checkboxgroup label {
+  display: block;
+}
+.checkboxgroup > .row {
+  margin-left: -5px;
+  margin-right: -5px;
+  text-align: center;
+}
+.checkboxgroup > .row .col-2 {
+  width: 25%;
+  display: block;
 }
 .itemInfo {
   padding-top: 30px;
