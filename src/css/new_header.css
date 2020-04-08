@@ -117,7 +117,6 @@ body {
   background-color: #dadada;
 }
 .header_search select {
-  width: 150px;
   height: 100%;
   float: left;
   font-size: 18px;
