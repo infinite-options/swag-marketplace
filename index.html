@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="src/css/style.css">
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Bootstrap/Carousel/Sign In Tools -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    <!-- FONT AWESOME  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/671c0e423a.js" crossorigin="anonymous"></script>
+
+    <!-- ionicons for cards -->
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+
+</head>
+
+<body>
+
+    <div class="bg">
+
+        <!-- HEADER -->
+
+        <header>
+            <nav role="navigation">
+                <div id="menuToggle">
+
+                  <input type="checkbox" />
+                  
+
+                  <span id="span-hover"></span>
+                  <span id="span-hover"></span>
+                  <span></span>
+                  
+                  <ul id="hamburger-menu">
+                    <a href="#"><li>My Account</li></a>
+                    <a href="#"><li>About</li></a>
+                    <a href="#"><li>Contact</li></a>
+                    <a href="#"><li>Contact</li></a>
+                    <a href="#"><li>Contact</li></a>
+                  </ul>
+                </div>
+              </nav>
+
+              <br><br>
+
+            <div class="topnav">
+                <img src="./src/assets/swag-logo.png" class="logo" alt="LOGO" />
+                <a href="index.html" class="active">HOME</a>
+                <a href="./src/about.html">ABOUT</a>
+                <a href="./src/shop.html">SHOP</a>
+                <a href="./src/post.html">POST </a>
+                <button type="button" class="btn btn-info" id="sign-in-modal" data-toggle="modal"
+                    data-target="#myModal">SIGN IN</button>
+
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4>Log In to Your Account</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                            </div>
+                            <div class="modal-body">
+                                <input type="text" placeholder="Enter Username" name="usrname" required>
+                                <input type="text" placeholder="Enter Password" name="psw" required>
+                                <button type="button" class="log-in"> Log In</button>
+                            </div>
+                            <div class="modal-footer" id="modal-footer">
+                                <h6>Need an Account?</h6>
+                                <button type="button" class="btn btn-default" style=" color: #2196F3;">Sign up</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="./src/cart.html"><i class="fa fa-shopping-cart  cart"></i> </a>
+                <div class="search-container">
+                    <form>
+                        <div class="form-box">
+                            <input class="search-field" name="search" type="text" placeholder="Search ..." />
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+        </header>
+
+        <!-- /HEADER -->
+
+        <!-- MAIN SITE SECTION -->
+
+        <main>
+
+            <div class="wrapper">
+
+                <!-- Circle Company Nav -->
+
+                <h5 class="explore">EXPLORE YOUR FAVORITE BRANDS</h5>
+
+                <div class="container-fluid carousel-container">
+                    <div class="col-sm-12">
+                        <div id="next" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="container">
+                                        <div class="row">
+
+                                            <div class="circle-nav">
+
+                                                <div class="company-circle" id="fb">
+                                                    <p>FACEBOOK</p>
+                                                </div>
+
+                                                <div class="company-circle" id="uber">
+                                                    <p>UBER</p>
+                                                </div>
+
+                                                <div class="company-circle" id="google">
+                                                    <p>GOOGLE</p>
+                                                </div>
+
+                                                <div class="company-circle" id="salesforce">
+                                                    <p>SALESFORCE</p>
+                                                </div>
+
+                                                <div class="company-circle" id="ebay">
+                                                    <p>EBAY</p>
+                                                </div>
+
+                                                <div class="company-circle" id="netflix">
+                                                    <p>NETFLIX</p>
+                                                </div>
+
+                                                <div class="company-circle" id="tw">
+                                                    <p>TWITTER</p>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <div class="container">
+                                        <div class="row">
+
+                                            <div class="circle-nav">
+
+                                                <div class="company-circle" id="fb">
+                                                    <p>FACEBOOK</p>
+                                                </div>
+
+                                                <div class="company-circle" id="uber">
+                                                    <p>UBER</p>
+                                                </div>
+
+                                                <div class="company-circle" id="google">
+                                                    <p>GOOGLE</p>
+                                                </div>
+
+                                                <div class="company-circle" id="salesforce">
+                                                    <p>SALESFORCE</p>
+                                                </div>
+
+                                                <div class="company-circle" id="ebay">
+                                                    <p>EBAY</p>
+                                                </div>
+
+                                                <div class="company-circle" id="netflix">
+                                                    <p>NETFLIX</p>
+                                                </div>
+
+                                                <div class="company-circle" id="tw">
+                                                    <p>TWITTER</p>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <a href="#next" class="carousel-control-prev" data-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </a>
+                            <a href="#next" class="carousel-control-next" data-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </a>
+
+                        </div>
+                    </div>
+                    <!-- /CIRCLE COMPANY NAV -->
+
+                </div>
+                <!-- /CIRCLENAV WRAPPER -->
+
+                <div class="ft-banner">
+                    <img src="./src/assets/ft-banner.png" class="banner-png">
+                </div>
+
+                <!----- FEATURED PRODUCTS SECTION ----->
+                <div class="featured-wrapper">
+                    <div class="featured-bg">
+                        <div class="featured-title">
+                            <h5>FEATURED PRODUCTS</h5>
+                        </div>
+
+                        <div class="featured-imgs-row">
+
+                            <div class="featured-lg-img">
+                                <div class="card">
+                                    <img src="./src/assets/google-sunnies3.jpg" class="card-lg-img-top">
+                                    <hr>
+                                    <div class="card-body">
+                                        <div class="card-body-inner">
+                                            <i class="far fa-heart"></i>
+                                            <h5>$ XX.XX </h5>
+                                            <i class="fas fa-share-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /large img -->
+
+                            <div class="featured-sm-img">
+                                <div class="card">
+                                    <img src="./src/assets/post-2.jpg" class="card-sm-img-top">
+                                    <hr>
+                                    <div class="card-body">
+                                        <div class="card-body-inner">
+                                            <i class="far fa-heart"></i>
+                                            <h5>$ XX.XX </h5>
+                                            <i class="fas fa-share-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="featured-sm-img">
+                                <div class="card">
+                                    <img src="./src/assets/carousel2-2.png" class="card-sm-img-top">
+                                    <hr>
+                                    <div class="card-body">
+                                        <div class="card-body-inner">
+                                            <i class="far fa-heart"></i>
+                                            <h5>$ XX.XX </h5>
+                                            <i class="fas fa-share-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="featured-sm-img">
+                                <div class="card">
+                                    <img src="./src/assets/post-1.jpg" class="card-sm-img-top">
+                                    <hr>
+                                    <div class="card-body">
+                                        <div class="card-body-inner">
+                                            <i class="far fa-heart"></i>
+                                            <h5>$ XX.XX </h5>
+                                            <i class="fas fa-share-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="featured-sm-img">
+                                <div class="card">
+                                    <img src="./src/assets/fakebook-hat.jpg" class="card-sm-img-top">
+                                    <hr>
+                                    <div class="card-body">
+                                        <div class="card-body-inner">
+                                            <i class="far fa-heart"></i>
+                                            <h5>$ XX.XX </h5>
+                                            <i class="fas fa-share-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="featured-sm-img">
+                                <div class="card">
+                                    <img src="./src/assets/google-sunnies3.jpg" class="card-sm-img-top">
+                                    <hr>
+                                    <div class="card-body">
+                                        <div class="card-body-inner">
+                                            <i class="far fa-heart"></i>
+                                            <h5>$ XX.XX </h5>
+                                            <i class="fas fa-share-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="featured-sm-img">
+                                <div class="card">
+                                    <img src="./src/assets/post-3.jpg" class="card-sm-img-top">
+                                    <hr>
+                                    <div class="card-body">
+                                        <div class="card-body-inner">
+                                            <i class="far fa-heart"></i>
+                                            <h5>$ XX.XX </h5>
+                                            <i class="fas fa-share-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /small imgs -->
+
+                        </div>
+                        <!-- /ft imgs -->
+
+                    </div>
+                    <!-- /featured bg -->
+
+                </div>
+                
+                <!----- RECENTLY VIEWED SECTION ----->
+                <div class="recently-viewed-wrapper">
+                    <div class="recently-viewed-bg">
+                        <div class="featured-title">
+                            <h5>RECENTLY VIEWED</h5>
+                        </div>
+
+                        <!-- POST CAROUSEL 1 -->
+                        <div class="carouseldiv">
+                            <div class="carousels">
+                                <div class="container-fluid carousel-container">
+                                    <div class="row">
+                                        <!-- <div class="col-sm-12"> -->
+                                            <div class="recently-viewed-carousel">
+                                            <div id="next" class="carousel slide">
+
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <div class="container">
+                                                            <div class="row">
+
+                                                                <div class="recently-viewed-post">
+                                                                    <div class="card" style="margin:auto;">
+                                                                        <img src="./src/assets/post-1.jpg"
+                                                                            class="card-img-top">
+                                                                        <hr>
+                                                                        <div class="card-body">
+                                                                            <div class="card-body-inner">
+                                                                                <i class="far fa-heart"></i>
+                                                                                <h5>$ XX.XX </h5>
+                                                                                <i class="fas fa-share-alt"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                
+
+                                                                <div class="recently-viewed-post">
+                                                                    <div class="card" style="margin:auto;">
+                                                                        <img src="./src/assets/post-1.jpg"
+                                                                            class="card-img-top">
+                                                                        <hr>
+                                                                        <div class="card-body">
+                                                                            <div class="card-body-inner">
+                                                                                <i class="far fa-heart"></i>
+                                                                                <h5>$ XX.XX </h5>
+                                                                                <i class="fas fa-share-alt"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="recently-viewed-post">
+                                                                    <div class="card" style="margin:auto;">
+                                                                        <img src="./src/assets/post-1.jpg"
+                                                                            class="card-img-top">
+                                                                        <hr>
+                                                                        <div class="card-body">
+                                                                            <div class="card-body-inner">
+                                                                                <i class="far fa-heart"></i>
+                                                                                <h5>$ XX.XX </h5>
+                                                                                <i class="fas fa-share-alt"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="recently-viewed-post">
+                                                                    <div class="card" style="margin:auto;">
+                                                                        <img src="./src/assets/post-1.jpg"
+                                                                            class="card-img-top">
+                                                                        <hr>
+                                                                        <div class="card-body">
+                                                                            <div class="card-body-inner">
+                                                                                <i class="far fa-heart"></i>
+                                                                                <h5>$ XX.XX </h5>
+                                                                                <i class="fas fa-share-alt"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- <div class="recently-viewed-post">
+                                                                    <div class="card" style="margin:auto;">
+                                                                        <img src="./src/assets/post-1.jpg"
+                                                                            class="card-img-top">
+                                                                        <hr>
+                                                                        <div class="card-body">
+                                                                            <div class="card-body-inner">
+                                                                                <i class="far fa-heart"></i>
+                                                                                <h5>$ XX.XX </h5>
+                                                                                <i class="fas fa-share-alt"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div> -->
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="carousel-item">
+                                                        <div class="container">
+                                                            <div class="row">
+
+                                                                <div class="recently-viewed-post">
+                                                                    <div class="card" style="margin:auto;">
+                                                                        <img src="./src/assets/post-1.jpg"
+                                                                            class="card-img-top">
+                                                                        <hr>
+                                                                        <div class="card-body">
+                                                                            <div class="card-body-inner">
+                                                                                <i class="far fa-heart"></i>
+                                                                                <h5>$ XX.XX </h5>
+                                                                                <i class="fas fa-share-alt"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                
+
+                                                                <div class="recently-viewed-post">
+                                                                    <div class="card" style="margin:auto;">
+                                                                        <img src="./src/assets/post-1.jpg"
+                                                                            class="card-img-top">
+                                                                        <hr>
+                                                                        <div class="card-body">
+                                                                            <div class="card-body-inner">
+                                                                                <i class="far fa-heart"></i>
+                                                                                <h5>$ XX.XX </h5>
+                                                                                <i class="fas fa-share-alt"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="recently-viewed-post">
+                                                                    <div class="card" style="margin:auto;">
+                                                                        <img src="./src/assets/post-1.jpg"
+                                                                            class="card-img-top">
+                                                                        <hr>
+                                                                        <div class="card-body">
+                                                                            <div class="card-body-inner">
+                                                                                <i class="far fa-heart"></i>
+                                                                                <h5>$ XX.XX </h5>
+                                                                                <i class="fas fa-share-alt"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="recently-viewed-post">
+                                                                    <div class="card" style="margin:auto;">
+                                                                        <img src="./src/assets/post-1.jpg"
+                                                                            class="card-img-top">
+                                                                        <hr>
+                                                                        <div class="card-body">
+                                                                            <div class="card-body-inner">
+                                                                                <i class="far fa-heart"></i>
+                                                                                <h5>$ XX.XX </h5>
+                                                                                <i class="fas fa-share-alt"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- <div class="recently-viewed-post">
+                                                                    <div class="card" style="margin:auto;">
+                                                                        <img src="./src/assets/post-1.jpg"
+                                                                            class="card-img-top">
+                                                                        <hr>
+                                                                        <div class="card-body">
+                                                                            <div class="card-body-inner">
+                                                                                <i class="far fa-heart"></i>
+                                                                                <h5>$ XX.XX </h5>
+                                                                                <i class="fas fa-share-alt"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div> -->
+
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <!--/carousel item-->
+                                                </div>
+                                                <!--/carousel inner-->
+                                                <a href="#next" class="carousel-control-prev" data-slide="prev">
+                                                    <span class="carousel-control-prev-icon"></span>
+                                                </a>
+                                                <a href="#next" class="carousel-control-next" data-slide="next">
+                                                    <span class="carousel-control-next-icon"></span>
+                                                </a>
+
+                                            </div>
+                                            <!--/next-->
+
+                                        </div>
+                                        <!--/col-->
+
+                                    </div>
+                                    <!--/row-->
+
+                                </div>
+                                <!--/carousel container-->
+
+                            </div>
+                            <!--/carousels-->
+
+
+                        </div>
+                    </div>
+
+                    <!----- SUGGESTED FOR YOU SECTION ----->
+
+                    <div class="suggested-wrapper">
+                        <div class="suggested-bg">
+                            <div class="featured-title">
+                                <h5>SUGGESTED FOR YOU</h5>
+                            </div>
+
+
+                            <!-- POST CAROUSEL 2 -->
+                            <div class="carouseldiv">
+                                <div class="carousels">
+                                    <div class="container-fluid carousel-container">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div id="next2" class="carousel slide">
+
+                                                    <div class="carousel-inner">
+                                                        <div class="carousel-item active">
+                                                            <div class="container">
+                                                                <div class="row">
+
+                                                                    <div class="recently-viewed-post">
+                                                                    <div class="card" style="margin:auto;">
+                                                                        <img src="./src/assets/post-1.jpg"
+                                                                            class="card-img-top">
+                                                                        <hr>
+                                                                        <div class="card-body">
+                                                                            <div class="card-body-inner">
+                                                                                <i class="far fa-heart"></i>
+                                                                                <h5>$ XX.XX </h5>
+                                                                                <i class="fas fa-share-alt"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="recently-viewed-post">
+                                                                    <div class="card" style="margin:auto;">
+                                                                        <img src="./src/assets/post-1.jpg"
+                                                                            class="card-img-top">
+                                                                        <hr>
+                                                                        <div class="card-body">
+                                                                            <div class="card-body-inner">
+                                                                                <i class="far fa-heart"></i>
+                                                                                <h5>$ XX.XX </h5>
+                                                                                <i class="fas fa-share-alt"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="recently-viewed-post">
+                                                                    <div class="card" style="margin:auto;">
+                                                                        <img src="./src/assets/post-1.jpg"
+                                                                            class="card-img-top">
+                                                                        <hr>
+                                                                        <div class="card-body">
+                                                                            <div class="card-body-inner">
+                                                                                <i class="far fa-heart"></i>
+                                                                                <h5>$ XX.XX </h5>
+                                                                                <i class="fas fa-share-alt"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="recently-viewed-post">
+                                                                    <div class="card" style="margin:auto;">
+                                                                        <img src="./src/assets/post-1.jpg"
+                                                                            class="card-img-top">
+                                                                        <hr>
+                                                                        <div class="card-body">
+                                                                            <div class="card-body-inner">
+                                                                                <i class="far fa-heart"></i>
+                                                                                <h5>$ XX.XX </h5>
+                                                                                <i class="fas fa-share-alt"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- <div class="recently-viewed-post">
+                                                                    <div class="card" style="margin:auto;">
+                                                                        <img src="./src/assets/post-1.jpg"
+                                                                            class="card-img-top">
+                                                                        <hr>
+                                                                        <div class="card-body">
+                                                                            <div class="card-body-inner">
+                                                                                <i class="far fa-heart"></i>
+                                                                                <h5>$ XX.XX </h5>
+                                                                                <i class="fas fa-share-alt"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div> -->
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="carousel-item">
+                                                            <div class="container">
+                                                                <div class="row">
+
+                                                                    <div class="recently-viewed-post">
+                                                                        <div class="card" style="margin:auto;">
+                                                                            <img src="./src/assets/post-1.jpg"
+                                                                                class="card-img-top">
+                                                                            <hr>
+                                                                            <div class="card-body">
+                                                                                <div class="card-body-inner">
+                                                                                    <i class="far fa-heart"></i>
+                                                                                    <h5>$ XX.XX </h5>
+                                                                                    <i class="fas fa-share-alt"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="recently-viewed-post">
+                                                                        <div class="card" style="margin:auto;">
+                                                                            <img src="./src/assets/post-1.jpg"
+                                                                                class="card-img-top">
+                                                                            <hr>
+                                                                            <div class="card-body">
+                                                                                <div class="card-body-inner">
+                                                                                    <i class="far fa-heart"></i>
+                                                                                    <h5>$ XX.XX </h5>
+                                                                                    <i class="fas fa-share-alt"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="recently-viewed-post">
+                                                                        <div class="card" style="margin:auto;">
+                                                                            <img src="./src/assets/post-1.jpg"
+                                                                                class="card-img-top">
+                                                                            <hr>
+                                                                            <div class="card-body">
+                                                                                <div class="card-body-inner">
+                                                                                    <i class="far fa-heart"></i>
+                                                                                    <h5>$ XX.XX </h5>
+                                                                                    <i class="fas fa-share-alt"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="recently-viewed-post">
+                                                                        <div class="card" style="margin:auto;">
+                                                                            <img src="./src/assets/post-1.jpg"
+                                                                                class="card-img-top">
+                                                                            <hr>
+                                                                            <div class="card-body">
+                                                                                <div class="card-body-inner">
+                                                                                    <i class="far fa-heart"></i>
+                                                                                    <h5>$ XX.XX </h5>
+                                                                                    <i class="fas fa-share-alt"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <!-- <div class="recently-viewed-post">
+                                                                        <div class="card" style="margin:auto;">
+                                                                            <img src="./src/assets/post-1.jpg"
+                                                                                class="card-img-top">
+                                                                            <hr>
+                                                                            <div class="card-body">
+                                                                                <div class="card-body-inner">
+                                                                                    <i class="far fa-heart"></i>
+                                                                                    <h5>$ XX.XX </h5>
+                                                                                    <i class="fas fa-share-alt"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div> -->
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!--/carousel item -->
+
+                                                    </div>
+                                                    <!--/carousel inner-->
+
+                                                    <a href="#next2" class="carousel-control-prev" data-slide="prev">
+                                                        <span class="carousel-control-prev-icon"></span>
+                                                    </a>
+                                                    <a href="#next2" class="carousel-control-next" data-slide="next">
+                                                        <span class="carousel-control-next-icon"></span>
+                                                    </a>
+
+                                                </div>
+                                                <!--/next-->
+
+                                            </div>
+                                            <!--/col-->
+
+                                        </div>
+                                        <!--/row-->
+                                    </div>
+                                    <!--/carousel container-->
+                                </div>
+                                <!--/carousels-->
+
+                            </div>
+                            <!--/carouseldiv-->
+                        </div>
+                        <!--/suggested grey bg-->
+                    </div>
+                    <!--/suggested wrapper-->
+
+
+
+        </main>
+
+        <!----- Footer ----->
+
+        <!-- Footer -->
+
+        <footer class="footer">
+            <hr style="margin-top:30px">
+            <div class="container">
+                <div class="sell">
+                    <h4>SELL</h4>
+                    <p>SELL ON SWAG</p>
+                    <p>TEAMS</p>
+                    <p>FORUMS</p>
+                    <p>AFFILIATES</p>
+                </div>
+                <div class="help">
+                    <h4>HELP</h4>
+                    <p>FAQs</p>
+                    <p>GUIDELINES</p>
+                    <p>SUPPORT</p>
+                    <p>BLOG</p>
+                </div>
+                <div class="about">
+                    <h4>ABOUT</h4>
+                    <p>SWAG INC.</p>
+                    <p>POLICIES</p>
+                    <p>INVESTORS</p>
+                    <p>CAREERS</p>
+                    <p>PRESS</p>
+                </div>
+                <div class="contact">
+                    <h4>CONTACT</h4>
+                    <p>TERMS AND CONDITIONS</p>
+                    <p>JOBS</p>
+                    <p>PRIVACY POLICY</p>
+                    <p>DO NOT SELL MY PERSONAL INFORMATION</p>
+                </div>
+                <div class="google-app-btn">
+                    <img src="./src/assets/google-play-badge.png">
+                </div>
+                <div class="apple-app-btn">
+                    <img src="./src/assets/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg">
+                </div>
+                <div class="newsletter">
+                    <div class="form-element">
+                        <input type="text" size="100" placeholder="ENTER YOUR EMAIL">
+                    </div>
+
+                </div>
+                <div class="subscribe-btn">
+                    <button class="ui button">SUBSCRIBE</button>
+                </div>
+                <div class="copyright">
+                    <p>COPYRIGHT © SWAG INC.</p>
+                </div>
+                <div class="rights-reserved">
+                    <p>ALL RIGHTS RESERVED</p>
+                </div>
+                <div class=""></div>
+
+                <div class="follow">
+                    <div>
+                        <!-- using FA icons -->
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+
+
+    </div>
+</body>
+
+</html>
