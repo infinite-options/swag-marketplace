@@ -320,10 +320,11 @@ img.hover-shadow {
 .checkboxgroup > .row {
   margin-left: -5px;
   margin-right: -5px;
-  text-align: center;
+  justify-content: center;
 }
 .checkboxgroup > .row .col-2 {
-  width: 25%;
+  width: 20%;
+  padding: 0%;
   display: block;
 }
 .itemInfo {
