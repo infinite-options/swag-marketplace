@@ -4,12 +4,153 @@
 
 * {
     margin: 0;
+    padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .bg {
     background-color: #9e015d;
 }
+
+/* hamburger nav/my account */
+ 
+ #menuToggle
+ {
+   display: block;
+   /* position: relative; */
+   padding: 20px 0 0 20px;
+   top: 20px;
+   left: 20px;
+   
+   z-index: 1;
+   
+   -webkit-user-select: none;
+   user-select: none;
+ }
+ 
+ #menuToggle a
+ {
+   text-decoration: none;
+   color: #232323;
+   
+   transition: color 0.3s ease;
+ }
+ 
+ #menuToggle a:hover
+ {
+   color: #9e015d;
+ }
+ 
+ #menuToggle input
+ {
+   display: block;
+   width: 40px;
+   height: 32px;
+   position: absolute;
+   /* top: -7px;
+   left: -5px; */
+   
+   cursor: pointer;
+   
+   opacity: 0; /* hide this */
+   z-index: 2; /* and place it over the hamburger */
+   
+   -webkit-touch-callout: none;
+ }
+ 
+ /* burger icon */
+ #menuToggle span
+ {
+   display: block;
+   width: 33px;
+   height: 4px;
+   margin-bottom: 5px;
+   position: relative;
+   
+   background: white;
+   border-radius: 3px;
+   
+   z-index: 1;
+   
+   transform-origin: 4px 0px;
+   
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               opacity 0.55s ease;
+ }
+ 
+ #menuToggle span:first-child
+ {
+   transform-origin: 0% 0%;
+ }
+ 
+ #menuToggle span:nth-last-child(2)
+ {
+   transform-origin: 0% 100%;
+ }
+ 
+ #menuToggle input:checked ~ span
+ {
+   opacity: 1;
+   transform: rotate(45deg) translate(-2px, -1px);
+   background: #232323;
+ }
+ 
+ /*
+  * hide middle span
+  */
+ #menuToggle input:checked ~ span:nth-last-child(3)
+ {
+   opacity: 0;
+   transform: rotate(0deg) scale(0.2, 0.2);
+ }
+ 
+ /*
+  * Ohyeah and the last one should go the other direction
+  */
+ #menuToggle input:checked ~ span:nth-last-child(2)
+ {
+   transform: rotate(-45deg) translate(0, -1px);
+ }
+ 
+ /*
+  * Make this absolute positioned
+  * at the top left of the screen
+  */
+ #hamburger-menu
+ {
+   position: absolute;
+   width: 300px;
+   margin: -100px 0 0 -50px;
+   padding: 50px;
+   padding-top: 125px;
+   
+   background: #ededed;
+   list-style-type: none;
+   -webkit-font-smoothing: antialiased;
+   /* to stop flickering of text in safari */
+   
+   transform-origin: 0% 0%;
+   transform: translate(-100%, 0);
+   
+   transition: transform 0.4s cubic-bezier(0.77,0.2,0.05,1.0);
+ }
+ 
+ #hamburger-menu li
+ {
+   padding: 10px 0;
+   font-size: 18px;
+ }
+ 
+ /*
+  * And let's slide it in from the left
+  */
+ #menuToggle input:checked ~ ul
+ {
+   transform: none;
+ }
+
+ /* ----- /hamburger ----- */
 
 .topnav {
     overflow: hidden;
@@ -114,6 +255,7 @@
     background:gold;
     font-size: 17px;
     border: none; 
+    padding: 10px;
 }
 .topnav .search-container {
 float: right;
@@ -154,20 +296,11 @@ float: right;
 
 /* ----- COMPANY CIRCLE THUMBNAILS ----- */
 
-.next, .prev {
-    color: white;
-}
-
-.next:hover, .prev:hover {
-    color: black;
-}
-
 .circle-nav {
     text-align: center;
     width: 100%;
     max-height: 120px;
     margin-bottom: 45px;
-    /* padding-bottom: 20px; */
     overflow: hidden;
 }
 
@@ -272,13 +405,37 @@ float: right;
 }
 
 .featured-bg .featured-lg-img .card-lg-img-top {
-    height: 456px;
+    height: 520px;
     object-fit: cover;
 }
 
-/* .featured-lg-img .card-body {
-    
-} */
+.featured-lg-img .card-body {
+    width: 100%;
+    padding-top: 0px;
+    text-align: center;
+}
+
+.featured-lg-img hr {
+    padding: 0;
+    margin: 0;
+}
+
+.featured-lg-img .card-body-inner {
+    display: table;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.card-body h5, i {
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.card-body i {
+    margin-top: 3px;
+}
 
 /* ft small imgs */
 
@@ -300,6 +457,16 @@ float: right;
     object-fit: cover;
 }
 
+.featured-sm-img hr {
+    margin-top: 0px;
+    padding-top: 0;
+}
+
+.featured-sm-img .card-body {
+    padding-top: 0;
+    margin: 0 auto;
+}
+
 .card img {
     padding: 15px;
 }
@@ -318,6 +485,7 @@ float: right;
 
 .recently-viewed-wrapper {
    padding-bottom: 24px;
+   text-align: center;
 }
 
 .recently-viewed-bg {
@@ -327,8 +495,40 @@ float: right;
     padding-bottom: 24px;
 }
 
-.recently-viewed-wrapper .card {
+.recently-viewed-carousel {
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.recently-viewed-post {
+    width: 225px;
+    margin: 0 0 35px 24px;
+    position: relative;
+    
+    /* float: left; */
+}
+
+.recently-viewed-post .card {
     border-radius: 25px;
+    height: 275px;
+    background: #f2f2f2;
+}
+
+.recently-viewed-post .card-img-top {
+    height: 210px;
+    object-fit: cover;
+}
+
+.recently-viewed-post hr {
+    margin: 0;
+    padding: 0;
+}
+
+.recently-viewed-post .card-body {
+    margin: 10px auto;
+    padding: 8px;
 }
 
 /* ----- SUGGESTED ----- */
