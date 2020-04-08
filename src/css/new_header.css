@@ -7,7 +7,7 @@ body {
 /* HEADER BEGIN */
 .header {
   width: 100%;
-  height: 60px;
+  height: 44px;
   margin-right: 35px;
   margin-left: 35px;
   justify-content: center;
@@ -39,7 +39,16 @@ body {
   background-image: linear-gradient(to right, #37a79f, #c77314);
 }
 .header_button {
-  width: 160px;
+  width: 112px;
+  height: 100%;
+  cursor: pointer;
+  background-color: white;
+  display: block;
+  margin-right: 10px;
+}
+
+.header_button_cart {
+  width: 144px;
   height: 100%;
   cursor: pointer;
   background-color: white;
@@ -52,11 +61,12 @@ body {
   height: 100%;
   border: none;
 }
-.button.white {
+/* .button.white {
   margin-left: 10px;
-}
+} */
 .header_button .button.white:hover {
   background-color: #dadada;
+  
 }
 .button.orange {
   background-color: orange;
@@ -82,7 +92,7 @@ body {
   color: black;
 }
 .header_search {
-  width: 800px;
+  width: 672px;
   height: 100%;
   float: left;
   display: block;
@@ -164,6 +174,10 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   display: none;
+  
+  /*fixing layer positioning*/
+  z-index: 3;
+  position: absolute;
 }
 .uploadImages {
   display: none;

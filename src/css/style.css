@@ -12,17 +12,22 @@
     background-color: #9e015d;
 }
 
+/* header {
+    z-index: 5;
+    position: relative;
+} */
+
 /* hamburger nav/my account */
  
  #menuToggle
  {
    display: block;
    /* position: relative; */
-   padding: 20px 0 0 20px;
-   top: 20px;
-   left: 20px;
+   padding: 10px 0 0 5px;
+   top: 10px;
+   left: 10px;
    
-   z-index: 1;
+   z-index: 4;
    
    -webkit-user-select: none;
    user-select: none;
@@ -47,13 +52,11 @@
    width: 40px;
    height: 32px;
    position: absolute;
-   /* top: -7px;
-   left: -5px; */
    
    cursor: pointer;
    
    opacity: 0; /* hide this */
-   z-index: 2; /* and place it over the hamburger */
+   z-index: 5; /* and place it over the hamburger */
    
    -webkit-touch-callout: none;
  }
@@ -70,7 +73,7 @@
    background: white;
    border-radius: 3px;
    
-   z-index: 1;
+   z-index: 4;
    
    transform-origin: 4px 0px;
    
@@ -120,6 +123,7 @@
  #hamburger-menu
  {
    position: absolute;
+   z-index: 3;
    width: 300px;
    margin: -100px 0 0 -50px;
    padding: 50px;
