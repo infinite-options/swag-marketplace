@@ -323,6 +323,12 @@ img.hover-shadow {
   margin-right: -5px;
   justify-content: center;
 }
+.radio p {
+  font-size: 14px;
+  max-width: 100%;
+  text-align: center;
+  opacity: 0.5;
+}
 .checkboxgroup > .row .col-2 {
   width: 20%;
   padding: 0%;
