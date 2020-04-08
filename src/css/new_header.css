@@ -92,17 +92,17 @@ body {
   width: 80%;
   height: 100%;
   float: left;
-  display: block;
+  display: inline-flex;
   background-color: white;
 }
 
 .header_search input {
-  width: 85%;
+  width: 80%;
   height: 100%;
   padding-left: 10px;
   float: left;
   font-size: 18px;
-  display: block;
+  display: inline;
   border: none;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box; /* Firefox, other Gecko */
@@ -117,13 +117,16 @@ body {
   background-color: #dadada;
 }
 .header_search select {
+  max-width: 20%;
   height: 100%;
-  float: left;
-  font-size: 18px;
-  display: block;
+  float: right;
+  font-size: 15px;
+  display: inline;
   margin: auto;
   background-color: white;
+  background-clip: border-box;
   border: none;
+  opacity: 50%;
 }
 .header_search select:hover {
   background-color: #dadada;
@@ -162,13 +165,11 @@ body {
   background-color: lightseagreen;
   width: 75%;
   max-height: 100%;
-  position: absolute;
   right: 30px;
   padding-bottom: 30px;
   overflow-x: hidden;
   overflow-y: auto;
   display: none;
-
   z-index: 3;
   position: absolute;
 }
@@ -312,7 +313,7 @@ img.hover-shadow {
 }
 .checkboxgroup {
   display: inline-block;
-  width: 65%;
+  width: 60%;
 }
 .checkboxgroup label {
   display: block;
