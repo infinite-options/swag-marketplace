@@ -217,7 +217,6 @@ body {
 .next {
   cursor: pointer;
   position: absolute;
-  top: 66%;
   width: 30px;
   height: 30px;
   padding: 3px;
