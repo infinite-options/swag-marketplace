@@ -102,7 +102,7 @@ body {
   padding-left: 10px;
   float: left;
   font-size: 18px;
-  display: inline;
+  display: inline-flex;
   border: none;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box; /* Firefox, other Gecko */
@@ -121,7 +121,7 @@ body {
   height: 100%;
   float: right;
   font-size: 15px;
-  display: inline;
+  display: inline-flex;
   margin: auto;
   background-color: white;
   background-clip: border-box;
