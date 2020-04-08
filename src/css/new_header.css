@@ -4,7 +4,6 @@ body {
   overflow-x: hidden;
 }
 
-/* HEADER BEGIN */
 .header {
   width: 100%;
   height: 44px;
@@ -55,7 +54,6 @@ body {
   display: block;
   margin-right: 10px;
 }
-
 .button {
   width: 100%;
   height: 100%;
@@ -132,7 +130,6 @@ body {
   background-color: #dadada;
 }
 
-/* Log in modal */
 .remember {
   color: black;
 }
@@ -161,20 +158,18 @@ body {
 .links a {
   margin-left: 10px;
 }
-/* log in modal end */
-/* Sell tab starts */
+
 .sell_tab {
   background-color: lightseagreen;
   width: 75%;
   max-height: 100%;
   position: absolute;
-  right: 35px;
+  right: 30px;
   padding-bottom: 30px;
   overflow-x: hidden;
   overflow-y: auto;
   display: none;
 
-  /*fixing layer positioning*/
   z-index: 3;
   position: absolute;
 }
@@ -195,7 +190,6 @@ body {
   margin: auto;
 }
 
-/* carousel goes here */
 .enlarge_imgage {
   position: relative;
   width: 400px;
@@ -217,8 +211,6 @@ body {
 .cursor {
   cursor: pointer;
 }
-
-/* Next & previous buttons */
 .prev,
 .next {
   cursor: pointer;
@@ -238,19 +230,16 @@ body {
   text-align: center;
 }
 
-/* Position the "next button" to the right */
 .next {
   right: 10px;
   border-radius: 15px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
   font-size: 12px;
@@ -258,7 +247,6 @@ body {
   position: absolute;
   top: 0;
 }
-
 .thumbnail_img {
   display: inline-block;
   margin-left: 20px;
@@ -287,7 +275,6 @@ img.hover-shadow {
 .hover-shadow:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-/* carousel ends here */
 .itemDetail {
   width: 100%;
   height: 40px;
@@ -347,7 +334,6 @@ img.hover-shadow {
 }
 .itemInfo .row {
   align-content: center;
-  /* justify-content: center; */
   margin-top: 5px;
 }
 .itemInfo hr {
@@ -355,7 +341,6 @@ img.hover-shadow {
   height: 1px;
   margin: 0px;
 }
-/* radio check button color */
 .radio_colorize input[type="radio"]:after {
   width: 17px;
   height: 17px;
@@ -381,7 +366,7 @@ img.hover-shadow {
   visibility: visible;
   border: 3px solid white;
 }
-/* radio check button end */
+
 .checked {
   color: #1d81df;
 }
@@ -400,5 +385,3 @@ img.hover-shadow {
   background-color: orange;
   margin-top: 20px;
 }
-/* Sell tab end */
-/* HEADER END */
