@@ -192,14 +192,16 @@ body {
 
 .enlarge_imgage {
   position: relative;
-  width: 400px;
-  height: 250px;
+  max-width: 400px;
+  max-height: 250px;
+  justify-content: center;
   background-color: white;
   border-radius: 10px;
   margin-left: 30px;
   margin-right: 10px;
   margin-top: 30px;
   margin-bottom: 20px;
+  justify-content: center;
 }
 .mySlides {
   display: none;
