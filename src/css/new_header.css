@@ -11,14 +11,7 @@ body {
   margin-right: 35px;
   margin-left: 35px;
   justify-content: center;
-  padding: 5px;
   display: flex;
-}
-.header img {
-  max-width: 100%;
-  max-height: 100%;
-  display: block;
-  float: left;
 }
 .header_icon {
   width: 100%;
@@ -27,13 +20,20 @@ body {
   margin: auto;
 }
 .header_icon img {
-  max-width: 100%;
   max-height: 100%;
-  display: inline;
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
-.header_icon a {
+.header_icon a,
+.header_button a {
   display: inline;
   cursor: pointer;
+}
+.header_button img {
+  width: 100%;
+  height: 100%;
+  text-align: center;
 }
 .header_icon a:hover {
   background-image: linear-gradient(to right, #37a79f, #c77314);
@@ -61,12 +61,11 @@ body {
   height: 100%;
   border: none;
 }
-/* .button.white {
-  margin-left: 10px;
-} */
+.button.white {
+  width: 144px;
+}
 .header_button .button.white:hover {
   background-color: #dadada;
-  
 }
 .button.orange {
   background-color: orange;
@@ -92,7 +91,7 @@ body {
   color: black;
 }
 .header_search {
-  width: 672px;
+  width: 80%;
   height: 100%;
   float: left;
   display: block;
@@ -100,7 +99,7 @@ body {
 }
 
 .header_search input {
-  width: 650px;
+  width: 85%;
   height: 100%;
   padding-left: 10px;
   float: left;
@@ -169,12 +168,12 @@ body {
   width: 75%;
   max-height: 100%;
   position: absolute;
-  right: 25px;
+  right: 35px;
   padding-bottom: 30px;
   overflow-x: hidden;
   overflow-y: auto;
   display: none;
-  
+
   /*fixing layer positioning*/
   z-index: 3;
   position: absolute;
@@ -195,35 +194,9 @@ body {
   display: block;
   margin: auto;
 }
-/* .imagesCarousel {
-  display: block;
-  margin-top: 30px;
-  margin-left: 15px;
-}
-.imagesCarousel img {
-  border-radius: 10px;
-}
-.smaller_carousel {
-  display: block;
-  margin-top: 20px;
-  text-align: center;
-}
-.smaller_carousel-item {
-  display: inline-block;
-  margin-left: 4px;
-  margin-right: 4px;
-  width: 30%;
-}
-.carousel_content {
-  position: relative;
-  background-color: #fefefe;
-  margin: auto;
-  padding: 0;
-  width: 90%;
-  max-width: 1200px;
-} */
+
 /* carousel goes here */
-.carousel_thumbnail {
+.enlarge_imgage {
   position: relative;
   width: 400px;
   height: 250px;
@@ -293,9 +266,9 @@ body {
   text-align: center;
 }
 .thumbnail_img img {
-  display: inline;
+  display: inline-block;
   border-radius: 10px;
-  width: 26%;
+  max-width: 26%;
   margin-left: 10px;
 }
 .thumbnail {
