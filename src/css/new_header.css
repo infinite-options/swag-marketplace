@@ -204,10 +204,14 @@ body {
 }
 .mySlides {
   display: none;
+  max-height: 100%;
+  max-width: 100%;
+  margin: auto;
 }
 .mySlides img {
+  width: 100%;
+  max-height: 100%;
   display: block;
-  vertical-align: middle;
   margin: auto;
 }
 .cursor {
@@ -217,8 +221,8 @@ body {
 .next {
   cursor: pointer;
   position: absolute;
-  width: 30px;
-  height: 30px;
+  max-width: 30px;
+  max-height: 30px;
   padding: 3px;
   margin-top: -11%;
   color: white;
@@ -253,12 +257,14 @@ body {
   margin-left: 20px;
   margin-right: 10px;
   text-align: center;
+  max-width: 100%;
 }
 .thumbnail_img img {
   display: inline-block;
   border-radius: 10px;
-  max-width: 26%;
   margin-left: 10px;
+  max-width: 26%;
+  height: auto;
 }
 .thumbnail {
   opacity: 0.6;
