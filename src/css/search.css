@@ -1,11 +1,21 @@
+html,
+body {
+  background-color: #9e015d;
+  overflow-x: hidden;
+  height: 100%;
+}
+
 span .tab {
   padding-left: 4px;
 }
 .content {
+  min-height: 100%;
   display: block;
   justify-content: center;
   margin: auto;
   padding: 0px 60px 0px 60px;
+  overflow: auto;
+  clear: both;
 }
 .breadcrumb_container {
   max-width: 80%;

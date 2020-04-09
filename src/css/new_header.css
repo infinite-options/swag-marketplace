@@ -2,6 +2,7 @@ html,
 body {
   background-color: #9e015d;
   overflow-x: hidden;
+  height: 100%;
 }
 
 .header {
