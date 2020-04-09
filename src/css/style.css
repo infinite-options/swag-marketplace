@@ -14,7 +14,7 @@
 
 /* hamburger nav/my account */
  
- #menuToggle
+ /* #menuToggle
  {
    display: block;
    padding: 10px 0 0 5px;
@@ -131,7 +131,7 @@
  #menuToggle input:checked ~ ul
  {
    transform: none;
- }
+ } */
  /* ----- /hamburger ----- */
 
 .topnav {
@@ -265,7 +265,7 @@ float: right;
 
 .wrapper {
     text-align: center;
-    white-space: nowrap; /*prevent circle nav wrap*/
+    /* white-space: nowrap; */
     margin: 0 24px 0 24px;
 }
 
@@ -486,10 +486,9 @@ float: right;
 
 .recently-viewed-post {
     width: 225px;
-    margin: 0 0 35px 24px;
+    padding: 0 12px 0 12px;
     position: relative;
-    
-    /* float: left; */
+    z-index: 3;
 }
 
 .recently-viewed-post .card {
@@ -513,6 +512,16 @@ float: right;
     padding: 8px;
 }
 
+.recently-viewed-wrapper .carousel-control-prev {
+    position: absolute;
+    padding-right: 80px;
+}
+
+.recently-viewed-wrapper .carousel-control-next {
+    position: absolute;
+    padding-left: 80px;
+}
+
 /* ----- SUGGESTED ----- */
 
 .suggested-wrapper {
@@ -524,6 +533,16 @@ float: right;
     margin: 0 24px 0 24px;
     border-radius: 25px;
     padding-bottom: 24px;
+}
+
+.suggested-wrapper .carousel-control-prev {
+    position: absolute;
+    padding-right: 100px;
+}
+
+.suggested-wrapper .carousel-control-next {
+    position: absolute;
+    padding-left: 100px;
 }
 
 /* ----- Footer ----- */
