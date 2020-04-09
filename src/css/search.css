@@ -2,10 +2,10 @@ span .tab {
   padding-left: 4px;
 }
 .content {
-  width: 1580px;
   display: block;
   justify-content: center;
   margin: auto;
+  padding: 0px 60px 0px 60px;
 }
 .breadcrumb_container {
   max-width: 80%;

@@ -1,4 +1,4 @@
 $(() => {
   // LOAD HEADER
-  $("#header").load("src/new_header.html");
+  $("#header").load("/swag-marketplace/src/new_header.html");
 });
