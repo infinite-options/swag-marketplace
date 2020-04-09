@@ -15,26 +15,22 @@ ul.bcrumb {
   list-style: none;
 }
 
-/* Display list items side by side */
 ul.bcrumb li {
   display: inline;
   font-size: 15px;
 }
 
-/* Add a slash symbol (/) before/behind each list item */
 ul.bcrumb li + li:before {
   padding: 8px;
   color: white;
   content: ">>";
 }
 
-/* Add a color to all links inside the list */
 ul.bcrumb li a {
   color: white;
   text-decoration: none;
 }
 
-/* Add a color on mouse-over */
 ul.bcrumb li a:hover {
   color: #01447e;
   text-decoration: underline;
