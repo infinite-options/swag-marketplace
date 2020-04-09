@@ -1,14 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
     <title>Sign Up</title>
 
-    <!-- custom stylesheet -->
-    <link rel="stylesheet" href="css/signup.css">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="./css/signup.css">
+
 </head>
+
 <body>
-    
+    <div class="reg-container">
+        <div class="wrapper">
+        <h1>Sign Up</h1>
+        <form>
+            <input required type="text" name="username" placeholder="Username">
+            <br>
+            <input required type="email" name="email" placeholder="Email">
+            <br>
+            <input required type="password" name="password" placeholder="Password">
+            <br>
+            <input required type="password" name="confirm-pass" placeholder="Confirm Password">
+            <br>
+            <div class="checkbox">
+                <input required type="checkbox" name="tos">
+                <label for="tos">I accept the <a href="">Terms of Service and Privacy Rules</a>.</label>
+            </div>
+            <br>
+            <div class="button-wrapper">
+                <button>SUBMIT</button>
+            </div>
+        </form>
+</div>
+</div>
 </body>
+
 </html>
