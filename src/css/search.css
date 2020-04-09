@@ -63,35 +63,61 @@ ul.bcrumb li a:hover {
 .item {
   padding: 20px;
   display: flex;
+  width: 100%;
+}
+.itemsContainer .col-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.itemsContainer .itemImage {
+  display: flex;
+  width: 85%;
+  height: 85%;
+  background-color: white;
+  border-radius: 10px;
+  vertical-align: middle;
+  text-align: center;
+}
+.itemImage img {
+  display: block;
+  border: 1px dashed #058dfd;
+  margin: auto;
+  max-width: 85%;
+  max-height: 85%;
+  align-items: center;
+  border-radius: 10px;
 }
 .item .col-10 {
   display: flex;
-  margin-left: 30px;
-  padding-top: 30px;
-  max-width: 80%;
-  background-color: white;
+  justify-content: center;
+  align-items: center;
+  max-width: 90%;
+}
+.item .col-10 .itemInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  width: 100%;
   border-radius: 10px;
+  background-color: white;
 }
-.item .col-4 {
-  padding-top: 40px;
-  padding-bottom: 20px;
-}
+
 .item .col-4.rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 10px;
+  width: 150px;
+  height: 150px;
   border-left: 1px solid grey;
 }
 .item .col-4.rating img {
-  display: block;
+  display: flex;
   margin: auto;
   max-width: 100%;
-}
-.itemsContainer .col-2 {
-  background-color: white;
-  border-radius: 10px;
-}
-.itemsContainer .col-2 img {
-  width: 100%;
-  display: block;
-  margin: 20px auto 20px auto;
-  border: thin dashed blue;
+  max-height: 100%;
+  justify-content: center;
+  align-items: center;
 }
