@@ -2,13 +2,21 @@ $(() => {
   $(document).click(e => {
     var sell_tab = $(".sell_tab");
     if (sell_tab.is(":hidden") && e.target.id == "h_sell") {
-      sell_tab.show("slow");
+      sell_tab.show("800");
       currentSlide(slideIndex);
+      $("#h_sell").css("background-color", "blue");
     } else if (
       sell_tab.is(":visible") &&
       !$(e.target).closest(".sell_tab").length
     ) {
-      sell_tab.hide("slow");
+      sell_tab.hide("800");
+    } else if (sell_tab.is(":visible")) {
+      var itemCategory = $("#itemCategory");
+      if (itemCategory.val() === "backpack") {
+        $("#itemDemension").css("display", "block");
+      } else {
+        $("#itemDemension").css("display", "none");
+      }
     } else if (e.target.id == "searchHeaderButton") {
       window.location.href = "/swag-marketplace/src/search.html";
     }
