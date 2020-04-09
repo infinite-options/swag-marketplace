@@ -1,0 +1,60 @@
+html,
+body {
+  background-color: #9e015d;
+}
+.page_footer {
+  display: block;
+  position: relative;
+  width: 100%;
+  background-color: #9e015d;
+}
+.page_footer .row .col-3 {
+  text-align: left;
+  padding-left: 7%;
+  padding-right: 7%;
+  color: gray;
+}
+.page_footer .row .col-6.verticalCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page_footer .row .col-6 img {
+  display: block;
+  margin: auto;
+  width: 100%;
+}
+.page_footer .row .col-6 p {
+  display: block;
+  text-align: center;
+}
+.page_footer .footerSubscribe {
+  width: 80%;
+  background-color: white;
+  border-radius: 20px;
+  height: 30%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.page_footer .footerSubscribe input {
+  width: 70%;
+  border: none;
+  margin-left: 10px;
+  display: block;
+}
+
+.page_footer .footerSubscribe button {
+  display: block;
+  width: 25%;
+  height: 80%;
+  margin-left: 15px;
+  background-color: grey;
+  border-radius: 20px;
+}
+.page_footer .row.icon {
+  width: 80%;
+  display: inline-block;
+  margin-left: 10%;
+  text-align: right;
+}
