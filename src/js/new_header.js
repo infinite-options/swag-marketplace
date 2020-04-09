@@ -10,7 +10,7 @@ $(() => {
     ) {
       sell_tab.hide("slow");
     } else if (e.target.id == "searchHeaderButton") {
-      window.location.href = "/src/search.html";
+      window.location.href = "/swag-marketplace/src/search.html";
     }
   });
 });
