@@ -1,0 +1,91 @@
+span .tab {
+  padding-left: 4px;
+}
+.content {
+  width: 1580px;
+  display: block;
+  justify-content: center;
+  margin: auto;
+}
+.breadcrumb_container {
+  max-width: 80%;
+}
+ul.bcrumb {
+  padding: 10px 16px;
+  list-style: none;
+}
+
+/* Display list items side by side */
+ul.bcrumb li {
+  display: inline;
+  font-size: 15px;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.bcrumb li + li:before {
+  padding: 8px;
+  color: white;
+  content: ">>";
+}
+
+/* Add a color to all links inside the list */
+ul.bcrumb li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.bcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+
+.searchingItem {
+  font-size: 22px;
+  display: block;
+  margin: auto;
+  color: white;
+  text-align: center;
+}
+
+.itemsContainer {
+  width: 100%;
+  max-height: 80%;
+  border-radius: 10px;
+  background-color: #d4d4d4;
+}
+.item {
+  padding: 20px;
+  display: flex;
+}
+.item .col-10 {
+  display: flex;
+  margin-left: 30px;
+  padding-top: 30px;
+  max-width: 80%;
+  background-color: white;
+  border-radius: 10px;
+}
+.item .col-4 {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+.item .col-4.rating {
+  padding: 10px;
+  border-left: 1px solid grey;
+}
+.item .col-4.rating img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+}
+.itemsContainer .col-2 {
+  background-color: white;
+  border-radius: 10px;
+}
+.itemsContainer .col-2 img {
+  width: 100%;
+  display: block;
+  margin: 20px auto 20px auto;
+  border: thin dashed blue;
+}

@@ -1,4 +1,4 @@
-$(function() {
-  console.log("hello there");
+$(() => {
+  // LOAD HEADER
   $("#header").load("src/new_header.html");
 });
