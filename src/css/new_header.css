@@ -178,21 +178,21 @@ body {
   display: block;
   margin-right: 10px;
 }
-.button {
+.header .button {
   width: 100%;
   height: 100%;
   border: none;
 }
-.button.white {
+.header .button.white {
   width: 144px;
 }
 .header_button .button.white:hover {
   background-color: #dadada;
 }
-.button.orange {
+.header .button.orange {
   background-color: orange;
 }
-.button.orange:focus {
+.header .button.orange:focus {
   outline: 0;
   background-color: #ff6600;
 }
@@ -201,10 +201,10 @@ body {
   background-color: #ff6600;
   color: black;
 }
-.button.seagreen {
+.header .button.seagreen {
   background-color: lightseagreen;
 }
-.button.seagreen:focus {
+.header .button.seagreen:focus {
   outline: 0;
   background-color: #007ef3;
 }
