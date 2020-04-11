@@ -64,6 +64,7 @@ ul.bcrumb li a:hover {
   padding: 10px;
   display: flex;
   width: 100%;
+  height: 210px;
 }
 .itemsContainer .col-2 {
   display: flex;
