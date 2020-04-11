@@ -338,8 +338,8 @@
 .ft-banner {
   padding: none;
   position: absolute;
-  top: -50px;
-  left: 10px;
+  top: -70px;
+  left: -75px;
   z-index: 2;
   margin-top: -15px;
   margin-left: -24px;
