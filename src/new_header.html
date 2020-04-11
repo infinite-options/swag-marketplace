@@ -142,7 +142,7 @@
           </button>
         </div>
         <div class="header_button" style="width:144px">
-          <button class="button orange">CART</button>
+          <button class="button orange" id="cartHeaderButton">CART</button>
         </div>
         <div class="header_button">
           <button class="button seagreen" id="h_sell">
@@ -220,16 +220,6 @@
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
             <!-- smaller carousel ends here -->
           </div>
-          <!-- size, condition, color -->
-          <div class="itemDetail" style="display: none" id="itemDemension">
-            <select>
-              <option value="" disabled selected>S/M/L/Dimension</option>
-              <option value="s">S</option>
-              <option value="m">M</option>
-              <option value="l">L</option>
-            </select>
-            <p>Size</p>
-          </div>
           <div class="container itemDetail">
             <input type="text" placeholder="Color family" />
             <p>Color</p>
@@ -282,12 +272,33 @@
           <hr />
           <div class="row">
             <div class="col-4">
-              <input
-                type="text"
-                placeholder="Item's category"
-                id="itemCategory"
-                style="text-align: left;"
-              />
+              <!-- <input
+                    type="text"
+                    placeholder="Item's category"
+                    id="itemCategory"
+                    style="text-align: left;"
+                  /> -->
+              <div class="input-group">
+                <span>
+                  <select id="itemCategory">
+                    <option value="All Categories">All Categories</option>
+                    <option value="Backpack">Backpack</option>
+                    <option value="Watch">Watch</option>
+                    <option value="Pen">Pen</option>
+                    <option value="T-shirt">T-Shirt</option>
+                  </select>
+                </span>
+                <!-- size, condition, color -->
+                <span class="panel" style="display: none" id="itemDemension">
+                  <select>
+                    <option value="" disabled selected>S/M/L/Dimension</option>
+                    <option value="s">S</option>
+                    <option value="m">M</option>
+                    <option value="l">L</option>
+                  </select>
+                  <p style="display: inline;">Size</p>
+                </span>
+              </div>
             </div>
             <div class="col-4" style="text-align: left;">
               <input
