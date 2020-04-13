@@ -3,7 +3,6 @@ body {
   background-color: #9e015d;
   overflow-x: hidden;
   overflow-y: auto;
-  min-height: 100%;
   position: relative;
 }
 .header {
@@ -196,7 +195,7 @@ body {
   display: flex;
   position: relative;
   width: 400px;
-  height: 250px;
+  height: 300px;
   align-items: center;
   justify-content: center;
   background-color: white;
@@ -226,7 +225,7 @@ body {
   position: absolute;
   max-width: 30px;
   max-height: 30px;
-  padding: 3px;
+  padding: 5px;
   margin-top: -11%;
   color: white;
   font-size: 15px;
@@ -285,14 +284,21 @@ img.hover-shadow {
 .hover-shadow:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+.itemDetail-fixed-postion {
+  width: 100%;
+  max-height: 100%;
+  margin-top: 50px;
+  position: absolute;
+  text-align: left;
+}
+
 .itemDetail {
   width: 100%;
   height: 40px;
-  display: inline-block;
-  margin: 0px;
-  padding: 0px;
+  display: flex;
   margin-left: 35px;
-  margin-top: 20px;
+  margin-top: 5px;
 }
 .itemDetail .radio {
   display: inline-block;
@@ -301,26 +307,33 @@ img.hover-shadow {
   text-align: center;
 }
 .itemDetail select {
-  display: inline-block;
+  display: inline-flex;
   width: 60%;
   height: 100%;
   border: none;
   background-color: white;
+  color: grey;
   text-align: right;
   outline: 1px inset #fff;
   outline-offset: -1px;
 }
-.itemDetail > input {
-  display: inline-block;
-  text-align: left;
+.itemDetail input {
   width: 60%;
   height: 100%;
+  border: none;
+  background-color: white;
 }
+
 .itemDetail p {
+  width: 60px;
+  max-height: 100%;
+  background-color: white;
+  padding: 5px;
+  margin-right: 5px;
+  margin-bottom: 0px;
   display: inline-block;
-  text-align: left;
-  height: 100%;
 }
+
 .checkboxgroup {
   display: inline-block;
   width: 60%;
@@ -358,7 +371,7 @@ img.hover-shadow {
   height: 1px;
   margin: 0px;
 }
-.radio_colorize input[type="radio"]:after {
+/* .radio_colorize input[type="radio"]:after {
   width: 17px;
   height: 17px;
   border-radius: 15px;
@@ -382,7 +395,7 @@ img.hover-shadow {
   display: inline-block;
   visibility: visible;
   border: 3px solid white;
-}
+} */
 
 .checked {
   color: #1d81df;
@@ -401,4 +414,28 @@ img.hover-shadow {
   height: 50px;
   background-color: orange;
   margin-top: 20px;
+  margin-bottom: 20px;
+}
+.col-sm button {
+  width: 100%;
+  color: grey;
+}
+
+.dropdown_button_category {
+  border: none;
+  background-color: transparent;
+  width: 80%;
+  text-align: left;
+}
+.itemChosen {
+  padding: 3px;
+  text-align: left;
+  display: inline-block;
+  background-color: white;
+  color: grey;
+  width: 80%;
+  height: 30px;
+}
+#itemDemension {
+  display: none;
 }

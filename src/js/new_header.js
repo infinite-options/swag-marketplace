@@ -1,24 +1,86 @@
+var colors = {
+  "Not specified": "Not specified",
+  Brown: "Brown",
+  Clear: "Clear",
+  Pink: "Pink",
+  Violet: "Violet",
+  Red: "Red",
+  Black: "Black",
+  Ivory: "Ivory",
+  Gold: "Gold",
+  Beige: "Beige",
+  Orange: "Orange",
+  Yellow: "Yellow",
+  White: "White",
+  Multicolor: "Multicolor",
+  Silver: "Silver",
+  Aqua: "Aqua",
+  Green: "Green",
+  Blue: "Blue",
+  Grey: "Grey",
+  Other: "Other"
+};
+var items = {
+  Backpack: "Backpack & Totebag",
+  Clothing: "Clothing",
+  Sportswear: "Sportswear",
+  Lanyards: "Lanyards & nametag",
+  Keychains: "Keychain",
+  Memorabilia: "Memorabilia",
+  Notebooks: "Notebooks & notepads",
+  PhoneAccessories: "Phone Accessories",
+  Pens: "Pens",
+  CoffeMugs: "Coffe Mugs",
+  WatterBottle: "WatterBottle",
+  Giftcards: "Gift cards",
+  Other: "Other"
+};
+var size_object = ["backpack", "shirt"];
+
+Object.entries(colors).forEach(element => {
+  $(".itemColor").append(
+    `<option value=${element[0].toLowerCase()}>${element[1]}</option>`
+  );
+});
+
+Object.values(items).forEach(element => {
+  $("#item_category").append(`<a class=dropdown-item>${element}</a>`);
+});
+
 $(() => {
   $(document).click(e => {
     var sell_tab = $(".sell_tab");
-    if (sell_tab.is(":hidden") && e.target.id == "h_sell") {
-      sell_tab.show("800");
-      currentSlide(slideIndex);
-    } else if (
-      sell_tab.is(":visible") &&
-      !$(e.target).closest(".sell_tab").length
-    ) {
-      sell_tab.hide("800");
-    } else if (sell_tab.is(":visible")) {
-      var itemCategory = $("#itemCategory");
-      if (itemCategory.val() === "Backpack") {
-        $("#itemDemension").css("display", "block");
-      } else {
-        $("#itemDemension").css("display", "none");
+    if (sell_tab.is(":hidden")) {
+      if (e.target.id == "h_sell") {
+        sell_tab.show("800");
+        currentSlide(slideIndex);
+      } else if (e.target.id === "searchHeaderButton") {
+        window.location.href = "/swag-marketplace/src/search.html";
       }
-    } else if (e.target.id === "searchHeaderButton") {
-      window.location.href = "/swag-marketplace/src/search.html";
+    } else if (sell_tab.is(":visible")) {
+      if (!$(e.target).closest(".sell_tab").length) {
+        sell_tab.hide("800");
+      }
     }
+  });
+  var itemChosen = $(".itemCategory").find("a");
+  itemChosen.click(e => {
+    let item = e.currentTarget.innerHTML;
+    $(".itemChosen > p").html(item);
+    for (element of size_object) {
+      if (item.toLowerCase().includes(element.toLowerCase())) {
+        $("#itemDemension").show();
+        break;
+      } else {
+        $("#itemDemension").hide();
+      }
+    }
+  });
+  var dimensionButton = $(".dimension button");
+  dimensionButton.click(e => {
+    let button_clicked = e.currentTarget.innerHTML; // should do something with this data
+    dimensionButton.css("color", "grey");
+    $(e.target).css("color", "black");
   });
 });
 
@@ -35,7 +97,6 @@ function currentSlide(n) {
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
-  console.log(slides);
   var dots = document.getElementsByClassName("thumbnail");
   if (n > slides.length) {
     slideIndex = 1;
