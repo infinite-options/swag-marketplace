@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    />
     <!--Fontawesome CDN-->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
     />
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
     <!-- customize css -->
     <link rel="stylesheet" href="/swag-marketplace/src/css/new_header.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Development version -->
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+
+    <!-- Production version -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   </head>
   <body>
     <!-- HEADER -->
@@ -164,7 +164,7 @@
           </button>
         </div>
         <div class="header_button" style="width:144px">
-          <button class="button orange">CART</button>
+          <button class="button orange" id="cartHeaderButton">CART</button>
         </div>
         <div class="header_button">
           <button class="button seagreen" id="h_sell">
@@ -242,57 +242,45 @@
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
             <!-- smaller carousel ends here -->
           </div>
-          <!-- size, condition, color -->
-          <div class="itemDetail" style="display: none" id="itemDemension">
-            <select>
-              <option value="" disabled selected>S/M/L/Dimension</option>
-              <option value="s">S</option>
-              <option value="m">M</option>
-              <option value="l">L</option>
-            </select>
-            <p>Size</p>
-          </div>
-          <div class="container itemDetail">
-            <input type="text" placeholder="Color family" />
-            <p>Color</p>
-          </div>
-          <div class="itemDetail">
-            <div class="radio">
-              <p>Used</p>
-              <div class="checkboxgroup">
-                <div class="row">
-                  <div class="col-2">
-                    <input type="radio" name="item_condition" id="condition1" />
-                    <label for="condition1">1</label>
-                  </div>
-                  <div class="col-2">
-                    <input type="radio" name="item_condition" id="condition2" />
-                    <label for="condition2">2</label>
-                  </div>
-                  <div class="col-2">
-                    <input type="radio" name="item_condition" id="condition3" />
-                    <label for="condition3">3</label>
-                  </div>
-                  <div class="col-2">
-                    <input type="radio" name="item_condition" id="condition4" />
-                    <label for="condition4">4</label>
-                  </div>
-                  <div class="col-2">
-                    <input type="radio" name="item_condition" id="condition5" />
-                    <label for="condition5">5</label>
-                  </div>
-                </div>
-              </div>
-              <p>New</p>
+          <div class="itemDetail-fixed-postion">
+            <div class="itemDetail" id="itemDemension">
+              <p>Size</p>
+              <select>
+                <option value="choice">S/M/L/Demension</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+              </select>
             </div>
-            <p>Condition</p>
+            <div class="itemDetail">
+              <p>Color</p>
+              <select class="itemColor"></select>
+            </div>
+            <div class="itemDetail" style="margin-left: 100px;">
+              <!-- Post button goes here -->
+              <button class="post_button">POST</button>
+              <!-- Post button end here -->
+            </div>
           </div>
         </div>
         <!-- right column -->
         <div class="col-8 itemInfo">
           <div class="row">
             <div class="col-4" style="text-align: left;">
-              <label>ITEM CATEGORY</label>
+              <div class="dropdown itemCategory">
+                <button
+                  type="button"
+                  class="dropdown_button_category dropdown-toggle"
+                  data-toggle="dropdown"
+                >
+                  CATEGORY
+                </button>
+                <div
+                  id="item_category"
+                  class="dropdown-menu"
+                  aria-labelledby="dropdownMenuButton"
+                ></div>
+              </div>
             </div>
             <div class="col-4" style="text-align: left;">
               <label>ITEM BRAND</label>
@@ -304,12 +292,7 @@
           <hr />
           <div class="row">
             <div class="col-4">
-              <input
-                type="text"
-                placeholder="Item's category"
-                id="itemCategory"
-                style="text-align: left;"
-              />
+              <div class="itemChosen"><p>All Categories</p></div>
             </div>
             <div class="col-4" style="text-align: left;">
               <input
@@ -425,7 +408,7 @@
               />
             </div>
           </div>
-          <!-- Description row -->
+          <!-- Decription row -->
           <div class="row">
             <div class="col-6" style="text-align: left;">
               <p style="margin-top: 20px;">DESCRIPTION</p>
@@ -450,9 +433,33 @@
                 rows="4" cols="50" style="background-color:white"></textarea>
             </div>
           </div>
-          <!-- Post button goes here -->
-          <button class="post_button">POST</button>
-          <!-- Post button end here -->
+          <!-- Dimension row -->
+          <div class="row" style="margin-top: 20px;">
+            <div class="col-sm" style="text-align: left;">
+              <p>DIMENSION</p>
+            </div>
+            <div class="col-sm dimension">
+              <button class="active">Well Used</button>
+            </div>
+            <div class="col-sm dimension">
+              <button>Somewhat Used</button>
+            </div>
+            <div class="col-sm dimension">
+              <button>Minimally Used</button>
+            </div>
+            <div class="col-sm dimension">
+              <button>Brand New</button>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="container">
+              <textarea
+                class="description"
+                placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec quam ipsum. Nam imperdiet nisl eget ante semper, eu pulvinar quam cursus. Aliquam posuere convallis consequat. Phasellus aliquet lectus at eleifend laoreet. Nulla lorem velit, sodales vel lacus non, consequat molestie ipsum. Praesent vestibulum at ligula nec aliquet. In posuere aliquam mi in viverra. Donec id dui et tellus varius porttitor quis vel mauris. Proin dignissim ac urna quis vehicula. Aenean fringilla nulla sit amet magna eleifend, ac gravida nunc suscipit. Maecenas finibus nulla sed velit viverra, non varius urna venenatis. Donec porttitor quis nibh nec vestibulum"
+              ></textarea>
+            </div>
+          </div>
         </div>
       </div>
     </div>
