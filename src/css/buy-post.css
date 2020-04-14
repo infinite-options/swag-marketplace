@@ -183,7 +183,7 @@ main .site-title .btn:hover {
 
 main .breadcrumbs-nav a {
     color: white;
-    text-align:left !important
+    text-align: left !important
 }
 
 /* ---- Post Content (Images) ----- */
@@ -210,11 +210,12 @@ main {
 }
 
 /* thumb carousel */
+
 .post-imgs {
     font-family: sans-serif;
-  }
+}
 
-  .thumb-buttons button {
+.thumb-buttons button {
     color: black;
     font-size: 14px;
     display: inline;
@@ -225,22 +226,24 @@ main {
     border: none;
     overflow: hidden;
     padding-left: 45px;
-  } 
-  .thumb-buttons button:hover {
-    cursor: pointer;
-  }
+}
 
-  #carouselWrapper {
+.thumb-buttons button:hover {
+    cursor: pointer;
+}
+
+#carouselWrapper {
     position: relative;
     overflow: hidden;
-  }
-  #carousel {
+}
+
+#carousel {
     position: absolute;
     visibility: hidden;
     padding-left: 50px;
-  }
+}
 
-  /* thumb and main image styling */
+/* thumb and main image styling */
 
 .bg .image {
     display: block;
@@ -250,10 +253,12 @@ main {
     display: block;
     margin: 10px;
     grid-template-columns: repeat(auto-fill);
-    padding: 5px; /*whitespace inside thumbs*/
-    width: 6vw; /* size*/
+    padding: 5px;
+    /*whitespace inside thumbs*/
+    width: 6vw;
+    /* size*/
     height: 6vw;
-    object-fit:cover;
+    object-fit: cover;
     background-color: #f2f2f2;
     border-radius: 15px;
     margin-left: -50px;
@@ -266,8 +271,8 @@ main {
 
 .post-imgs .main-image {
     float: right;
-    height:420px;
-    width:450px;
+    height: 420px;
+    width: 450px;
     object-fit: cover;
     background-color: #f2f2f2;
     padding: 30px;
@@ -284,8 +289,8 @@ main {
 }
 
 .column .location {
-    margin-top:-29px;
-    margin-left:220px;
+    margin-top: -29px;
+    margin-left: 220px;
 }
 
 .seller-rating {
@@ -365,11 +370,14 @@ input[type=number] {
     margin-left: 50px;
 }
 
-.carouseldiv .card-body {
-    text-align: center;
-    letter-spacing: 1.5em;
-    font-size: 25px;
-    padding: 2px;
+.carousel-item .card-body h5, .carousel-item .card-body i {
+    float: left;
+    margin: 0 4px 0 4px;
+    font-weight: bold;
+}
+
+.carousel-item .card-body i {
+    margin-top: 3px;
 }
 
 /* carousels 2 and 3 */
@@ -380,14 +388,53 @@ input[type=number] {
     display: inline-block;
     border-radius: 25px;
     padding-bottom: 30px;
-    padding-top: 30px;
+    padding-top: 60px;
     transform: translate(2.5%, 0);
     margin-top: 30px;
 }
 
-.bg-2 .carousel-title-3 {
+.bg-3 {
+    background-color: #cccccc;
+    max-width: 95%;
+    display: inline-block;
+    border-radius: 25px;
+    padding-bottom: 30px;
+    padding-top: 40px;
+    transform: translate(2.5%, 0);
+    margin-top: 30px;
+}
+
+.bg-2 .carousel-title-3, .bg-3 .carousel-title-3 {
     padding-right: 1135px;
     text-align: right;
+}
+
+.recently-viewed-post {
+    width: 225px;
+    padding: 0 12px 0 12px;
+    position: relative;
+    z-index: 3;
+}
+
+.recently-viewed-post .card {
+    border-radius: 25px;
+    height: 275px;
+    background: #f2f2f2;
+}
+
+.recently-viewed-post .card-img-top {
+    height: 210px;
+    object-fit: cover;
+}
+
+.recently-viewed-post hr {
+    margin: 0;
+    padding: 0;
+}
+
+.recently-viewed-post .card-body {
+    margin: 10px auto;
+    padding: 8px;
 }
 
 /* ----- Footer ----- */

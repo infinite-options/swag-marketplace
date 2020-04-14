@@ -14,7 +14,7 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <!-- FONT AWESOME  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" />
     <script src="https://kit.fontawesome.com/671c0e423a.js" crossorigin="anonymous"></script>
 
     <!-- Carousel Tools -->
@@ -22,12 +22,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
-    <!-- Ionicons for Horizontal Carousels -->
+    <!-- Ionicons for Vertical Carousel Icons -->
     <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 
     <!-- Custom Stylesheets -->
     <link rel="stylesheet" href="./css/buy-post.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <!-- Custom JavaScript (vertical thumbnail carousel) -->
     <script src="./js/buy-post.js"></script>
@@ -36,46 +35,8 @@
 
 <body>
 
-    <!-- Header -->
-
     <header>
-        <!-- <div class="topnav">
-            <img src="./assets/swag-logo.png " class="logo" alt="LOGO" />
-            <a href="./../index.html"> HOME</a>
-            <a href="about.html">ABOUT </a>
-            <a href="./shop.html" class="active">SHOP</a>
-            <a href="./post.html">POST </a>
-            <button type="button" class="btn btn-info" id="sign-in-modal" data-toggle="modal"
-                data-target="#myModal">SIGN IN</button>
-            <div class="modal fade" id="myModal" role="dialog">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4>Log In to Your Account</h4>
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        </div>
-                        <div class="modal-body">
-                            <input type="text" placeholder="Enter Username" name="usrname" required>
-                            <input type="text" placeholder="Enter Password" name="psw" required>
-                            <button type="button" class="log-in"> Log In</button>
-                        </div>
-                        <div class="modal-footer" id="modal-footer">
-                            <h6>Need an Account?</h6>
-                            <button type="button" class="btn btn-default" style=" color: #2196F3;">Sign up</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <a href="./cart.html"><i class="fa fa-shopping-cart  cart"></i> </a>
-            <div class="search-container">
-                <form>
-                    <div class="form-box">
-                        <input class="search-field" name="search" type="text" placeholder="Search ..." />
-                        <button type="submit"><i class="fa fa-search"></i></button>
-                    </div>
-                </form>
-            </div>
-        </div> -->
+        <div id="header"></div>
     </header>
 
     <!-- Post -->
@@ -129,8 +90,6 @@
                         <div class="post-imgs large-image">
                             <img src="assets/google-sunnies5.jpg" id="image" class="main-image" height="420" />
                         </div>
-
-                        
 
                     </div>
                 </div>
@@ -204,46 +163,62 @@
                                         <div class="container">
                                             <div class="row">
     
-                                                <div class="col-sm-12 col-lg-3">
+                                                <div class="recently-viewed-post">
                                                     <div class="card" style="margin:auto;">
-                                                        <img src="./assets/post-1.jpg" class="card-img-top">
+                                                        <a href="buy-post.html"><img src="./assets/post-1.jpg"
+                                                            class="card-img-top"></a>
+                                                        <hr>
                                                         <div class="card-body">
-                                                            <ion-icon class="custom-icon" name="share-social-outline"></ion-icon>
-                                                            <ion-icon name="bookmark-outline"></ion-icon>
-                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                                                            <div class="card-body-inner">
+                                                                <i class="far fa-heart"></i>
+                                                                <a href="src/buy-post.html"><h5>$ XX.XX </h5></a>
+                                                                <i class="fas fa-share-alt"></i>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-    
-                                                <div class="col-sm-12 col-lg-3">
-                                                    <div class="card">
-                                                        <img src="./assets/post-2.jpg" class="card-img-top">
-                                                        <div class="card-body">
-                                                            <ion-icon name="share-social-outline"></ion-icon>
-                                                            <ion-icon name="bookmark-outline"></ion-icon>
-                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
-                                                        </div>
-                                                    </div>
-                                                </div>
-    
-                                                <div class="col-sm-12 col-lg-3">
-                                                    <div class="card">
-                                                        <img src="./assets/ibm-pin.jpg" class="card-img-top">
-                                                        <div class="card-body">
-                                                            <ion-icon name="share-social-outline"></ion-icon>
-                                                            <ion-icon name="bookmark-outline"></ion-icon>
-                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
-                                                        </div>
-                                                    </div>
-                                                </div>
-    
-                                                <div class="col-sm-12 col-lg-3">
+
+                                                <div class="recently-viewed-post">
                                                     <div class="card" style="margin:auto;">
-                                                        <img src="./assets/post-1.jpg" class="card-img-top">
+                                                        <a href="buy-post.html"><img src="./assets/post-1.jpg"
+                                                            class="card-img-top"></a>
+                                                        <hr>
                                                         <div class="card-body">
-                                                            <ion-icon name="share-social-outline"></ion-icon>
-                                                            <ion-icon name="bookmark-outline"></ion-icon>
-                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                                                            <div class="card-body-inner">
+                                                                <i class="far fa-heart"></i>
+                                                                <a href="src/buy-post.html"><h5>$ XX.XX </h5></a>
+                                                                <i class="fas fa-share-alt"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="recently-viewed-post">
+                                                    <div class="card" style="margin:auto;">
+                                                        <a href="buy-post.html"><img src="./assets/post-1.jpg"
+                                                            class="card-img-top"></a>
+                                                        <hr>
+                                                        <div class="card-body">
+                                                            <div class="card-body-inner">
+                                                                <i class="far fa-heart"></i>
+                                                                <a href="src/buy-post.html"><h5>$ XX.XX </h5></a>
+                                                                <i class="fas fa-share-alt"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="recently-viewed-post">
+                                                    <div class="card" style="margin:auto;">
+                                                        <a href="buy-post.html"><img src="./assets/post-1.jpg"
+                                                            class="card-img-top"></a>
+                                                        <hr>
+                                                        <div class="card-body">
+                                                            <div class="card-body-inner">
+                                                                <i class="far fa-heart"></i>
+                                                                <a href="src/buy-post.html"><h5>$ XX.XX </h5></a>
+                                                                <i class="fas fa-share-alt"></i>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -256,46 +231,62 @@
                                         <div class="container">
                                             <div class="row">
     
-                                                <div class="col-sm-12 col-lg-3">
-                                                    <div class="card" style="margin: auto;">
-                                                        <img src="./assets/post-3.jpg" class="card-img-top">
-                                                        <div class="card-body">
-                                                            <ion-icon name="share-social-outline"></ion-icon>
-                                                            <ion-icon name="bookmark-outline"></ion-icon>
-                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
-                                                        </div>
-                                                    </div>
-                                                </div>
-    
-                                                <div class="col-sm-12 col-lg-3">
-                                                    <div class="card">
-                                                        <img src="./assets/post-2.jpg" class="card-img-top">
-                                                        <div class="card-body">
-                                                            <ion-icon name="share-social-outline"></ion-icon>
-                                                            <ion-icon name="bookmark-outline"></ion-icon>
-                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
-                                                        </div>
-                                                    </div>
-                                                </div>
-    
-                                                <div class="col-sm-12 col-lg-3">
-                                                    <div class="card">
-                                                        <img src="./assets/post-1.jpg" class="card-img-top">
-                                                        <div class="card-body">
-                                                            <ion-icon name="share-social-outline"></ion-icon>
-                                                            <ion-icon name="bookmark-outline"></ion-icon>
-                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
-                                                        </div>
-                                                    </div>
-                                                </div>
-    
-                                                <div class="col-sm-12 col-lg-3">
+                                                <div class="recently-viewed-post">
                                                     <div class="card" style="margin:auto;">
-                                                        <img src="./assets/post-3.jpg" class="card-img-top">
+                                                        <a href="buy-post.html"><img src="./assets/post-1.jpg"
+                                                            class="card-img-top"></a>
+                                                        <hr>
                                                         <div class="card-body">
-                                                            <ion-icon name="share-social-outline"></ion-icon>
-                                                            <ion-icon name="bookmark-outline"></ion-icon>
-                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                                                            <div class="card-body-inner">
+                                                                <i class="far fa-heart"></i>
+                                                                <a href="src/buy-post.html"><h5>$ XX.XX </h5></a>
+                                                                <i class="fas fa-share-alt"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="recently-viewed-post">
+                                                    <div class="card" style="margin:auto;">
+                                                        <a href="buy-post.html"><img src="./assets/post-1.jpg"
+                                                            class="card-img-top"></a>
+                                                        <hr>
+                                                        <div class="card-body">
+                                                            <div class="card-body-inner">
+                                                                <i class="far fa-heart"></i>
+                                                                <a href="src/buy-post.html"><h5>$ XX.XX </h5></a>
+                                                                <i class="fas fa-share-alt"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="recently-viewed-post">
+                                                    <div class="card" style="margin:auto;">
+                                                        <a href="buy-post.html"><img src="./assets/post-1.jpg"
+                                                            class="card-img-top"></a>
+                                                        <hr>
+                                                        <div class="card-body">
+                                                            <div class="card-body-inner">
+                                                                <i class="far fa-heart"></i>
+                                                                <a href="src/buy-post.html"><h5>$ XX.XX </h5></a>
+                                                                <i class="fas fa-share-alt"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="recently-viewed-post">
+                                                    <div class="card" style="margin:auto;">
+                                                        <a href="buy-post.html"><img src="./assets/post-1.jpg"
+                                                            class="card-img-top"></a>
+                                                        <hr>
+                                                        <div class="card-body">
+                                                            <div class="card-body-inner">
+                                                                <i class="far fa-heart"></i>
+                                                                <a href="src/buy-post.html"><h5>$ XX.XX </h5></a>
+                                                                <i class="fas fa-share-alt"></i>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -342,49 +333,66 @@
                                         <div class="container">
                                             <div class="row">
     
-                                                <div class="col-sm-12 col-lg-3">
+                                                <div class="recently-viewed-post">
                                                     <div class="card" style="margin:auto;">
-                                                        <img src="./assets/post-1.jpg" class="card-img-top">
+                                                        <a href="buy-post.html"><img src="./assets/post-1.jpg"
+                                                            class="card-img-top"></a>
+                                                        <hr>
                                                         <div class="card-body">
-                                                            <ion-icon class="custom-icon" name="share-social-outline"></ion-icon>
-                                                            <ion-icon name="bookmark-outline"></ion-icon>
-                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                                                            <div class="card-body-inner">
+                                                                <i class="far fa-heart"></i>
+                                                                <a href="src/buy-post.html"><h5>$ XX.XX </h5></a>
+                                                                <i class="fas fa-share-alt"></i>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-    
-                                                <div class="col-sm-12 col-lg-3">
-                                                    <div class="card">
-                                                        <img src="./assets/post-2.jpg" class="card-img-top">
-                                                        <div class="card-body">
-                                                            <ion-icon name="share-social-outline"></ion-icon>
-                                                            <ion-icon name="bookmark-outline"></ion-icon>
-                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
-                                                        </div>
-                                                    </div>
-                                                </div>
-    
-                                                <div class="col-sm-12 col-lg-3">
-                                                    <div class="card">
-                                                        <img src="./assets/post-3.jpg" class="card-img-top">
-                                                        <div class="card-body">
-                                                            <ion-icon name="share-social-outline"></ion-icon>
-                                                            <ion-icon name="bookmark-outline"></ion-icon>
-                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
-                                                        </div>
-                                                    </div>
-                                                </div>
-    
-                                                <div class="col-sm-12 col-lg-3">
+
+                                                <div class="recently-viewed-post">
                                                     <div class="card" style="margin:auto;">
-                                                        <img src="./assets/post-1.jpg" class="card-img-top">
+                                                        <a href="buy-post.html"><img src="./assets/post-1.jpg"
+                                                            class="card-img-top"></a>
+                                                        <hr>
                                                         <div class="card-body">
-                                                            <ion-icon name="share-social-outline"></ion-icon>
-                                                            <ion-icon name="bookmark-outline"></ion-icon>
-                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                                                            <div class="card-body-inner">
+                                                                <i class="far fa-heart"></i>
+                                                                <a href="src/buy-post.html"><h5>$ XX.XX </h5></a>
+                                                                <i class="fas fa-share-alt"></i>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
+
+                                                <div class="recently-viewed-post">
+                                                    <div class="card" style="margin:auto;">
+                                                        <a href="buy-post.html"><img src="./assets/post-1.jpg"
+                                                            class="card-img-top"></a>
+                                                        <hr>
+                                                        <div class="card-body">
+                                                            <div class="card-body-inner">
+                                                                <i class="far fa-heart"></i>
+                                                                <a href="src/buy-post.html"><h5>$ XX.XX </h5></a>
+                                                                <i class="fas fa-share-alt"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="recently-viewed-post">
+                                                    <div class="card" style="margin:auto;">
+                                                        <a href="buy-post.html"><img src="./assets/post-1.jpg"
+                                                            class="card-img-top"></a>
+                                                        <hr>
+                                                        <div class="card-body">
+                                                            <div class="card-body-inner">
+                                                                <i class="far fa-heart"></i>
+                                                                <a href="src/buy-post.html"><h5>$ XX.XX </h5></a>
+                                                                <i class="fas fa-share-alt"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
     
                                             </div>
                                         </div>
@@ -394,49 +402,67 @@
                                         <div class="container">
                                             <div class="row">
     
-                                                <div class="col-sm-12 col-lg-3">
-                                                    <div class="card" style="margin: auto;">
-                                                        <img src="./assets/post-3.jpg" class="card-img-top">
-                                                        <div class="card-body">
-                                                            <ion-icon name="share-social-outline"></ion-icon>
-                                                            <ion-icon name="bookmark-outline"></ion-icon>
-                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
-                                                        </div>
-                                                    </div>
-                                                </div>
-    
-                                                <div class="col-sm-12 col-lg-3">
-                                                    <div class="card">
-                                                        <img src="./assets/post-2.jpg" class="card-img-top">
-                                                        <div class="card-body">
-                                                            <ion-icon name="share-social-outline"></ion-icon>
-                                                            <ion-icon name="bookmark-outline"></ion-icon>
-                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
-                                                        </div>
-                                                    </div>
-                                                </div>
-    
-                                                <div class="col-sm-12 col-lg-3">
-                                                    <div class="card">
-                                                        <img src="./assets/post-1.jpg" class="card-img-top">
-                                                        <div class="card-body">
-                                                            <ion-icon name="share-social-outline"></ion-icon>
-                                                            <ion-icon name="bookmark-outline"></ion-icon>
-                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
-                                                        </div>
-                                                    </div>
-                                                </div>
-    
-                                                <div class="col-sm-12 col-lg-3">
+                                                <div class="recently-viewed-post">
                                                     <div class="card" style="margin:auto;">
-                                                        <img src="./assets/post-3.jpg" class="card-img-top">
+                                                        <a href="buy-post.html"><img src="./assets/post-1.jpg"
+                                                            class="card-img-top"></a>
+                                                        <hr>
                                                         <div class="card-body">
-                                                            <ion-icon name="share-social-outline"></ion-icon>
-                                                            <ion-icon name="bookmark-outline"></ion-icon>
-                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                                                            <div class="card-body-inner">
+                                                                <i class="far fa-heart"></i>
+                                                                <a href="src/buy-post.html"><h5>$ XX.XX </h5></a>
+                                                                <i class="fas fa-share-alt"></i>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
+
+                                                <div class="recently-viewed-post">
+                                                    <div class="card" style="margin:auto;">
+                                                        <a href="buy-post.html"><img src="./assets/post-1.jpg"
+                                                            class="card-img-top"></a>
+                                                        <hr>
+                                                        <div class="card-body">
+                                                            <div class="card-body-inner">
+                                                                <i class="far fa-heart"></i>
+                                                                <a href="src/buy-post.html"><h5>$ XX.XX </h5></a>
+                                                                <i class="fas fa-share-alt"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="recently-viewed-post">
+                                                    <div class="card" style="margin:auto;">
+                                                        <a href="buy-post.html"><img src="./assets/post-1.jpg"
+                                                            class="card-img-top"></a>
+                                                        <hr>
+                                                        <div class="card-body">
+                                                            <div class="card-body-inner">
+                                                                <i class="far fa-heart"></i>
+                                                                <a href="src/buy-post.html"><h5>$ XX.XX </h5></a>
+                                                                <i class="fas fa-share-alt"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="recently-viewed-post">
+                                                    <div class="card" style="margin:auto;">
+                                                        <a href="buy-post.html"><img src="./assets/post-1.jpg"
+                                                            class="card-img-top"></a>
+                                                        <hr>
+                                                        <div class="card-body">
+                                                            <div class="card-body-inner">
+                                                                <i class="far fa-heart"></i>
+                                                                <a href="src/buy-post.html"><h5>$ XX.XX </h5></a>
+                                                                <i class="fas fa-share-alt"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                
     
                                             </div>
                                         </div>
@@ -461,7 +487,7 @@
 
     <!----- Carousel 3 ----->
 
-    <div class="bg-2">
+    <div class="bg-3">
         <div class="carouseldiv">
             <div class="carousels-2">
                 <div class="carousel-title-3">
@@ -478,47 +504,63 @@
                                         <div class="container">
                                             <div class="row">
     
-                                                <div class="col-sm-12 col-lg-3">
+                                                <div class="recently-viewed-post">
                                                     <div class="card" style="margin:auto;">
-                                                        <img src="./assets/post-1.jpg" class="card-img-top">
-                                                        <!-- <div class="card-body">
-                                                            <ion-icon class="custom-icon" name="share-social-outline"></ion-icon>
-                                                            <ion-icon name="bookmark-outline"></ion-icon>
-                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
-                                                        </div> -->
+                                                        <a href="buy-post.html"><img src="./assets/post-1.jpg"
+                                                            class="card-img-top"></a>
+                                                        <hr>
+                                                        <div class="card-body">
+                                                            <div class="card-body-inner">
+                                                                <i class="far fa-heart"></i>
+                                                                <a href="src/buy-post.html"><h5>$ XX.XX </h5></a>
+                                                                <i class="fas fa-share-alt"></i>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
-    
-                                                <div class="col-sm-12 col-lg-3">
-                                                    <div class="card">
-                                                        <img src="./assets/post-2.jpg" class="card-img-top">
-                                                        <!-- <div class="card-body">
-                                                            <ion-icon name="share-social-outline"></ion-icon>
-                                                            <ion-icon name="bookmark-outline"></ion-icon>
-                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
-                                                        </div> -->
-                                                    </div>
-                                                </div>
-    
-                                                <div class="col-sm-12 col-lg-3">
-                                                    <div class="card">
-                                                        <img src="./assets/post-3.jpg" class="card-img-top">
-                                                        <!-- <div class="card-body">
-                                                            <ion-icon name="share-social-outline"></ion-icon>
-                                                            <ion-icon name="bookmark-outline"></ion-icon>
-                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
-                                                        </div> -->
-                                                    </div>
-                                                </div>
-    
-                                                <div class="col-sm-12 col-lg-3">
+
+                                                <div class="recently-viewed-post">
                                                     <div class="card" style="margin:auto;">
-                                                        <img src="./assets/post-1.jpg" class="card-img-top">
-                                                        <!-- <div class="card-body">
-                                                            <ion-icon name="share-social-outline"></ion-icon>
-                                                            <ion-icon name="bookmark-outline"></ion-icon>
-                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
-                                                        </div> -->
+                                                        <a href="buy-post.html"><img src="./assets/post-1.jpg"
+                                                            class="card-img-top"></a>
+                                                        <hr>
+                                                        <div class="card-body">
+                                                            <div class="card-body-inner">
+                                                                <i class="far fa-heart"></i>
+                                                                <a href="src/buy-post.html"><h5>$ XX.XX </h5></a>
+                                                                <i class="fas fa-share-alt"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="recently-viewed-post">
+                                                    <div class="card" style="margin:auto;">
+                                                        <a href="buy-post.html"><img src="./assets/post-1.jpg"
+                                                            class="card-img-top"></a>
+                                                        <hr>
+                                                        <div class="card-body">
+                                                            <div class="card-body-inner">
+                                                                <i class="far fa-heart"></i>
+                                                                <a href="src/buy-post.html"><h5>$ XX.XX </h5></a>
+                                                                <i class="fas fa-share-alt"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="recently-viewed-post">
+                                                    <div class="card" style="margin:auto;">
+                                                        <a href="buy-post.html"><img src="./assets/post-1.jpg"
+                                                            class="card-img-top"></a>
+                                                        <hr>
+                                                        <div class="card-body">
+                                                            <div class="card-body-inner">
+                                                                <i class="far fa-heart"></i>
+                                                                <a href="src/buy-post.html"><h5>$ XX.XX </h5></a>
+                                                                <i class="fas fa-share-alt"></i>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
     
@@ -530,47 +572,63 @@
                                         <div class="container">
                                             <div class="row">
     
-                                                <div class="col-sm-12 col-lg-3">
-                                                    <div class="card" style="margin: auto;">
-                                                        <img src="./assets/post-3.jpg" class="card-img-top">
-                                                        <!-- <div class="card-body">
-                                                            <ion-icon name="share-social-outline"></ion-icon>
-                                                            <ion-icon name="bookmark-outline"></ion-icon>
-                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
-                                                        </div> -->
-                                                    </div>
-                                                </div>
-    
-                                                <div class="col-sm-12 col-lg-3">
-                                                    <div class="card">
-                                                        <img src="./assets/post-2.jpg" class="card-img-top">
-                                                        <!-- <div class="card-body">
-                                                            <ion-icon name="share-social-outline"></ion-icon>
-                                                            <ion-icon name="bookmark-outline"></ion-icon>
-                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
-                                                        </div> -->
-                                                    </div>
-                                                </div>
-    
-                                                <div class="col-sm-12 col-lg-3">
-                                                    <div class="card">
-                                                        <img src="./assets/post-1.jpg" class="card-img-top">
-                                                        <!-- <div class="card-body">
-                                                            <ion-icon name="share-social-outline"></ion-icon>
-                                                            <ion-icon name="bookmark-outline"></ion-icon>
-                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
-                                                        </div> -->
-                                                    </div>
-                                                </div>
-    
-                                                <div class="col-sm-12 col-lg-3">
+                                                <div class="recently-viewed-post">
                                                     <div class="card" style="margin:auto;">
-                                                        <img src="./assets/post-3.jpg" class="card-img-top">
-                                                        <!-- <div class="card-body">
-                                                            <ion-icon name="share-social-outline"></ion-icon>
-                                                            <ion-icon name="bookmark-outline"></ion-icon>
-                                                            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
-                                                        </div> -->
+                                                        <a href="buy-post.html"><img src="./assets/post-1.jpg"
+                                                            class="card-img-top"></a>
+                                                        <hr>
+                                                        <div class="card-body">
+                                                            <div class="card-body-inner">
+                                                                <i class="far fa-heart"></i>
+                                                                <a href="src/buy-post.html"><h5>$ XX.XX </h5></a>
+                                                                <i class="fas fa-share-alt"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="recently-viewed-post">
+                                                    <div class="card" style="margin:auto;">
+                                                        <a href="buy-post.html"><img src="./assets/post-1.jpg"
+                                                            class="card-img-top"></a>
+                                                        <hr>
+                                                        <div class="card-body">
+                                                            <div class="card-body-inner">
+                                                                <i class="far fa-heart"></i>
+                                                                <a href="src/buy-post.html"><h5>$ XX.XX </h5></a>
+                                                                <i class="fas fa-share-alt"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="recently-viewed-post">
+                                                    <div class="card" style="margin:auto;">
+                                                        <a href="buy-post.html"><img src="./assets/post-1.jpg"
+                                                            class="card-img-top"></a>
+                                                        <hr>
+                                                        <div class="card-body">
+                                                            <div class="card-body-inner">
+                                                                <i class="far fa-heart"></i>
+                                                                <a href="src/buy-post.html"><h5>$ XX.XX </h5></a>
+                                                                <i class="fas fa-share-alt"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="recently-viewed-post">
+                                                    <div class="card" style="margin:auto;">
+                                                        <a href="buy-post.html"><img src="./assets/post-1.jpg"
+                                                            class="card-img-top"></a>
+                                                        <hr>
+                                                        <div class="card-body">
+                                                            <div class="card-body-inner">
+                                                                <i class="far fa-heart"></i>
+                                                                <a href="src/buy-post.html"><h5>$ XX.XX </h5></a>
+                                                                <i class="fas fa-share-alt"></i>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
     

@@ -27,15 +27,37 @@
     <div class="row">
       <div class="header" style="height: 47px;">
         <div class="header_icon">
-          <a href="#"
+          <!-- <a href="#"
             ><img
               src="/swag-marketplace/src/assets/menuIcon.png"
               style="float: left;"
-          /></a>
+          /></a> -->
+
+          <!-- hamburger menu -->
+          <nav role="navigation">
+            <div id="menuToggle">
+
+              <input type="checkbox" />
+
+              <span id="span-hover"></span>
+              <span id="span-hover"></span>
+              <span></span>
+              
+              <ul id="hamburger-menu">
+                <p>Hi, [username]</p>
+                <a href="#"><li>Payment Information</li></a>
+                <a href="#"><li>My Account</li></a>
+                <a href="#"><li>Shipping Address</li></a>
+                <a href="#"><li>Saved Items</li></a>
+                <a href="#"><li>Order History</li></a>
+              </ul>
+            </div>
+          </nav>
+
           <a href="#"
             ><img
               src="/swag-marketplace/src/assets/chatIcon.png"
-              style="float: right; margin-left: 10px"
+              style="float: right; margin-left: 10px; top: -55px;position:absolute;"
           /></a>
         </div>
       </div>
@@ -43,7 +65,7 @@
         <div class="header_button" style="width:144px">
           <div class="button white">
             <a href="/swag-marketplace/">
-              <img src="/swag-marketplace/src/assets/swag-logo.png" />
+              <img src="/swag-marketplace/src/assets/swag-logo.png" style="width:70px;object-fit:cover;margin-left:35px"/>
             </a>
           </div>
         </div>
@@ -408,8 +430,7 @@
             <div class="container">
               <textarea
                 class="description"
-                placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec quam ipsum. Nam imperdiet nisl eget ante semper, eu pulvinar quam cursus. Aliquam posuere convallis consequat. Phasellus aliquet lectus at eleifend laoreet. Nulla lorem velit, sodales vel lacus non, consequat molestie ipsum. Praesent vestibulum at ligula nec aliquet. In posuere aliquam mi in viverra. Donec id dui et tellus varius porttitor quis vel mauris. Proin dignissim ac urna quis vehicula. Aenean fringilla nulla sit amet magna eleifend, ac gravida nunc suscipit. Maecenas finibus nulla sed velit viverra, non varius urna venenatis. Donec porttitor quis nibh nec vestibulum"
-              ></textarea>
+                rows="4" cols="50" style="background-color:white"></textarea>
             </div>
           </div>
           <!-- Dimension row -->
