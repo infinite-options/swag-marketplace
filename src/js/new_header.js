@@ -69,7 +69,7 @@ $(() => {
     $(".itemChosen > p").html(item);
     for (element of size_object) {
       if (item.toLowerCase().includes(element.toLowerCase())) {
-        $("#itemDemension").show();
+        $("#itemDemension").css("display", "flex");
         break;
       } else {
         $("#itemDemension").hide();
