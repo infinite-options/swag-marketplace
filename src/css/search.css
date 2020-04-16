@@ -73,20 +73,20 @@ ul.bcrumb li a:hover {
 }
 .itemsContainer .itemImage {
   display: flex;
-  width: 85%;
-  height: 85%;
+  width: 70%;
+  height: 100%;
   background-color: white;
   border-radius: 10px;
   vertical-align: middle;
-  text-align: center;
+  justify-content: center;
+  padding: 20px;
 }
 .itemImage img {
   display: block;
   border: 1px dashed #058dfd;
   margin: auto;
-  max-width: 85%;
-  max-height: 85%;
-  align-items: center;
+  max-width: 100%;
+  max-height: 100%;
   border-radius: 10px;
 }
 .item .col-10 {
