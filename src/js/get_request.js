@@ -3,7 +3,7 @@ $(() => {
   $(document).click(e => {
     if (e.target.id === "cartHeaderButton") {
       console.log("cart button was hit");
-      $.get("http://127.0.0.1:4000/", (data, status) => {
+      $.get("http://127.0.0.1:4000/api/v2/templateapi", (data, status) => {
         //I got this get request and sent a request to api ==> it gets back "data" and status.
         console.log(status);
         if (status === "success") {
