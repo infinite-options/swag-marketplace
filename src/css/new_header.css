@@ -173,7 +173,7 @@ body {
   width: 144px;
 }
 .header_button .button.white:hover {
-  background-color: #dadada;
+  /* background-color: #dadada; */
 }
 .header .button.orange {
   background-color: orange;
@@ -579,4 +579,8 @@ img.hover-shadow {
   display: inline-block;
   margin-bottom: 0px;
   padding: 10px;
+}
+
+textarea .description {
+  border: solid 1px white;
 }
