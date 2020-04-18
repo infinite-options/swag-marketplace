@@ -316,9 +316,9 @@ body {
 }
 #imagesAddingUpload {
   position: absolute;
-  top: 8px;
+  top: 1%;
   display: block;
-  left: 120px;
+  left: 26%;
   height: 40px;
   width: 200px;
   border-radius: 5px;
